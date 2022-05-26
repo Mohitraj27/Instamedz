@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".SignUP">
 
+
     <ImageView
         android:layout_width="310dp"
         android:layout_height="160dp"
@@ -13,9 +14,10 @@
         android:src="@drawable/instamedz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.296" />
 
     <TextView
         android:layout_width="90dp"
@@ -53,12 +55,13 @@
         android:id="@+id/sign_up_username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="170dp"
-        android:hint="Name"
-
-        android:selectAllOnFocus="true"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
+
+        android:layout_marginBottom="170dp"
+        android:hint="Name"
+        android:minHeight="48dp"
+        android:selectAllOnFocus="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,11 +142,12 @@
         android:imeActionLabel="@string/action_sign_in_short"
         android:imeOptions="actionDone"
         android:inputType="textEmailAddress"
+        android:minHeight="48dp"
         android:selectAllOnFocus="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
 
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.551" />
@@ -159,6 +163,7 @@
         android:imeActionLabel="@string/action_sign_in_short"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         android:selectAllOnFocus="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -173,60 +178,59 @@
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:background="@drawable/rounded_button"
         android:backgroundTint="#1792E6"
         android:enabled="true"
         android:text="@string/Sign_Up"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
 
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.745" />
+        app:layout_constraintTop_toBottomOf="@+id/SigUP_password" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="370dp"
         android:layout_height="30dp"
         android:layout_marginStart="15dp"
-        android:background="#FFF"
 
-        android:text="@string/or_logIn_with"
-        android:layout_marginTop="510dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFF"
         android:gravity="center"
+        android:text="@string/or_logIn_with"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.336" />
+        app:layout_constraintTop_toBottomOf="@id/sign_up_button"
+        app:layout_constraintVertical_bias="0.23" />
 
     <ImageView
         android:id="@+id/facebook_sign_up_button"
         android:layout_width="160dp"
         android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
         android:src="@drawable/facebook_sign_up_buttom"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.944" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/google_sign_up_button"
         android:layout_width="160dp"
         android:layout_height="100dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="24dp"
         android:src="@drawable/google_sign_up_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.86"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.944" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
