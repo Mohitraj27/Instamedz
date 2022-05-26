@@ -4,6 +4,8 @@
     <string name="prompt_email">Email or Username </string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">LogIn</string>
+    <string name="Sign_Up">Signup</string>
+    <string name="or_logIn_with">or Login with</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>

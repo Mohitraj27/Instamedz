@@ -50,7 +50,7 @@
         android:text="Already have an account"
         android:textSize="20sp"
         android:background="#FFF"
-
+        android:id="@+id/Already_have_a_account_text"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
