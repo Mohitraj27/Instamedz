@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Instamedz">
         <activity
+            android:name=".ui.login.Navigation_drawer"
+            android:exported="false"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/Theme.Instamedz.NoActionBar" />
+        <activity
+            android:name=".Home_Page"
+            android:exported="false" />
+        <activity
             android:name=".SignUP"
             android:exported="true"
-            android:label="Sign up"/>
+            android:label="Sign up" />
         <activity
             android:name=".ui.login.LoginActivity"
             android:exported="true"
