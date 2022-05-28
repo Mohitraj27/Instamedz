@@ -3,28 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.158" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/ic_baseline_power_settings_new_24.xml" value="0.158" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.1135" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout-w936dp/activity_login.xml" value="0.6" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_about_us.xml" value="0.1" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_dashboard.xml" value="0.16" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_home_page.xml" value="0.2760416666666667" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_navigation_drawer.xml" value="0.2" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/app_bar_navigation_drawer.xml" value="0.25" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/content_navigation_drawer.xml" value="0.264" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/fragment_gallery.xml" value="0.25" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/fragment_slideshow.xml" value="0.25" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/main_nav_drawer.xml" value="0.264" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/main_toolbar.xml" value="0.4" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/nav_activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/nav_header_navigation_drawer.xml" value="0.25" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
       </map>
     </option>
   </component>
