@@ -7,125 +7,256 @@
     tools:context=".Home_Page">
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:id="@+id/imageView2"
+        android:layout_width="409dp"
+        android:layout_height="56dp"
         android:scaleType="centerCrop"
         android:src="@drawable/instamedz_tollbar"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <HorizontalScrollView
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginBottom="500dp"
-        android:fillViewport="true"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp"
+        android:orientation="vertical"
+        android:padding="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.749"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.824"
+        tools:ignore="UnknownId">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            android:orientation="horizontal">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="00dp"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/Eye_Care"
+                        android:layout_width="106dp"
+                        android:layout_height="103dp"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/eye_care_icon_1" />
+
+                    <ImageView
+                        android:id="@+id/health_care"
+                        android:layout_width="97dp"
+                        android:layout_height="98dp"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/health_care_icon" />
+
+                    <ImageView
+                        android:id="@+id/heart_care"
+                        android:layout_width="94dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/heart_care_icon" />
+
+                    <ImageView
+                        android:id="@+id/soul_care"
+                        android:layout_width="106dp"
+                        android:layout_height="98dp"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/soul_care" />
+
+                    <ImageView
+                        android:id="@+id/bussiness_care"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/bussiness_care_icon" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
 
             <ImageView
-                android:id="@+id/Eye_Care"
-                android:layout_width="106dp"
-                android:layout_height="103dp"
-                android:layout_margin="15dp"
-                android:src="@drawable/eye_care_icon_1" />
-
-            <ImageView
-                android:id="@+id/health_care"
-                android:layout_width="97dp"
-                android:layout_height="98dp"
-                android:layout_margin="15dp"
-                android:src="@drawable/health_care_icon" />
-
-            <ImageView
-                android:id="@+id/heart_care"
-                android:layout_width="94dp"
-                android:layout_height="100dp"
-                android:layout_margin="15dp"
-                android:src="@drawable/heart_care_icon" />
-
-            <ImageView
-               android:id="@+id/soul_care"
-                android:layout_width="106dp"
-                android:layout_height="98dp"
-                android:layout_margin="15dp"
-                android:src="@drawable/soul_care" />
-
-            <ImageView
-                android:id="@+id/bussiness_care"
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_margin="15dp"
-                android:src="@drawable/bussiness_care_icon" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="140dp"
+                android:src="@drawable/screenshot_2022_05_29_171149"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABOUT US"
+                android:textColor="#144970"
+                android:textSize="29sp"
+                android:textStyle="bold"
+                android:layout_marginStart="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.022"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:layout_constraintVertical_bias="0.708" />
+
+            <TextView
+                android:layout_width="383dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:paddingStart="15dp"
+                android:text="@string/About_Us_Content"
+                android:textColor="#144970"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:layout_constraintVertical_bias="0.774" />
+
+            <TextView
+                android:layout_width="383dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="25dp"
+                android:padding="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/About_Us_Description"
+                android:textColor="#144970"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                app:layout_constraintVertical_bias="0.951" />
+
+
+            <ImageView
+                android:layout_width="384dp"
+                android:layout_height="188dp"
+
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="15dp"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/heart_care_card_view" />
+
+            <Button
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="-60dp"
+                android:text="Learn More"
+                android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:layout_width="370dp"
+                android:layout_height="188dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/health_care_card_view_1" />
+
+            <Button
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="-70dp"
+                android:text="Learn More"
+                android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:layout_width="370dp"
+                android:layout_height="188dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/eye_care_card_view" />
+
+            <Button
+                android:id="@id/health_care"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="-70dp"
+                android:text="Learn More"
+                android:textColor="#FFFFFF" />
+            <ImageView
+                android:layout_width="370dp"
+                android:layout_height="188dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/soul_care_card_view" />
+
+            <Button
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="-80dp"
+                android:text="Learn More"
+                android:textColor="#FFFFFF" />
+            <ImageView
+                android:layout_width="370dp"
+                android:layout_height="188dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/bussiness_care_card_view" />
+
+            <Button
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="-80dp"
+                android:text="Learn More"
+                android:textColor="#FFFFFF" />
+
         </LinearLayout>
-
-    </HorizontalScrollView>
-<ScrollView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
-        android:src="@drawable/screenshot_2022_05_29_171149"
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.518" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ABOUT US"
-        android:textColor="#144970"
-        android:textSize="29sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.708" />
-
-    <TextView
-        android:layout_width="405dp"
-        android:layout_height="30dp"
-        android:text="@string/About_Us_Content"
-        android:textColor="#144970"
-        android:textStyle="bold"
-    android:paddingStart="15dp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.774" />
-
-    <TextView
-        android:layout_width="405dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:padding="10dp"
-        android:text="@string/About_Us_Description"
-        android:textColor="#144970"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.951" />
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

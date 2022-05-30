@@ -38,6 +38,7 @@
             android:exported="true"
             android:label="EYE Care"
             android:parentActivityName=".Home_Page"
+
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
         <activity
             android:name=".ui.login.Navigation_drawer"

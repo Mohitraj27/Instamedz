@@ -19,11 +19,18 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 <string name="About_Us_Content">We Specialize In Health  Business Needs.</string>
-    <string name="About_Us_Description">We work towards your betterment and well being. Entrust us
-                                        with your will and we will provide you the best. Instamedz
-                                        is a group of professionals capable of uplifting your bussiness
-                                        as well as health simultaneously to the next level.</string>
+    <string name="About_Us_Description">We work towards your betterment and well being.
+                                        Entrust us with your will and we will provide you
+                                        the best. Instamedz is a group of professionals
+                                        capable of uplifting your bussiness as well
+                                        as health simultaneously to the next level.</string>
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Dashboard</string>
     <string name="menu_slideshow">Log Out</string>
+    <string name="Heart_care_content">We work towards your betterment and well being.
+                                        Entrust us with your will and we will provide you
+                                        the best.</string>
+    <string name="Health_care_content">We work towards your betterment and well being.
+                                        Entrust us with your will and we will provide you
+                                        the best.</string>
 </resources>
