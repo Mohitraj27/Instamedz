@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "229501187991",
+    "project_id": "instamedz-f5dcf",
+    "storage_bucket": "instamedz-f5dcf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229501187991:android:7dbe1fd7e916378a42b6d2",
+        "android_client_info": {
+          "package_name": "com.example.instamedz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229501187991-9docemmln6m40uj7op1ivdv0om2tn5gs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhHKZHBYp-htAz9Cm77fktc70KJ8uYMH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229501187991-9docemmln6m40uj7op1ivdv0om2tn5gs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
