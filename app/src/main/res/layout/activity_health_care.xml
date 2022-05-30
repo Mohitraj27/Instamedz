@@ -5,5 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Health_Care">
+    <TextView
+        android:layout_width="294dp"
+        android:layout_height="75dp"
+        android:text="Health Care"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.229" />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal">
+
+            <ImageView
+
+                android:layout_width="393dp"
+                android:layout_height="360dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/health_care_1" />
+            <ImageView
+
+                android:layout_width="393dp"
+                android:layout_height="360dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/health_insurance" />
+            <ImageView
+
+                android:layout_width="393dp"
+                android:layout_height="360dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/health_care_1" />
+
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
