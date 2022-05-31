@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "229501187991",
+    "firebase_url": "https://instamedz-f5dcf-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "instamedz-f5dcf",
     "storage_bucket": "instamedz-f5dcf.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "229501187991-nsarshuaia57bfdhs4236mjq4b3om4e8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.instamedz",
+            "certificate_hash": "0946db8cbf9c35e0ac0d6b8d0f89e3d79d477fb3"
+          }
+        },
         {
           "client_id": "229501187991-9docemmln6m40uj7op1ivdv0om2tn5gs.apps.googleusercontent.com",
           "client_type": 3
