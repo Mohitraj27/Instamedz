@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUP extends AppCompatActivity implements View.OnClickListener {
@@ -32,7 +33,8 @@ public class SignUP extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
+        LogIn_text=(TextView)findViewById(R.id.login_text);
+        LogIn_text.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
 
         registerUser = (Button) findViewById(R.id.sign_up_button);
@@ -50,7 +52,7 @@ public class SignUP extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.login_text:
-                startActivity(new Intent(SignUP.this, LoginActivity.class));
+                startActivity(new Intent(this, LoginActivity.class));
                 break;
             case R.id.sign_up_button:
                 registerUser();
@@ -102,7 +104,11 @@ public class SignUP extends AppCompatActivity implements View.OnClickListener {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
-                                        Toast.makeText(SignUP.this,"User registered successfully",Toast.LENGTH_LONG).show();
+                                        UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                                .setDisplayName(Name).build();
+                                        FirebaseAuth.getInstance().getCurrentUser().updateProfile(profileUpdates);
+                                        Toast.makeText(SignUP.this,"User registered successfully!",Toast.LENGTH_LONG).show();
+                                        startActivity(new Intent(SignUP.this, Home_Page.class));
                                     }else {
                                         Toast.makeText(SignUP.this,"Failed to register! Try again!",Toast.LENGTH_LONG).show();
                                     }

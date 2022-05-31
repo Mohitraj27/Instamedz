@@ -11,13 +11,18 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-public class Home_Page extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+public class Home_Page extends AppCompatActivity implements View.OnClickListener {
       ImageView Whatsapp_icon_heart_care;
       ImageView Whatsapp_icon_health_care;
       ImageView Whatsapp_icon_eye_care;
       ImageView Whatsapp_icon_bussiness_care;
      ImageView Whatsapp_icon_Soul_care;
-
+     ImageView UserProfilePic;
     DrawerLayout drawerLayout;
    ImageView onCLick_menu_bar;
    ImageView Eye_Care;
@@ -25,14 +30,21 @@ public class Home_Page extends AppCompatActivity {
    ImageView Heart_care;
    ImageView Soul_care;
    ImageView Business_care;
-
+    private FirebaseUser user, currentUser;
+    private DatabaseReference reference;
+    private String userID,name;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nav_activity_main);
-
+        user= FirebaseAuth.getInstance().getCurrentUser();
+        reference= FirebaseDatabase.getInstance("https://instamedz-f5dcf-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users");
+        userID=user.getUid();
+        Toast.makeText(this,"Welcome "+user.getDisplayName(),Toast.LENGTH_LONG).show();
+        UserProfilePic=(ImageView) findViewById(R.id.profilePic);
+        UserProfilePic.setOnClickListener(Home_Page.this);
        Whatsapp_icon_health_care=findViewById(R.id.whatsapp_icon_health_care);
         Whatsapp_icon_heart_care =findViewById(R.id.whatsapp_icon_heart_care);
         Whatsapp_icon_eye_care=findViewById(R.id.whatsapp_icon_eye_care);
@@ -40,14 +52,19 @@ public class Home_Page extends AppCompatActivity {
         Whatsapp_icon_bussiness_care=findViewById(R.id.whatsapp_icon_business_care);
 
 
-       final  String num= "+7415070882";
-        final        String text_heart_care ="I Just Clicked on Heart Care whatsapp icon";
+       final String num= "+7415070882";
+        final String text_heart_care ="I Just Clicked on Heart Care whatsapp icon";
         final String text_health_care="I Just Clicked on Health Care whatsapp icon";
         final String text_eye_care="I Just Clicked on Eye Care Whatsapp icon";
         final String text_soul_care="I Just Clicked on Soul Care Whatsapp icon";
        final String text_bussines_care="I Just Clicked on Bussiness Care Whatsapp icon";
 
-
+        UserProfilePic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Home_Page.this, UserProfile.class));
+            }
+        });
         Whatsapp_icon_Soul_care.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -266,5 +283,8 @@ Business_care.setOnClickListener(new View.OnClickListener() {
     }
 
 
+    @Override
+    public void onClick(View view) {
 
+    }
 }
