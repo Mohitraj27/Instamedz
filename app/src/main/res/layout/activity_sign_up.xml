@@ -238,8 +238,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/sign_up_button"
-        app:layout_constraintTop_toBottomOf="@+id/SignUP_password" />
+        app:layout_constraintTop_toBottomOf="@+id/SignUP_password"
+        tools:visibility="invisible" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
