@@ -102,14 +102,15 @@ public class SignUP extends AppCompatActivity implements View.OnClickListener {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
-                                        Toast.makeText(SignUP.this,"User registered successfully",Toast.LENGTH_SHORT).show();
-                                        progressBar.setVisibility(View.VISIBLE);
+                                        Toast.makeText(SignUP.this,"User registered successfully",Toast.LENGTH_LONG).show();
                                     }else {
-                                        Toast.makeText(SignUP.this,"Failed to register! Try again!",Toast.LENGTH_SHORT).show();
-                                        progressBar.setVisibility(View.GONE);
+                                        Toast.makeText(SignUP.this,"Failed to register! Try again!",Toast.LENGTH_LONG).show();
                                     }
+                                    progressBar.setVisibility(View.GONE);
                                 }
                             });
+                        }else{
+                            Toast.makeText(SignUP.this,"Failed to reg",Toast.LENGTH_LONG).show();
                         }
                     }
                 });
