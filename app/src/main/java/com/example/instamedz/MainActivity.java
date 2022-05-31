@@ -9,10 +9,12 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.instamedz.ui.login.LoginActivity;
+
 public class MainActivity extends AppCompatActivity {
 
 
-    private Button GetStarted;
+    private Button GetStarted, HomePage;
     private TextView Already_Have_A_account;
 private Button Login_button;
 
@@ -31,12 +33,20 @@ private Button Login_button;
                 startActivity(SigUpPage);
             }
         });
-        Already_Have_A_account=findViewById(R.id.Home_Page_Default_button);
+        Already_Have_A_account=findViewById(R.id.Already_have_a_account_text);
         Already_Have_A_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent LogInPage=new Intent(MainActivity.this,Home_Page.class);
+                Intent LogInPage=new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(LogInPage);
+            }
+        });
+        HomePage=findViewById(R.id.Home_Page_Default_button);
+        HomePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent HomePageInfo=new Intent(MainActivity.this,Home_Page.class);
+                startActivity(HomePageInfo);
             }
         });
 

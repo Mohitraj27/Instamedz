@@ -1,17 +1,8 @@
 package com.example.instamedz.ui.login;
 
 import android.app.Activity;
-
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -23,29 +14,41 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+
 import com.example.instamedz.R;
 import com.example.instamedz.SignUP;
-import com.example.instamedz.ui.login.LoginViewModel;
-import com.example.instamedz.ui.login.LoginViewModelFactory;
 import com.example.instamedz.databinding.ActivityLoginBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
     private LoginViewModel loginViewModel;
     private ActivityLoginBinding binding;
+    private TextView forgotPass;
+    private EditText editTextEmail, editTextPassword;
+    private Button login;
 
-
+    private FirebaseAuth mAuth;
+    private ProgressBar progressBar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
 
-
-
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_login);
+        login= binding.login;
+        login.setOnClickListener(this);
 
+        editTextEmail=binding.username;
+        editTextPassword= binding.password;
+        progressBar= binding.progressBarlogin;
         loginViewModel = new ViewModelProvider(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
 
@@ -139,5 +142,21 @@ public class LoginActivity extends AppCompatActivity {
 
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.sign_UP_text:
+                Intent SigUpPage=new Intent(LoginActivity.this, SignUP.class);
+                startActivity(SigUpPage);
+                break;
+            case R.id.login:
+                userLogin();
+                break;
+        }
+    }
+
+    private void userLogin() {
     }
 }
