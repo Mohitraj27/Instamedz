@@ -9,13 +9,16 @@
 
     <ImageView
         android:id="@+id/Userpic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="112dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="44dp"
+        android:contentDescription="Display Picture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:ignore="ImageContrastCheck"
+        tools:src="@tools:sample/avatars" />
 
     <Button
         android:id="@+id/logoutButton"
