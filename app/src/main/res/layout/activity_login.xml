@@ -190,7 +190,7 @@
         app:layout_constraintVertical_bias="0.944" />
 
     <ImageView
-        android:id="@+id/google_sign_up_button"
+        android:id="@+id/googleSignup"
         android:layout_width="160dp"
         android:layout_height="100dp"
         android:src="@drawable/google_sign_up_button"
