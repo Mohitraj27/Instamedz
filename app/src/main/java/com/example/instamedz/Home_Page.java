@@ -296,8 +296,21 @@ Business_care.setOnClickListener(new View.OnClickListener() {
     }
 });
     }
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Exit")
+                .setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setNegativeButton(android.R.string.no, null)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
+                    public void onClick(DialogInterface dialog, int which) {
 
+                        finishAndRemoveTask();
+                    }
+                }).create().show();
+    }
     @Override
     public void onClick(View view) {
 
