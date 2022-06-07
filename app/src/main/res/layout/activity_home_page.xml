@@ -165,8 +165,10 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/heart_care_card_view">
 
-
+=
             </ImageView>
+
+
 
             <Button
                 android:id="@id/heart_care"
@@ -184,7 +186,6 @@
                 android:layout_height="58dp"
                 android:layout_marginStart="310dp"
                 android:layout_marginTop="-60dp"
-                android:src="@drawable/whatsapp_icon"
 
                 />
 
@@ -209,7 +210,7 @@
                 android:layout_marginStart="320dp"
                 android:layout_marginTop="-74dp"
 
-                android:src="@drawable/whatsapp_icon" />
+                 />
 
             <Button
 
@@ -239,7 +240,7 @@
                 android:layout_height="48dp"
                 android:layout_marginStart="300dp"
                 android:layout_marginTop="-74dp"
-                android:src="@drawable/whatsapp_icon"
+
 
                 />
 
@@ -280,7 +281,7 @@
                 android:layout_height="48dp"
                 android:layout_marginStart="300dp"
                 android:layout_marginTop="-55dp"
-                android:src="@drawable/whatsapp_icon"
+
 
                 />
 
@@ -302,7 +303,7 @@
                 android:layout_height="48dp"
                 android:layout_marginStart="300dp"
                 android:layout_marginTop="-75dp"
-                android:src="@drawable/whatsapp_icon"
+
 
                 />
             <Button
@@ -319,11 +320,13 @@
 
     <ImageView
         android:id="@+id/profilePic"
-        android:layout_width="43dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.994"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.011"
         tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>

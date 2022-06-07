@@ -30,10 +30,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView signup;
     private EditText editTextEmail, editTextPassword;
     private Button login;
-    SignUP signupobj=new SignUP();
+
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
-
 //BY gunal
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,13 +52,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         progressBar=(ProgressBar)findViewById(R.id.progressBarlogin);
 
         mAuth = FirebaseAuth.getInstance();
-        findViewById(R.id.googleSignup).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                signupobj.signIn();
-            }
-        });
 
+        {
+
+        }
     }
 //BY Gunal
     @Override
@@ -70,9 +66,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.login:
                 userLogin();
-                break;
-            case R.id.googleSignup:
-                signupobj.signIn();
                 break;
         }
     }

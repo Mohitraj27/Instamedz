@@ -15,11 +15,17 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    private Button GetStarted, HomePage;
+    private Button GetStarted;
     private TextView Already_Have_A_account;
 private Button Login_button;
     private FirebaseAuth mAuth;
+
+
+
+    //Dashboard Intent
+
+
+
 
     @Override
     public void onStart() {
@@ -35,6 +41,8 @@ private Button Login_button;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         GetStarted = findViewById(R.id.Get_started);
         GetStarted.setOnClickListener(new View.OnClickListener() {
@@ -52,14 +60,7 @@ private Button Login_button;
                 startActivity(LogInPage);
             }
         });
-        HomePage=findViewById(R.id.Home_Page_Default_button);
-        HomePage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent HomePageInfo=new Intent(MainActivity.this,Home_Page.class);
-                startActivity(HomePageInfo);
-            }
-        });
+
 
 
     }

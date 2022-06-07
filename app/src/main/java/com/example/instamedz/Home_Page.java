@@ -1,13 +1,17 @@
 package com.example.instamedz;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -16,7 +20,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Home_Page extends AppCompatActivity implements View.OnClickListener {
+public class Home_Page extends AppCompatActivity implements View.OnClickListener, Home_Page1 {
+
+Button ExitBtn;
+
+
       ImageView Whatsapp_icon_heart_care;
       ImageView Whatsapp_icon_health_care;
       ImageView Whatsapp_icon_eye_care;
@@ -35,10 +43,17 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
     private String userID,name;
 
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nav_activity_main);
+
+
+
+
         user= FirebaseAuth.getInstance().getCurrentUser();
         reference= FirebaseDatabase.getInstance("https://instamedz-f5dcf-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users");
         userID=user.getUid();
@@ -287,4 +302,46 @@ Business_care.setOnClickListener(new View.OnClickListener() {
     public void onClick(View view) {
 
     }
+
+// Dialog exit part of the app
+
+
+    @Override
+    public  void onBackPressed(){
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want to Exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes",new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i)
+                    {
+                        finish();
+                        Home_Page.super.onBackPressed();
+                    }
+                })
+
+
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+
+        AlertDialog alertDialog= builder.create();
+        alertDialog.show();
+    }
+
+
+    @Override
+    public boolean onOptionsItemsSelected(MenuItem item) {
+        return false;
+    }
 }
+
+
+
+
+
