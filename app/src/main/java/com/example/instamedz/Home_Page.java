@@ -1,5 +1,6 @@
 package com.example.instamedz;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -21,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Home_Page extends AppCompatActivity implements View.OnClickListener, Home_Page1 {
 
 Button ExitBtn;
-private long pressedTime;
+
 
       ImageView Whatsapp_icon_heart_care;
       ImageView Whatsapp_icon_health_care;
@@ -302,7 +304,7 @@ Business_care.setOnClickListener(new View.OnClickListener() {
     }
 
 // Dialog exit part of the app
-/*
+
 
     @Override
     public  void onBackPressed(){
@@ -332,37 +334,6 @@ Business_care.setOnClickListener(new View.OnClickListener() {
         alertDialog.show();
     }
 
-
-   */
-//Define as Actviity properties
-/*private long backPressTime;
-    private static final int DOUBLE_BACK_TIME_LIMIT = 800;
-
-    //Define method that will perform the "magic"
-    private void doubleBackPressTrigger() {
-        if (backPressTime + DOUBLE_BACK_TIME_LIMIT > System.currentTimeMillis()) {
-            super.onBackPressed();
-        }else {
-            Toast.makeText(getBaseContext(), "Press \"Back\" twice to get out of the application!", Toast.LENGTH_SHORT).show();
-        }
-        backPressTime = System.currentTimeMillis();
-    }
-
-    @Override
-    public boolean onOptionsItemsSelected(MenuItem item) {
-        return false;
-    }*/
-    @Override
-    public void onBackPressed(){
-        if(pressedTime + 2000 > System.currentTimeMillis() ){
-            super.onBackPressed();
-        finish();
-        }
-        else {
-            Toast.makeText(getBaseContext(),"Press back again to exit",Toast.LENGTH_SHORT).show();
-        }
-        pressedTime=System.currentTimeMillis();
-    }
 
     @Override
     public boolean onOptionsItemsSelected(MenuItem item) {
