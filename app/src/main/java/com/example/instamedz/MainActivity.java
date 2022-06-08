@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 private Button Login_button;
     private FirebaseAuth mAuth;
 
+
+    private  long pressedTime;
 
 
     //Dashboard Intent
@@ -64,4 +67,30 @@ private Button Login_button;
 
 
     }
+
+    //Put in your activity you want to be enabled with "double back exit"
+  /*  @Override
+    public void onBackPressed() {
+        doubleBackPressTrigger();
+    }*/
+
+    private void doubleBackPressTrigger() {
+    }
+    @Override
+    public void onBackPressed(){
+
+        if(pressedTime +2000 > System.currentTimeMillis() ){
+            super.onBackPressed();
+            finish();
+        }
+        else {
+            Toast.makeText(getBaseContext(),"Press back again to exit",Toast.LENGTH_SHORT).show();
+        }
+        pressedTime=System.currentTimeMillis();
+    }
+
+    /*@Override
+    public boolean onOptionsItemsSelected(MenuItem item) {
+        return false;
+    }*/
 }
