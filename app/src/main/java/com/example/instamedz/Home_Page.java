@@ -1,17 +1,14 @@
 package com.example.instamedz;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -22,7 +19,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Home_Page extends AppCompatActivity implements View.OnClickListener, Home_Page1 {
 
-Button ExitBtn;
 
 
       ImageView Whatsapp_icon_heart_care;
@@ -305,7 +301,7 @@ Business_care.setOnClickListener(new View.OnClickListener() {
 
 // Dialog exit part of the app
 
-
+/*
     @Override
     public  void onBackPressed(){
         AlertDialog.Builder builder=new AlertDialog.Builder(this);
@@ -333,7 +329,7 @@ Business_care.setOnClickListener(new View.OnClickListener() {
         AlertDialog alertDialog= builder.create();
         alertDialog.show();
     }
-
+*/
 
     @Override
     public boolean onOptionsItemsSelected(MenuItem item) {
