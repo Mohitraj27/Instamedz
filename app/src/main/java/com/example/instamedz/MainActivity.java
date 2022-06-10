@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView Already_Have_A_account;
 private Button Login_button;
     private FirebaseAuth mAuth;
+    private long pressedTime;
 
 
     private  long pressedTime;
@@ -63,9 +64,17 @@ private Button Login_button;
                 startActivity(LogInPage);
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
 
-
-
+        if (pressedTime + 2000 > System.currentTimeMillis()) {
+            super.onBackPressed();
+            finish();
+        } else {
+            Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+        }
+        pressedTime = System.currentTimeMillis();
     }
 
     //Put in your activity you want to be enabled with "double back exit"

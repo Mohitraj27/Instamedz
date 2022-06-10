@@ -29,10 +29,9 @@
         android:padding="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.671"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.995"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="UnknownId">
 
         <LinearLayout
@@ -165,9 +164,7 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/heart_care_card_view">
 
-=
-            </ImageView>
-
+                =</ImageView>
 
 
             <Button
@@ -210,7 +207,7 @@
                 android:layout_marginStart="320dp"
                 android:layout_marginTop="-74dp"
 
-                 />
+                />
 
             <Button
 
@@ -296,6 +293,7 @@
 
                 android:scaleType="centerCrop"
                 android:src="@drawable/bussiness_care_card_view" />
+
             <ImageView
 
                 android:id="@+id/whatsapp_icon_business_care"
@@ -306,6 +304,7 @@
 
 
                 />
+
             <Button
 
                 android:layout_width="wrap_content"
@@ -315,8 +314,11 @@
                 android:text="Learn More"
                 android:textColor="#FFFFFF" />
 
+
         </LinearLayout>
     </ScrollView>
+
+
 
     <ImageView
         android:id="@+id/profilePic"
@@ -329,4 +331,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.011"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="Chatbot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_twotone_chat_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

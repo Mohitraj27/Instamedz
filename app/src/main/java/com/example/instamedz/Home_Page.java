@@ -335,6 +335,11 @@ Business_care.setOnClickListener(new View.OnClickListener() {
     public boolean onOptionsItemsSelected(MenuItem item) {
         return false;
     }
+
+    public void Chatbot(View view) {
+        Intent Chatbot=new Intent(Home_Page.this, Chatbot.class);
+        startActivity(Chatbot);
+    }
 }
 
 
