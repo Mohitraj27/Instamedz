@@ -12,5 +12,5 @@ public class Eye_hygiene_diet extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eye_hygiene_diet);
-    }
+           }
 }
