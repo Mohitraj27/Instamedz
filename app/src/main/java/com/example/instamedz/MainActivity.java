@@ -23,7 +23,7 @@ private Button Login_button;
     private long pressedTime;
 
 
-    private  long pressedTime;
+
 
 
     //Dashboard Intent
@@ -84,18 +84,6 @@ private Button Login_button;
     }*/
 
     private void doubleBackPressTrigger() {
-    }
-    @Override
-    public void onBackPressed(){
-
-        if(pressedTime +2000 > System.currentTimeMillis() ){
-            super.onBackPressed();
-            finish();
-        }
-        else {
-            Toast.makeText(getBaseContext(),"Press back again to exit",Toast.LENGTH_SHORT).show();
-        }
-        pressedTime=System.currentTimeMillis();
     }
 
     /*@Override
