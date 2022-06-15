@@ -337,7 +337,7 @@ Business_care.setOnClickListener(new View.OnClickListener() {
     }
 
     public void Chatbot(View view) {
-        Intent Chatbot=new Intent(Home_Page.this, Chatbot.class);
+        Intent Chatbot=new Intent(Home_Page.this, ChatBot.class);
         startActivity(Chatbot);
     }
 }
