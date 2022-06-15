@@ -19,7 +19,7 @@ class ChatBot : AppCompatActivity() {
     private val TAG = "MainActivity"
     var messagesList = mutableListOf<Message>()
     private lateinit var adapter: MessagingAdapter
-    private val botList = listOf("Peter", "Francesca", "Luigi", "Igor")
+    private val botList = listOf("Jenny", "Jenny", "Jenny", "Jenny")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +34,7 @@ class ChatBot : AppCompatActivity() {
     private fun clickEvents() {
 
         //Send a message
+
         btn_send.setOnClickListener {
             sendMessage()
         }
@@ -103,6 +104,7 @@ class ChatBot : AppCompatActivity() {
                 adapter.insertMessage(Message(response, RECEIVE_ID, timeStamp))
 
                 //Scrolls us to the position of the latest message
+
                 rv_messages.scrollToPosition(adapter.itemCount - 1)
 
                 //Starts Google

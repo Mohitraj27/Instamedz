@@ -22,6 +22,8 @@ object BotResponse {
                 "I flipped a coin and it landed on $result"
             }
 
+            //I have a Eye Problem
+
             //Math calculations
             message.contains("solve") -> {
                 val equation: String? = message.substringAfterLast("solve")
@@ -35,10 +37,10 @@ object BotResponse {
             }
 
             //Hello
-            message.contains("hello") -> {
+            message.contains("hello")|| message.contains("Jenny") -> {
                 when (random) {
                     0 -> "Hello there!"
-                    1 -> "Sup"
+                    1 -> "Hello, Hope you are doing good!"
                     2 -> "Buongiorno!"
                     else -> "error" }
             }
@@ -77,7 +79,7 @@ object BotResponse {
                 when (random) {
                     0 -> "I don't understand..."
                     1 -> "Try asking me something different"
-                    2 -> "Idk"
+                    2 -> "I don't know."
                     else -> "error"
                 }
             }
