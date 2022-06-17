@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Doctor_consultaions">
+    tools:context=".Heart_Patient">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,43 +19,26 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="parent"
             app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" >
+            app:layout_constraintTop_toBottomOf="parent" />
+
+
+
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/doctors_image_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent">
 
         </ImageView>
 
 
-        <Button
-            android:id="@+id/offline_doctors"
-            android:layout_width="210dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="210dp"
-            android:backgroundTint="#A7CEEF"
-            android:text="@string/Offline_doctors"
-            android:textColor="#144970"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+        <ImageView
 
-        <ImageButton
-            android:id="@+id/Online_dr1"
-            android:clickable="true"
-            android:layout_width="match_parent"
-            android:layout_height="190dp"
-            android:layout_marginTop="50dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/doctors_image_1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-             />
-
-
-
-        <ImageButton
-            android:id="@+id/Onlinedr2"
-            android:clickable="true"
-            android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="190dp"
             android:layout_marginTop="50dp"
@@ -62,10 +46,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="parent"
             app:layout_constraintStart_toEndOf="parent"/>
-        <ImageButton
-            android:id="@+id/Online_dr3"
-            android:clickable="true"
-            android:scaleType="centerCrop"
+
+        <ImageView
+
             android:layout_width="match_parent"
             android:layout_height="190dp"
             android:layout_marginTop="50dp"
@@ -73,8 +56,12 @@
             android:src="@drawable/doctors_image_1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toEndOf="parent"></ImageButton>
+            app:layout_constraintStart_toEndOf="parent"/>
+
+
+
 
     </LinearLayout>
+
 
 </ScrollView>

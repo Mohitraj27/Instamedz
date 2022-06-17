@@ -22,7 +22,7 @@ object BotResponse {
                 "I flipped a coin and it landed on $result"
             }
 
-            //I have a Eye Problem
+            //I
 
             //Math calculations
             message.contains("solve") -> {

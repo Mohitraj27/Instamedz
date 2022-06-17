@@ -8,11 +8,12 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.instamedz.ui.login.ui.Nayan_care_option_page;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Eye_Care extends AppCompatActivity {
 
 private ImageView Nayan_care_Button;
-
+private FloatingActionButton ChatBot_icon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,4 +28,17 @@ private ImageView Nayan_care_Button;
             startActivity(LogInPage);
         }
     });
-}}
+}
+
+    public void Chatbot(View view) {
+        ChatBot_icon=findViewById(R.id.floatingActionButton2);
+       ChatBot_icon.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent=new Intent(Eye_Care.this,ChatBot.class);
+               startActivity(intent);
+           }
+       });
+
+    }
+}

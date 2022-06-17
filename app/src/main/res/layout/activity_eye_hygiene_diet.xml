@@ -52,7 +52,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="-202dp"
-            android:src="@drawable/eye_hygiene_and_diet_image6"/>
+
+            android:src="@drawable/eye_hygiene_and_diet_image7"/>
 
     </LinearLayout>
 </ScrollView>

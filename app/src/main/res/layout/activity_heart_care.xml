@@ -4,27 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Heart_Care">
+    tools:context=".Heart_Care"
+    android:layout_marginTop="-30dp"
+    android:background="@drawable/heart_care1">
 
     <ImageView
-        android:layout_width="407dp"
-        android:layout_height="275dp"
-        android:src="@drawable/heart_care_page"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/are_u_a_doctor_button"
+        android:layout_width="377dp"
+        android:layout_height="55dp"
 
-    <TextView
-        android:layout_width="294dp"
-        android:layout_height="75dp"
-        android:text="Heart Care"
-        android:textSize="45sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.229" />
+        app:layout_constraintVertical_bias="0.762" />
+
+    <ViewFlipper
+
+        android:id="@+id/v_flipper"
+        android:layout_width="406dp"
+        android:layout_height="288dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448"
+        tools:ignore="MissingConstraints">
+
+        <FrameLayout
+            android:id="@+id/flFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="300dp">
+
+        </FrameLayout>
+    </ViewFlipper>
+
+    <ImageView
+        android:id="@+id/are_u_a_heart_patient_button"
+        android:layout_width="377dp"
+        android:layout_height="55dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.898" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
