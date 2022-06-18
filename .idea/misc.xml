@@ -3,7 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_appointment_details.xml" value="0.25" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_eye_care.xml" value="0.2760416666666667" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_home_page.xml" value="0.25" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_login.xml" value="0.18" />
@@ -44,10 +43,12 @@
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/nav_header_navigation_drawer.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/menu/navigation_drawer.xml" value="0.2" />
+        <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/ic_baseline_calendar_today_24.xml" value="0.1" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/receice_round_button.xml" value="0.1" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/round_button.xml" value="0.1" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/rounded_button.xml" value="0.1" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/send_round_button.xml" value="0.1" />
+        <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_appointment_details.xml" value="0.1" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_chat_bot.xml" value="0.13385416666666666" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/message_item.xml" value="0.1" />
       </map>

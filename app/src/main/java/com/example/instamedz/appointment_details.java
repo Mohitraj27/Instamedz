@@ -1,41 +1,38 @@
 package com.example.instamedz;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
+import com.example.instamedz.data.DAOPatient;
+import com.example.instamedz.data.Patient;
+import com.google.android.material.textfield.TextInputEditText;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
-public class appointment_details extends AppCompatActivity  implements AdapterView.OnItemSelectedListener {
+public class appointment_details extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
 
     private Object v;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private Button submit;
-    private EditText editTextName, editTextDoA, editTextGender, editTextEmail, editTextPhNo;
-    String email = editTextEmail.getText().toString().trim();
-    String PTname = editTextName.getText().toString().trim();
-    String DoA=editTextDoA.getText().toString().trim();
-    String PhNo=editTextPhNo.getText().toString().trim();
 
     public void toastMsg(String msg) {
         Toast toast = Toast.makeText(this, msg, Toast.LENGTH_LONG);
         toast.show();
     }
+
     public void displayToastMsg(View v) {
         toastMsg("Your Appointment details has been Submitted!!");
     }
@@ -43,19 +40,26 @@ public class appointment_details extends AppCompatActivity  implements AdapterVi
 
     // create array of Strings
     // and store name of Services
-    String[] courses = { "Dr. Instamedz", "Dr. Mohit Raj",
-            "Dr. Devina Patel", "Dr. Gunal",
-            "Dr. Sharvesh " };
+    String[] courses = {"Dr. Instamedz", "Dr. Mohit Raj",
+            "Dr. Devina Patel", "Dr. Instamedz",
+            "Dr. Sharvesh "};
 
+    int year, month, day, hour, minute;
+    DatePickerDialog.OnDateSetListener setListener;
+    String date, time;
+    String Gender;
+    TextInputEditText Appdate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appointment_details);
+
+
         // Take the instance of Spinner and
         // apply OnItemSelectedListener on it which
         // tells which item of spinner is clicked
-        Spinner spin = findViewById(R.id.coursesspinner);
+        final Spinner spin = findViewById(R.id.coursesspinner);
         spin.setOnItemSelectedListener(this);
 
         // Create the instance of ArrayAdapter
@@ -75,19 +79,60 @@ public class appointment_details extends AppCompatActivity  implements AdapterVi
         // Set the ArrayAdapter (ad) data on the
         // Spinner which binds data to spinner
         spin.setAdapter(ad);
-        editTextName=(EditText)findViewById(R.id.Patient_Name);
-        editTextDoA=(EditText)findViewById(R.id.Appoint_DOA);
-        editTextEmail=(EditText)findViewById(R.id.Gmail_id);
-        editTextPhNo=(EditText)findViewById(R.id.Contact_No);
+        final EditText patient_name = findViewById(R.id.Patient_Name);
+         RadioGroup gender = findViewById(R.id.radio);
+        int selectId = gender.getCheckedRadioButtonId();
+        if (selectId == R.id.radio_button_male) {
+            Gender = "Male";
+        } else {
+            Gender = "Female";
+        }
+        Appdate = findViewById(R.id.datatime);
+        final EditText email = findViewById(R.id.Gmail_id);
+        Calendar calendar = Calendar.getInstance();
+        year = calendar.get(Calendar.YEAR);
+        month = calendar.get(Calendar.MONTH);
+        day = calendar.get(Calendar.DAY_OF_MONTH);
+        hour = calendar.get(Calendar.HOUR_OF_DAY);
+        minute = calendar.get(Calendar.MINUTE);
 
-        submit=(Button) findViewById(R.id.appointment_submission);
-        submit.setOnClickListener(new View.OnClickListener() {
+        date = new SimpleDateFormat("dd/mm/yyyy", Locale.getDefault()).format(new Date());
+        time = new SimpleDateFormat("hh:mm aa", Locale.getDefault()).format(new Date());
+
+        setListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+
+                month = month + 1;
+                String date = year + "/" + month + "/" + day;
+                //String date = year+"-"+month+"-"+day;
+                Appdate.setText(date);
+
+            }
+        };
+
+        Appdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AppointUser();
+
+                showCalender1();
             }
         });
-
+        final EditText phno = findViewById(R.id.Contact_No);
+        DAOPatient dao = new DAOPatient();
+        Button btn = findViewById(R.id.appointment_submission);
+        btn.setOnClickListener(v ->
+        {
+            Patient patient = new Patient(spin.getSelectedItem().toString(), patient_name.getText().toString(), Gender, Appdate.getText().toString(), email.getText().toString(), phno.getText().toString());
+            dao.add(patient).addOnSuccessListener(suc ->
+                    {
+                        Toast.makeText(this, "Record is submitted", Toast.LENGTH_SHORT).show();
+                    }
+            ).addOnFailureListener(er ->
+            {
+                Toast.makeText(this, "Record submission failed", Toast.LENGTH_SHORT).show();
+            });
+        });
     }
 
     @Override
@@ -96,39 +141,44 @@ public class appointment_details extends AppCompatActivity  implements AdapterVi
         // make toastof name of course
         // which is selected in spinner
         Toast.makeText(getApplicationContext(),
-                courses[position],
-                Toast.LENGTH_LONG)
+                        courses[position],
+                        Toast.LENGTH_LONG)
                 .show();
-    }
-    public void AppointUser()
-    {
-
-
-        // Create a new user with a first and last name
-        Map<String, Object> user = new HashMap<>();
-        user.put("Patient Name", PTname);
-        user.put("Email", email);
-        user.put("Date Of Appointment", DoA);
-        user.put("Phone Number",PhNo);
-
-        db.collection("users")
-                .add(user)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Toast.makeText(appointment_details.this,"Appointment Registered!",Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(appointment_details.this,"Errpr -"+e.getMessage(),Toast.LENGTH_SHORT).show();
-                    }
-                });
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    public void showCalender1() {
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+
+
+                month = month + 1;
+
+                String fmonth = "" + month;
+                String fDate = "" + dayOfMonth;
+
+                if (month < 10) {
+                    fmonth = "0" + month;
+                }
+                if (dayOfMonth < 10) {
+                    fDate = "0" + dayOfMonth;
+                }
+
+                String date = year + "-" + fmonth + "-" + fDate;
+                //String date = year+"-"+month+"-"+day;
+
+                Appdate.setText(date);
+
+            }
+        }, year, month, day);
+
+        datePickerDialog.show();
     }
 }

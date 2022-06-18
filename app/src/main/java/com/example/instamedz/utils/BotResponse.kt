@@ -1,5 +1,6 @@
 package com.example.instamedz.utils
 
+import com.example.instamedz.utils.Constants.INSTAMETZ
 import com.example.instamedz.utils.Constants.OPEN_GOOGLE
 import com.example.instamedz.utils.Constants.OPEN_SEARCH
 import java.sql.Date
@@ -10,7 +11,7 @@ object BotResponse {
     fun basicResponses(_message: String): String {
 
         val random = (0..2).random()
-        val message =_message.toLowerCase()
+        val message = _message.toLowerCase()
 
         return when {
 
@@ -37,13 +38,15 @@ object BotResponse {
             }
 
             //Hello
-            message.contains("hello")|| message.contains("Jenny") -> {
+            message.contains("hello") || message.contains("Jenny") || message.contains("hi") -> {
                 when (random) {
                     0 -> "Hello there!"
                     1 -> "Hello, Hope you are doing good!"
-                    2 -> "Buongiorno!"
-                    else -> "error" }
+                    2 -> "Namaste!"
+                    else -> "error"
+                }
             }
+
 
             //How are you?
             message.contains("how are you") -> {
@@ -56,21 +59,25 @@ object BotResponse {
             }
 
             //What time is it?
-            message.contains("time") && message.contains("?")-> {
+            message.contains("time") && message.contains("?") -> {
                 val timeStamp = Timestamp(System.currentTimeMillis())
                 val sdf = SimpleDateFormat("dd/MM/yyyy HH:mm")
                 val date = sdf.format(Date(timeStamp.time))
 
                 date.toString()
             }
+//help
+            message.contains("help") || message.contains("instamedz") || message.contains("about") -> {
+                INSTAMETZ
+            }
 
             //Open Google
-            message.contains("open") && message.contains("google")-> {
+            message.contains("open") && message.contains("google") -> {
                 OPEN_GOOGLE
             }
 
             //Search on the internet
-            message.contains("search")-> {
+            message.contains("search") -> {
                 OPEN_SEARCH
             }
 
