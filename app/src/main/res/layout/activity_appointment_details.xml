@@ -107,7 +107,6 @@
         app:layout_constraintVertical_bias="0.347">
 
 
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/datatime"
             android:layout_width="match_parent"
@@ -172,7 +171,7 @@
         android:backgroundTint="#D3E7F7"
         android:id="@+id/appointment_submission"
         android:text="Submit"
-        android:onClick="displayToastMsg"
+        android:onClick="AppointUser"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
