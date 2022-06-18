@@ -31,10 +31,11 @@ public class appointment_details extends AppCompatActivity  implements AdapterVi
     private Object v;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     private Button submit;
-    private EditText editTextName, editTextDoA, editTextGender, editTextEmail, editTextPhNo;
-    private String dateID,gender="Unknown";
+    private EditText editTextName, editTextDoA, editTextEmail, editTextPhNo;
+    private String gender="Unknown";
     private RadioGroup radioGroup;
-    private RadioButton radioButton, male,female;
+    private RadioButton radioButton;
+    private Spinner spin;
     public void toastMsg(String msg) {
         Toast toast = Toast.makeText(this, msg, Toast.LENGTH_LONG);
         toast.show();
@@ -59,7 +60,7 @@ public class appointment_details extends AppCompatActivity  implements AdapterVi
         // Take the instance of Spinner and
         // apply OnItemSelectedListener on it which
         // tells which item of spinner is clicked
-        Spinner spin = findViewById(R.id.coursesspinner);
+        spin = findViewById(R.id.coursesspinner);
         spin.setOnItemSelectedListener(this);
 
         // Create the instance of ArrayAdapter
@@ -122,6 +123,7 @@ public class appointment_details extends AppCompatActivity  implements AdapterVi
         String PTname = editTextName.getText().toString().trim();
         String DoA=editTextDoA.getText().toString().trim();
         String PhNo=editTextPhNo.getText().toString().trim();
+        String DrName=spin.getSelectedItem().toString();
         int ID=radioGroup.getCheckedRadioButtonId();
         radioButton=findViewById(ID);
         gender=radioButton.getText().toString();
@@ -129,6 +131,7 @@ public class appointment_details extends AppCompatActivity  implements AdapterVi
         Map<String, Object> user = new HashMap<>();
         user.put("Patient Name", PTname);
         user.put("Email", email);
+        user.put("Doctor Name",DrName);
         user.put("Date Of Appointment", DoA);
         user.put("Phone Number",PhNo);
         user.put("Gender",gender);
