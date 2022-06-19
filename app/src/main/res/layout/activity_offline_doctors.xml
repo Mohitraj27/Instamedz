@@ -22,18 +22,18 @@
 
 
         <Button
+            android:id="@+id/online_doctors"
             android:layout_width="210dp"
             android:layout_height="42dp"
             android:layout_marginStart="210dp"
-            android:text="Online Doctors"
 
             android:backgroundTint="#A7CEEF"
+            android:text="Online Doctors"
             android:textColor="#144970"
-            android:id="@+id/online_doctors"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="parent"
             app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"/>
+            app:layout_constraintTop_toBottomOf="parent" />
 
         <ImageButton
             android:id="@+id/dr1"

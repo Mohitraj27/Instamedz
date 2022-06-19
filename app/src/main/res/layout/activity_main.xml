@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/mask_group1"
+    android:background="@drawable/_1"
     >
 
 
     <Button
         android:id="@+id/Get_started"
-        android:layout_width="210dp"
-        android:layout_height="65dp"
+        android:layout_width="237dp"
+        android:layout_height="60dp"
         android:background="@drawable/rounded_button"
         android:backgroundTint="#E18D09"
         android:text="@string/Get_started"
@@ -23,23 +23,21 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.768"></Button>
-
+        app:layout_constraintVertical_bias="0.817"></Button>
 
     <TextView
         android:id="@+id/Already_have_a_account_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="334dp"
+        android:layout_height="32dp"
         android:layout_marginTop="485dp"
 
         android:contextClickable="true"
-        android:text="Already have an account ? Login Now!"
         android:textColor="#FFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671" />
+        app:layout_constraintVertical_bias="0.649" />
 </androidx.constraintlayout.widget.ConstraintLayout>

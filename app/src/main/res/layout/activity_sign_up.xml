@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUP"
-    android:background="@drawable/sign_up_page">
+    android:background="@drawable/signup_page1"
+    android:layout_marginTop="-10dp"
+    android:layout_marginStart="-10dp">
 
 
     <TextView
@@ -117,7 +119,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SignUP_password"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.073" />
 
     <ImageView
         android:id="@+id/SignUP_facebook_button"
@@ -142,7 +144,8 @@
         app:layout_constraintHorizontal_bias="0.88"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UnknownId" />
 
     <ProgressBar
         android:id="@+id/progressBar"
