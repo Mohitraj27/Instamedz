@@ -51,6 +51,7 @@
 
         android:layout_marginBottom="170dp"
         android:hint="Name"
+
         android:minHeight="48dp"
         android:selectAllOnFocus="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -67,7 +68,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
+
         android:hint="Email"
+        android:layout_marginTop="10dp"
         android:imeActionLabel="@string/action_sign_in_short"
         android:imeOptions="actionDone"
         android:inputType="textEmailAddress"
@@ -76,18 +79,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.476" />
 
     <EditText
         android:id="@+id/SignUP_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="29dp"
         android:layout_marginEnd="35dp"
+
+
         android:hint="@string/prompt_password"
         android:imeActionLabel="@string/action_sign_in_short"
         android:imeOptions="actionDone"
@@ -100,8 +105,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556" />
-
+        app:layout_constraintVertical_bias="0.553" />
 
     <Button
         android:id="@+id/sign_up_button"
