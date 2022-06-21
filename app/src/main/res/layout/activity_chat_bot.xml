@@ -1,64 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChatBot">
+    tools:context=".chatBot.ChatBot">
 
-    <LinearLayout
-        android:id="@+id/ll_layout_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#D3E7F7"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/et_message"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight=".5"
-            android:background="@drawable/round_button"
-            android:backgroundTint="@android:color/white"
-            android:hint="Type Here..."
-            android:inputType="textShortMessage"
-            android:padding="10dp"
-            android:singleLine="true" />
-
-        <ImageButton
-            android:id="@+id/btn_send"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="2"
-            android:background="@drawable/chatbot_for_nayan_care_chatbot_sendbutton"
-
-            android:text="Send"
-            android:textColor="@android:color/white" />
-
-    </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_messages"
+    <fragment
+        android:id="@+id/hostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/ll_layout_bar"
-        android:layout_below="@+id/dark_divider"
-        android:layout_marginTop="50dp"
-        tools:itemCount="20"
-        tools:listitem="@layout/message_item" />
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/chatbotnav" />
 
-    <ImageView
-        android:id="@+id/dark_divider"
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:background="@drawable/chatbot_for_nayan_care_image1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
