@@ -37,4 +37,6 @@
     <string name="Get_started">Get Started</string>
 
     <string name="Offline_doctors">Offline Doctors</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

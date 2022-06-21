@@ -8,6 +8,7 @@ import android.widget.ViewFlipper;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.instamedz.chatBot.ChatBot;
 import com.example.instamedz.ui.login.ui.Nayan_care_option_page;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -58,7 +59,7 @@ private FloatingActionButton ChatBot_icon;
        ChatBot_icon.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent intent=new Intent(Eye_Care.this,ChatBot.class);
+               Intent intent=new Intent(Eye_Care.this, ChatBot.class);
                startActivity(intent);
            }
        });

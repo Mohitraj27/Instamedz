@@ -7,6 +7,8 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.instamedz.chatBot.ChatBot;
+
 public class are_u_doctor_heart_care extends AppCompatActivity {
 
 
@@ -25,7 +27,7 @@ public class are_u_doctor_heart_care extends AppCompatActivity {
             ChatBot_icon.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent=new Intent(are_u_doctor_heart_care.this,ChatBot.class);
+                    Intent intent=new Intent(are_u_doctor_heart_care.this, ChatBot.class);
                     startActivity(intent);
                 }
             });

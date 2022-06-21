@@ -3,8 +3,9 @@
     package="com.example.instamedz">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,6 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Instamedz">
+        <activity
+            android:name=".chatBot.ChatBot"
+            android:exported="false" />
         <activity
             android:name=".Heart_Patient"
             android:exported="false" />
@@ -21,12 +25,8 @@
         <activity
             android:name=".are_u_doctor_heart_care"
             android:exported="false" />
-
         <activity
             android:name=".offline_doctors"
-            android:exported="false" />
-        <activity
-            android:name=".ChatBot"
             android:exported="false" />
         <activity
             android:name=".Doctor_consultaions"

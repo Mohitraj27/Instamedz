@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chatbotnav"
+    app:startDestination="@id/questionFragment">
+
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.instamedz.chatBot.QuestionFragment"
+        android:label="QuestionFragment" >
+        <action
+            android:id="@+id/action_questionFragment_to_fragZeroToForty"
+            app:destination="@id/fragZeroToForty" />
+        <action
+            android:id="@+id/action_questionFragment_to_fragAboveForty"
+            app:destination="@id/fragAboveForty" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragAboveForty"
+        android:name="com.example.instamedz.chatBot.FragAboveForty"
+        android:label="FragAboveForty" />
+    <fragment
+        android:id="@+id/fragZeroToForty"
+        android:name="com.example.instamedz.chatBot.FragZeroToForty"
+        android:label="FragZeroToForty" />
+
+</navigation>
