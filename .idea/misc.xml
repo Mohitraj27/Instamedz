@@ -54,6 +54,11 @@
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/rounded_button.xml" value="0.1" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/send_round_button.xml" value="0.1" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_chat_bot.xml" value="0.13385416666666666" />
+        <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_eye_care.xml" value="0.10916919959473151" />
+        <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_health_care.xml" value="0.1" />
+        <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_heart_care.xml" value="0.1" />
+        <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_heart_patient.xml" value="0.10916919959473151" />
+        <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_home_page.xml" value="0.10916919959473151" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/message_item.xml" value="0.1" />
       </map>
     </option>

@@ -49,13 +49,13 @@
             android:exported="true"
             android:label="Bussiness Care"
             android:parentActivityName=".Home_Page"
-            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Soul_care"
             android:exported="true"
             android:label="Soul Care"
             android:parentActivityName=".Home_Page"
-            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Heart_Care"
             android:exported="true" />
@@ -64,7 +64,7 @@
             android:exported="true"
             android:label="Health Care"
             android:parentActivityName=".Home_Page"
-            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Eye_Care"
             android:exported="true" />
