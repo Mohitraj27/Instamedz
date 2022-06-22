@@ -4,55 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="-30dp"
     tools:context=".ui.login.ui.Nayan_care_option_page"
-    android:background="@drawable/option_page">
+    android:background="@drawable/option_page__1_">
 
 
     <ImageView
-        android:id="@+id/nayan_care_option_page_button"
-        android:layout_width="77dp"
-        android:layout_height="84dp"
+        android:id="@+id/eye_care_user_lgout"
+        android:layout_width="50dp"
+        android:layout_height="38dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.897" />
+        app:layout_constraintVertical_bias="0.04" />
 
     <ImageView
         android:id="@+id/Eye_care_exercise_button"
-        android:layout_width="373dp"
-        android:layout_height="64dp"
+        android:layout_width="341dp"
+        android:layout_height="74dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.346"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458" />
+        app:layout_constraintVertical_bias="0.478" />
 
     <ImageView
         android:id="@+id/doctors_consulations_button"
-        android:layout_width="373dp"
-        android:layout_height="64dp"
+        android:layout_width="355dp"
+        android:layout_height="57dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.694" />
+        app:layout_constraintVertical_bias="0.711" />
 
     <ImageView
         android:id="@+id/Eye_hygiene_button"
-        android:layout_width="377dp"
+        android:layout_width="351dp"
         android:layout_height="55dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.576" />
+        app:layout_constraintVertical_bias="0.593" />
 </androidx.constraintlayout.widget.ConstraintLayout>

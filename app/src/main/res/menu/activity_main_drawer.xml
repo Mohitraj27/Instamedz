@@ -12,19 +12,13 @@
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_baseline_dashboard_24"
             android:title="@string/menu_gallery" />
-        <item
-            android:id="@+id/settings"
-            android:icon="@drawable/ic_baseline_settings_24"
-            android:title="Settings"/>
+
         <item
             android:id="@+id/about_us"
             android:icon="@drawable/ic_baseline_info_24"
             android:title="About Us"/>
 
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_baseline_power_settings_new_24"
-            android:title="@string/menu_slideshow" />
+
 
 
         <item

@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-
+        android:textColorHint="#FFFF"
         android:layout_marginBottom="170dp"
         android:hint="Name"
 
@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
-
+        android:textColorHint="#FFFF"
         android:hint="Email"
         android:layout_marginTop="10dp"
         android:imeActionLabel="@string/action_sign_in_short"
@@ -98,7 +98,7 @@
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         android:minHeight="48dp"
-
+        android:textColorHint="#FFFF"
         android:selectAllOnFocus="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

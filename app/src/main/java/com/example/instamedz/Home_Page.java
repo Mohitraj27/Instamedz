@@ -302,37 +302,7 @@ Business_care.setOnClickListener(new View.OnClickListener() {
 
     }
 
-// Dialog exit part of the app
 
-/*
-    @Override
-    public  void onBackPressed(){
-        AlertDialog.Builder builder=new AlertDialog.Builder(this);
-        builder.setMessage("Are you sure you want to Exit?")
-                .setCancelable(false)
-                .setPositiveButton("Yes",new DialogInterface.OnClickListener()
-                {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i)
-                    {
-                        finish();
-                        Home_Page.super.onBackPressed();
-                    }
-                })
-
-
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                });
-
-
-        AlertDialog alertDialog= builder.create();
-        alertDialog.show();
-    }
-*/
 
     @Override
     public boolean onOptionsItemsSelected(MenuItem item) {

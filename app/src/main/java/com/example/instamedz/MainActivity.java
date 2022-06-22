@@ -28,9 +28,6 @@ private Button Login_button;
 
     //Dashboard Intent
 
-
-
-
     @Override
     public void onStart() {
         super.onStart();

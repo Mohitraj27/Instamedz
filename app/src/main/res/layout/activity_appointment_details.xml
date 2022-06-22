@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".appointment_details">
 
+
+    <ImageView
+        android:id="@+id/eye_care_user_lgout"
+        android:layout_width="50dp"
+        android:layout_height="38dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.014" />
+
+
+
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -19,8 +35,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-
-    //For Services we provide
     <Spinner
         android:background="#D3E7F7"
         android:id="@+id/coursesspinner"
@@ -179,19 +193,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.938" />
 
-    <Button
-        android:id="@+id/Generate_pdf"
-        android:layout_width="357dp"
-        android:layout_height="48dp"
-        android:backgroundTint="#D3E7F7"
-
-        android:text="Generate pdf"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.837" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

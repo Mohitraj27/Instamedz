@@ -9,10 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.instamedz.Doctor_consultaions;
 import com.example.instamedz.R;
+import com.example.instamedz.UserProfile;
 
 public class Nayan_care_option_page extends AppCompatActivity {
 
-
+private  ImageView EyeCare_User_logout;
 
     private ImageView Eye_excercise;
     private  ImageView Eye_Hygiene_Diet;
@@ -24,6 +25,17 @@ public class Nayan_care_option_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nayan_care_option_page);
 
+
+
+
+        EyeCare_User_logout=findViewById(R.id.eye_care_user_lgout);
+        EyeCare_User_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Nayan_care_option_page.this, UserProfile.class);
+                startActivity(intent);
+            }
+        });
 
         Eye_excercise =findViewById(R.id.Eye_care_exercise_button);
         Eye_excercise.setOnClickListener(new View.OnClickListener() {

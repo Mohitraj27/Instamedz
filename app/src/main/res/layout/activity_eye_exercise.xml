@@ -15,6 +15,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="262dp"
+        android:layout_marginTop="-2dp"
         android:scaleType="centerCrop"
         android:src="@drawable/eye_excercise_image1"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,23 +33,25 @@
         app:layout_constraintTop_toBottomOf="parent" />
 
     <ImageView
-        android:layout_width="364dp"
-        android:layout_height="312dp"
-        android:src="@drawable/eye_excercise_image4"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-90dp"
+        android:src="@drawable/final_eye_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="parent" />
+
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-120dp"
-android:src="@drawable/eye_excercise_image5"/>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-200dp"
-        android:src="@drawable/eye_excercise_image6"/>
+        android:layout_height="match_parent"
+        android:layout_marginTop="-190dp"
+
+        android:src="@drawable/final_eye_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
 
 </LinearLayout>
 </ScrollView>
