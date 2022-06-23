@@ -180,17 +180,23 @@ public class SignUP extends AppCompatActivity implements View.OnClickListener {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             User user=new User(Name,email);
+                            FirebaseUser User= FirebaseAuth.getInstance().getCurrentUser();
+                            UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                    .setDisplayName(Name).build();
+                            User.updateProfile(profileUpdates);
                             FirebaseDatabase.getInstance("https://instamedz-f5dcf-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
-                                        UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
-                                                .setDisplayName(Name).build();
-                                        FirebaseAuth.getInstance().getCurrentUser().updateProfile(profileUpdates);
-                                        Toast.makeText(SignUP.this,"User registered successfully!",Toast.LENGTH_LONG).show();
-                                        startActivity(new Intent(SignUP.this, Home_Page.class));
+                                        FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+                                        if(user.isEmailVerified()) {
+                                            user.sendEmailVerification();
+                                            Toast.makeText(SignUP.this,"Check your email to verify your account and log in! Please check spam.",Toast.LENGTH_LONG).show();
+                                            startActivity(new Intent(SignUP.this, LoginActivity.class));
+                                        }
+
                                     }else {
                                         Toast.makeText(SignUP.this,"Failed to register! Try again!",Toast.LENGTH_LONG).show();
                                     }
@@ -198,7 +204,7 @@ public class SignUP extends AppCompatActivity implements View.OnClickListener {
                                 }
                             });
                         }else{
-                            Toast.makeText(SignUP.this,"Failed to reg",Toast.LENGTH_LONG).show();
+                            Toast.makeText(SignUP.this,"Email already taken!",Toast.LENGTH_LONG).show();
                         }
                     }
                 });

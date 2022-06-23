@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.instamedz">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -8,11 +9,16 @@
 
     <application
         android:allowBackup="true"
-         android:icon="@drawable/temp_app_icon"
+        android:icon="@drawable/temp_app_icon"
         android:label="@string/app_name"
         android:roundIcon="@drawable/temp_app_icon"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Instamedz">
+        android:theme="@style/Theme.Instamedz"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
         <activity
             android:name=".chatBot.ChatBot"
             android:exported="false" />

@@ -38,7 +38,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
    ImageView Business_care;
     private FirebaseUser user, currentUser;
     private DatabaseReference reference;
-    private String userID,name;
+    private String userID,username;
 
 
 
@@ -56,6 +56,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         user= FirebaseAuth.getInstance().getCurrentUser();
         reference= FirebaseDatabase.getInstance("https://instamedz-f5dcf-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users");
         userID=user.getUid();
+        username=user.getDisplayName();
         Toast.makeText(this,"Welcome "+user.getDisplayName(),Toast.LENGTH_LONG).show();
         UserProfilePic=(ImageView) findViewById(R.id.profilePic);
         UserProfilePic.setOnClickListener(Home_Page.this);

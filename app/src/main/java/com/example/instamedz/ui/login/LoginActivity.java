@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.instamedz.ForgotPassword;
 import com.example.instamedz.Home_Page;
 import com.example.instamedz.R;
 import com.example.instamedz.SignUP;
@@ -21,6 +22,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -52,10 +54,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         progressBar=(ProgressBar)findViewById(R.id.progressBarlogin);
 
         mAuth = FirebaseAuth.getInstance();
-
-        {
-
-        }
+        forgotPass=(TextView) findViewById(R.id.forget_pass);
+        forgotPass.setOnClickListener(this);
     }
 //BY Gunal
     @Override
@@ -66,6 +66,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.login:
                 userLogin();
+                break;
+            case R.id.forget_pass:
+                startActivity(new Intent(this, ForgotPassword.class));
                 break;
         }
     }
@@ -100,16 +103,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    //FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
-
-                    startActivity(new Intent(LoginActivity.this, Home_Page.class));
-                    /*if(user.isEmailVerified()) {
+                    FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+                    if(user.isEmailVerified()) {
                         startActivity(new Intent(LoginActivity.this, Home_Page.class));
-                        Toast.makeText(LoginActivity.this, "Logged in!", Toast.LENGTH_LONG).show();
                     }else{
                         user.sendEmailVerification();
                         Toast.makeText(LoginActivity.this,"Check your email to verify your account!",Toast.LENGTH_LONG).show();
-                    }*/
+                    }
                 }else{
                     Toast.makeText(LoginActivity.this,"Failed to Login! Please check credentials",Toast.LENGTH_LONG).show();
                 }
