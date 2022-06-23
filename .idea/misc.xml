@@ -20,7 +20,7 @@
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/ic_twotone_chat_24.xml" value="0.169" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/round_button.xml" value="0.1" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/rounded_button.xml" value="0.153" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.2971938775510204" />
+        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.176" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout-w936dp/activity_login.xml" value="0.6" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_appointment_details.xml" value="0.2" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_chat_bot.xml" value="0.2722222222222222" />
@@ -35,14 +35,16 @@
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_navigation_drawer.xml" value="0.25" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_nayan_care_option_page.xml" value="0.25" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
+        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_sign_up.xml" value="0.536" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_soul_care.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_user_profile.xml" value="0.25" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/app_bar_navigation_drawer.xml" value="0.2" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/content_navigation_drawer.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/fragment_frag_above_forty.xml" value="0.25" />
+        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/fragment_frag_zero_to_forty.xml" value="0.25" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/fragment_gallery.xml" value="0.2" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/fragment_home.xml" value="0.536" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/fragment_question.xml" value="0.1" />
+        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/fragment_question.xml" value="0.4" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/fragment_slideshow.xml" value="0.2" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/message_item.xml" value="0.25" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/nav_activity_main.xml" value="0.41702867072111205" />
@@ -54,11 +56,6 @@
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/rounded_button.xml" value="0.1" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/send_round_button.xml" value="0.1" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_chat_bot.xml" value="0.13385416666666666" />
-        <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_eye_care.xml" value="0.10916919959473151" />
-        <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_health_care.xml" value="0.1" />
-        <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_heart_care.xml" value="0.1" />
-        <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_heart_patient.xml" value="0.10916919959473151" />
-        <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_home_page.xml" value="0.10916919959473151" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/message_item.xml" value="0.1" />
       </map>
     </option>

@@ -1,54 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+
         android:layout_height="match_parent">
 
-
-        <TextView
-            android:id="@+id/question"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="116dp"
-            android:text="What is your Age?"
-            android:textSize="55dp"
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="37dp"
+            android:id="@+id/skip_button"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.967"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.01" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="810dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chatbot_for_nayan_care__1_"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+
+            android:id="@+id/question"
+            android:layout_width="275dp"
+            android:layout_height="55dp"
+            android:text="What is your Age?"
+
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.419"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.352" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="481dp"
+            android:layout_height="175dp"
+            android:layout_marginEnd="80dp"
+
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.653"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/question"
-            app:layout_constraintVertical_bias="0.182">
+            app:layout_constraintVertical_bias="0.186">
 
             <Button
                 android:id="@+id/option1"
-                android:layout_width="match_parent"
+                android:layout_width="290dp"
                 android:layout_height="wrap_content"
-                android:text="Below 18" />
+                android:layout_marginStart="150dp"
+                android:text="Below 18"
+
+                android:backgroundTint="#D3E7F7"
+                android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/option2"
-                android:layout_width="match_parent"
+                android:layout_width="290dp"
                 android:layout_height="wrap_content"
-                android:text="18-40" />
+                android:layout_marginStart="150dp"
+                android:backgroundTint="#D3E7F7"
+                android:text="18-40"
+                android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/option3"
-                android:layout_width="match_parent"
+                android:layout_width="290dp"
                 android:layout_height="wrap_content"
-                android:text="40 &amp; Above" />
+                android:layout_marginStart="150dp"
+                android:backgroundTint="#D3E7F7"
+                android:text="40 &amp; Above"
+                android:textColor="@color/black" />
 
 
         </LinearLayout>

@@ -12,20 +12,34 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="810dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chatbot_for_nayan_care__1_"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <TextView
             android:id="@+id/question"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="116dp"
-            tools:text="Do you feel difficulty in reading when something is written on board? "
             android:text="@{zerotoforty.currenQuestion.theQuestion}"
+            android:padding="5dp"
             android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.326"
+            tools:text="Do you feel difficulty in reading when something is written on board? " />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,22 +54,30 @@
 
             <Button
                 android:id="@+id/option1"
-
-                android:layout_width="match_parent"
+                android:backgroundTint="#D3E7F7"
+                android:textColor="@color/black"
+                android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 tools:text="yes"
+                android:layout_marginStart="70dp"
                 android:text="@{zerotoforty.answers[0]}"/>
 
             <Button
                 android:id="@+id/option2"
-                android:layout_width="match_parent"
+                android:backgroundTint="#D3E7F7"
+                android:textColor="@color/black"
+                android:layout_width="290dp"
+                android:layout_marginStart="70dp"
                 android:layout_height="wrap_content"
                 tools:text="Rarely"
                 android:text="@{zerotoforty.answers[1]}"/>
 
             <Button
                 android:id="@+id/option3"
-                android:layout_width="match_parent"
+                android:backgroundTint="#D3E7F7"
+                android:textColor="@color/black"
+                android:layout_width="290dp"
+                android:layout_marginStart="70dp"
                 android:layout_height="wrap_content"
                 tools:text="Not at all"
                 android:text="@{zerotoforty.answers[2]}"/>
