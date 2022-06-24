@@ -31,6 +31,7 @@
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_eye_care.xml" value="0.2" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_eye_exercise.xml" value="0.4" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_eye_hygiene_diet.xml" value="0.2" />
+        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_forgot_password.xml" value="0.25" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_health_care.xml" value="0.25" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_heart_care.xml" value="0.25" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_home_page.xml" value="0.19144602851323828" />
@@ -51,7 +52,7 @@
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/nav_activity_main.xml" value="0.41702867072111205" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/nav_header_navigation_drawer.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/otp_send.xml" value="0.32848837209302323" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/otp_verify.xml" value="0.25" />
+        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/otp_verify.xml" value="0.536" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/menu/activity_main_drawer.xml" value="0.4" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/menu/navigation_drawer.xml" value="0.2" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/receice_round_button.xml" value="0.1" />

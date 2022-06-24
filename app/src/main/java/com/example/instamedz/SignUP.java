@@ -7,6 +7,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,10 +43,26 @@ public class SignUP extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "GoogleActivity";
     private final static int RC_SIGN_IN=123;
 
+private ImageView otp_signup_button;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+setContentView(R.layout.activity_sign_up);
+
+        otp_signup_button=findViewById(R.id.SignUP_Otp_phone);
+        otp_signup_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SignUP.this,otp_send.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         // [START config_signin]
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)

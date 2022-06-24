@@ -126,9 +126,10 @@
         app:layout_constraintVertical_bias="0.073" />
 
     <ImageView
-        android:id="@+id/SignUP_facebook_button"
+        android:id="@+id/SignUP_Otp_phone"
         android:layout_width="157dp"
         android:layout_height="72dp"
+        android:clickable="true"
         android:layout_marginBottom="84dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
