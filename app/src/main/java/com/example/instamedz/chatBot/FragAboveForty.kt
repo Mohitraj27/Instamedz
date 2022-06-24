@@ -18,7 +18,7 @@ class FragAboveForty : Fragment() {
     var score=0;
     lateinit var currenQuestion: QnsAboveForty
     lateinit var answers:ArrayList<String>
-    val maxNUmberOfQuestion =6
+    val maxNUmberOfQuestion =21
     var questions = arrayListOf<QnsAboveForty>(
         QnsAboveForty(
             "Do you have sudden flashes of light? ",
@@ -37,7 +37,30 @@ class FragAboveForty : Fragment() {
             "Do you have double visions?",
             arrayListOf("Yes", "Rarely", "Not at all")
         ),
-        QnsAboveForty("Do you have watery eyes often?", arrayListOf("Yes", "Rarely", "Not at all"))
+        QnsAboveForty("Do you have watery eyes often?", arrayListOf("Yes", "Rarely", "Not at all")),
+
+                QnsAboveForty("What is your occupation?", arrayListOf("Primary sector", "Industrial Sector", "Others")),
+
+    QnsAboveForty("Do you have any of these diseases?", arrayListOf("Diabetes", "Hypertension", "None")),
+
+    QnsAboveForty("Did you have an eye infection/eye disease in the past?", arrayListOf("Contracts", "Astigmatism", "Others")),
+
+
+    QnsAboveForty("Is there anyone who has a history of eye disease?", arrayListOf("Mother", "Father", "Siblings")),
+    QnsAboveForty("How long do you spend your time at your workplace?", arrayListOf("3 hours", "6 hours", "More than 6 hours")),
+    QnsAboveForty("How much is your screen time?", arrayListOf("4 hours", "6 hours", "More than 6 hours")),
+    QnsAboveForty("Do you face difficulty driving a car?", arrayListOf("Yes","No")),
+    QnsAboveForty("Do you experience headaches ?", arrayListOf("Yes", "Rarely", "Not at all")),
+    QnsAboveForty("Do you hold the objects close to your face to see them clearly?", arrayListOf("Yes", "Rarely", "Not at all")),
+    QnsAboveForty("Do you experience itching?", arrayListOf("Yes", "Rarely", "Not at all")),
+    QnsAboveForty("How many hours do you sleep?", arrayListOf("Less than 5 hours", "5-8 hours", "More than 8 hours")),
+    QnsAboveForty("Do you blink your eyes often while you are trying to see distant objects?", arrayListOf("Yes", "Rarely", "Not at all")),
+    QnsAboveForty("Do you rub your eyes?", arrayListOf("Yes", "Rarely", "Not at all")),
+    QnsAboveForty("Have you used any glasses before?", arrayListOf("Yes ", "No","Sorry, I Don't remember")),
+    QnsAboveForty("If yes then when did you change your glasses last ?", arrayListOf("Recently", "Been a while","Sorry, I Don't remember"))
+
+
+
 
     )
 

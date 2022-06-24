@@ -17,6 +17,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
+            android:name=".otp_verify"
+            android:exported="false" />
+        <activity
+            android:name=".opt_verify"
+            android:exported="false" />
+        <activity
+            android:name=".otp_send"
+            android:exported="false" />
+        <activity
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity
