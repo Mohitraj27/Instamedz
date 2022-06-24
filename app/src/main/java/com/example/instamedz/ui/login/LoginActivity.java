@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mAuth = FirebaseAuth.getInstance();
         forgotPass=(TextView) findViewById(R.id.forget_pass);
         forgotPass.setOnClickListener(this);
+
     }
 //BY Gunal
     @Override
@@ -116,4 +117,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
         });
     }
+
+
 }

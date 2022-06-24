@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.instamedz.ui.login.LoginActivity;
+import com.example.instamedz.ui.login.otp_send;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -93,6 +94,9 @@ public class SignUP extends AppCompatActivity implements View.OnClickListener {
                 break;
             case R.id.googleSignup:
                 signIn();
+                break;
+            case R.id.facebook_log_in_button:
+                startActivity(new Intent(this, otp_send.class));
                 break;
         }
     }
