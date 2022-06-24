@@ -9,19 +9,21 @@
     tools:openDrawer="start">
 
     <include
-
-        layout="@layout/activity_home_page"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
+        android:layout_height="match_parent"
+        android:id="@+id/appbar_home_navigation_drawer"
+        layout="@layout/appbar_home_drawer"
+        />
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
+        android:id="@+id/nav_view1"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_navigation_drawer"
-        app:menu="@menu/activity_main_drawer" >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/navigation_drawer">
 
     </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

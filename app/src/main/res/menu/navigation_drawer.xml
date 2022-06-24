@@ -2,8 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:id="@+id/main_item"
+        android:title="Title">
+        <menu>
+            <item
+                android:id="@+id/dashboard_item"
+                android:icon="@drawable/ic_baseline_dashboard_24"
+                android:title="Dashboard"
+                android:checkable="true"/>
+            <item
+                android:id="@+id/about_us_item"
+                android:icon="@drawable/ic_baseline_info_24"
+                android:title="About us"
+                android:checkable="true"/>
+            <item
+                android:id="@+id/share_item"
+                android:icon="@drawable/ic_baseline_share_24"
+                android:title="Share"
+                android:checkable="true"/>
+        </menu>
+    </item>
 </menu>
