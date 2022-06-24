@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
@@ -13,6 +14,10 @@
             android:icon="@drawable/ic_baseline_dashboard_24"
             android:title="@string/menu_gallery" />
 
+        <item
+            android:id="@+id/book_your_appointment"
+            android:icon="@drawable/ic_baseline_event_note_24"
+            android:title="Book your Appointmemt"/>
         <item
             android:id="@+id/about_us"
             android:icon="@drawable/ic_baseline_info_24"
