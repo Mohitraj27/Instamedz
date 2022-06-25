@@ -17,13 +17,21 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
-            android:name=".otp_verify"
-            android:exported="false" />
+            android:name=".Splash_screen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
-            android:name=".opt_verify"
+            android:name=".ui.login.otp_verify"
             android:exported="false" />
+
         <activity
-            android:name=".otp_send"
+            android:name=".ui.login.otp_send"
             android:exported="false" />
         <activity
             android:name=".ForgotPassword"
@@ -100,11 +108,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
