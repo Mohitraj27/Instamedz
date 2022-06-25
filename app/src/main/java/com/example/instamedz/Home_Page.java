@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -14,6 +15,8 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.instamedz.chatBot.ChatBot;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -29,7 +32,10 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
       ImageView Whatsapp_icon_bussiness_care;
      ImageView Whatsapp_icon_Soul_care;
      ImageView UserProfilePic;
+     MaterialToolbar toolbar;
     DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    FrameLayout frameLayout;
    ImageView onCLick_menu_bar;
    ImageView Eye_Care;
    ImageView Health_Care;
@@ -48,11 +54,16 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        setContentView(R.layout.nav_activity_main);
-
-
-
-
+        setContentView(R.layout.activity_home_page);
+        /*toolbar=findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        frameLayout=findViewById(R.id.main_frameLayout);
+        drawerLayout=findViewById(R.id.drawer_layout_home);
+        navigationView=findViewById(R.id.nav_view);
+        ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this, drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();*/
         user= FirebaseAuth.getInstance().getCurrentUser();
         reference= FirebaseDatabase.getInstance("https://instamedz-f5dcf-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users");
         userID=user.getUid();
@@ -73,7 +84,16 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         final String text_eye_care="I Just Clicked on Eye Care Whatsapp icon";
         final String text_soul_care="I Just Clicked on Soul Care Whatsapp icon";
        final String text_bussines_care="I Just Clicked on Bussiness Care Whatsapp icon";
-
+        /*toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (drawerLayout.isDrawerOpen(GravityCompat.END)) {
+                    drawerLayout.closeDrawers();
+                } else {
+                    drawerLayout.openDrawer(Gravity.RIGHT);
+                }
+            }
+        });*/
         UserProfilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
