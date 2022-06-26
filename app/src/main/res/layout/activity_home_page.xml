@@ -286,6 +286,7 @@
 
             <Button
 
+                style="@style/Widget.Material3.Button"
                 android:layout_width="147dp"
                 android:layout_height="44dp"
                 android:layout_marginStart="120dp"

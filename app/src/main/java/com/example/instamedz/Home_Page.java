@@ -15,10 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.bumptech.glide.Glide;
 import com.example.instamedz.chatBot.ChatBot;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -68,6 +65,13 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this, drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+        /*mAppBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.nav_profile)
+                .setOpenableLayout(drawerLayout)
+                .build();
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation_drawer);
+        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        NavigationUI.setupWithNavController(navigationView, navController);*/
         user= FirebaseAuth.getInstance().getCurrentUser();
         reference= FirebaseDatabase.getInstance("https://instamedz-f5dcf-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users");
         userID=user.getUid();
@@ -75,8 +79,6 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         Toast.makeText(this,"Welcome "+user.getDisplayName(),Toast.LENGTH_LONG).show();
         UserProfilePic=(ImageView) findViewById(R.id.profilePic);
         UserProfilePic.setOnClickListener(Home_Page.this);
-        GoogleSignInAccount account= GoogleSignIn.getLastSignedInAccount(this);
-        Glide.with(this).load(account != null ? account.getPhotoUrl() : null).circleCrop().into((ImageView) findViewById(R.id.profilePic));
        Whatsapp_icon_health_care=findViewById(R.id.whatsapp_icon_health_care);
         Whatsapp_icon_heart_care =findViewById(R.id.whatsapp_icon_heart_care);
         Whatsapp_icon_eye_care=findViewById(R.id.whatsapp_icon_eye_care);

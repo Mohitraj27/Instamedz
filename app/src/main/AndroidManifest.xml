@@ -16,6 +16,7 @@
         android:theme="@style/Theme.Instamedz"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
+
         <activity
             android:name=".Splash_screen"
             android:exported="true">
@@ -25,11 +26,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.login.otp_verify"
             android:exported="false" />
-
         <activity
             android:name=".ui.login.otp_send"
             android:exported="false" />
@@ -107,9 +106,7 @@
             android:label="Log In" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
