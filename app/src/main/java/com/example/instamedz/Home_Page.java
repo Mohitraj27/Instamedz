@@ -10,11 +10,15 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.bumptech.glide.Glide;
 import com.example.instamedz.chatBot.ChatBot;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -55,7 +59,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_home_page);
-        /*toolbar=findViewById(R.id.toolbar);
+        toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         frameLayout=findViewById(R.id.main_frameLayout);
@@ -63,7 +67,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         navigationView=findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this, drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();*/
+        toggle.syncState();
         user= FirebaseAuth.getInstance().getCurrentUser();
         reference= FirebaseDatabase.getInstance("https://instamedz-f5dcf-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users");
         userID=user.getUid();
@@ -71,6 +75,8 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         Toast.makeText(this,"Welcome "+user.getDisplayName(),Toast.LENGTH_LONG).show();
         UserProfilePic=(ImageView) findViewById(R.id.profilePic);
         UserProfilePic.setOnClickListener(Home_Page.this);
+        GoogleSignInAccount account= GoogleSignIn.getLastSignedInAccount(this);
+        Glide.with(this).load(account != null ? account.getPhotoUrl() : null).circleCrop().into((ImageView) findViewById(R.id.profilePic));
        Whatsapp_icon_health_care=findViewById(R.id.whatsapp_icon_health_care);
         Whatsapp_icon_heart_care =findViewById(R.id.whatsapp_icon_heart_care);
         Whatsapp_icon_eye_care=findViewById(R.id.whatsapp_icon_eye_care);
@@ -84,7 +90,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         final String text_eye_care="I Just Clicked on Eye Care Whatsapp icon";
         final String text_soul_care="I Just Clicked on Soul Care Whatsapp icon";
        final String text_bussines_care="I Just Clicked on Bussiness Care Whatsapp icon";
-        /*toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+       /* toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (drawerLayout.isDrawerOpen(GravityCompat.END)) {

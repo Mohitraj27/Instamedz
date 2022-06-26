@@ -7,7 +7,7 @@
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_eye_care.xml" value="0.2760416666666667" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_eye_hygiene_diet.xml" value="0.1175925925925926" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_forgot_password.xml" value="0.33" />
-        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_home_page.xml" value="0.1" />
+        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_home_page.xml" value="0.22" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_login.xml" value="0.5" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_main.xml" value="0.21603260869565216" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_navigation_drawer.xml" value="0.2760416666666667" />
@@ -21,7 +21,7 @@
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/nav_activity_main.xml" value="0.2760416666666667" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/nav_content_home.xml" value="0.1897644927536232" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/nav_header_navigation_drawer.xml" value="0.5" />
-        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/toolbar.xml" value="0.1897644927536232" />
+        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/toolbar.xml" value="0.9" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/menu/activity_main_drawer.xml" value="0.2760416666666667" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/menu/activity_navigation_drawer2_drawer.xml" value="0.2760416666666667" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/menu/navigation_drawer.xml" value="0.2760416666666667" />
@@ -48,7 +48,6 @@
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_nayan_care_option_page.xml" value="0.25" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_sign_up.xml" value="0.4" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_soul_care.xml" value="0.12158054711246201" />
-        <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/app_bar_navigation_drawer.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/content_navigation_drawer.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/layout/fragment_frag_above_forty.xml" value="0.17300724637681159" />
@@ -69,7 +68,6 @@
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/rounded_button.xml" value="0.1" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/send_round_button.xml" value="0.1" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_chat_bot.xml" value="0.13385416666666666" />
-        <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_sign_up.xml" value="0.11367753623188406" />
         <entry key="..\:/Users/sharv/AndroidStudioProjects/Instamedz/app/src/main/res/layout/message_item.xml" value="0.1" />
       </map>
     </option>
