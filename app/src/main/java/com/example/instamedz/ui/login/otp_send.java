@@ -9,7 +9,10 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.instamedz.databinding.OtpSendBinding;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseException;
+import com.google.firebase.appcheck.FirebaseAppCheck;
+import com.google.firebase.appcheck.safetynet.SafetyNetAppCheckProviderFactory;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.PhoneAuthCredential;
@@ -28,6 +31,10 @@ private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
         binding=OtpSendBinding.inflate(getLayoutInflater());
         mAuth = FirebaseAuth.getInstance();
         setContentView(binding.getRoot());
+        FirebaseApp.initializeApp(/*context=*/ this);
+        FirebaseAppCheck firebaseAppCheck = FirebaseAppCheck.getInstance();
+        firebaseAppCheck.installAppCheckProviderFactory(
+                SafetyNetAppCheckProviderFactory.getInstance());
 
         binding.btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +75,7 @@ private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
                                    @NonNull PhoneAuthProvider.ForceResendingToken token) {
                 binding.progressBar.setVisibility(View.GONE);
                 binding.btnSend.setVisibility(View.GONE);
+                Toast.makeText(otp_send.this,"OTP Successfully sent",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(otp_send.this,otp_verify.class);
                 intent.putExtra("phone",binding.etPhone.getText().toString().trim());
                 intent.putExtra("verificationId",verificationId);

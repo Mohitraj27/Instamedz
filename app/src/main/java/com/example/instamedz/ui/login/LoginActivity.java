@@ -14,17 +14,22 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.instamedz.ForgotPassword;
+import com.example.instamedz.Heart_Care;
 import com.example.instamedz.Home_Page;
 import com.example.instamedz.R;
 import com.example.instamedz.SignUP;
+import com.example.instamedz.are_u_doctor_heart_care;
 import com.example.instamedz.databinding.ActivityLoginBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.appcheck.FirebaseAppCheck;
+import com.google.firebase.appcheck.safetynet.SafetyNetAppCheckProviderFactory;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private LoginViewModel loginViewModel;
     private ActivityLoginBinding binding;
@@ -35,33 +40,47 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
-//BY gunal
+
+    //BY gunal
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        FirebaseApp.initializeApp(/*context=*/ this);
+        FirebaseAppCheck firebaseAppCheck = FirebaseAppCheck.getInstance();
+        firebaseAppCheck.installAppCheckProviderFactory(
+                SafetyNetAppCheckProviderFactory.getInstance());
+                binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_login);
 
-        signup=(TextView)findViewById(R.id.sign_UP_text);
+        signup = (TextView) findViewById(R.id.sign_UP_text);
         signup.setOnClickListener(this);
 
-        login=(Button) findViewById(R.id.login);
+        login = (Button) findViewById(R.id.login);
         login.setOnClickListener(this);
 
-        editTextEmail=(EditText) findViewById(R.id.username);
-        editTextPassword=(EditText)findViewById(R.id.password);
-        progressBar=(ProgressBar)findViewById(R.id.progressBarlogin);
+        editTextEmail = (EditText) findViewById(R.id.username);
+        editTextPassword = (EditText) findViewById(R.id.password);
+        progressBar = (ProgressBar) findViewById(R.id.progressBarlogin);
 
         mAuth = FirebaseAuth.getInstance();
-        forgotPass=(TextView) findViewById(R.id.forget_pass);
+        forgotPass = (TextView) findViewById(R.id.forget_pass);
         forgotPass.setOnClickListener(this);
 
+        findViewById(R.id.facebook_log_in_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, otp_send.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
-//BY Gunal
+
+    //BY Gunal
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.sign_UP_text:
                 startActivity(new Intent(this, SignUP.class));
                 break;
@@ -75,25 +94,25 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void userLogin() {
-        String email=editTextEmail.getText().toString().trim();
-        String password=editTextPassword.getText().toString().trim();
+        String email = editTextEmail.getText().toString().trim();
+        String password = editTextPassword.getText().toString().trim();
 
-        if(email.isEmpty()){
+        if (email.isEmpty()) {
             editTextEmail.setError("Email is required!");
             editTextEmail.requestFocus();
             return;
         }
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             editTextEmail.setError("Please enter a valid email!");
             editTextEmail.requestFocus();
             return;
         }
-        if(password.isEmpty()){
+        if (password.isEmpty()) {
             editTextPassword.setError("Password is required!");
             editTextPassword.requestFocus();
             return;
         }
-        if(password.length()<6){
+        if (password.length() < 6) {
             editTextPassword.setError("Min password length is 6 characters!");
             editTextPassword.requestFocus();
             return;
@@ -103,16 +122,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
-                    if(user.isEmailVerified()) {
+                if (task.isSuccessful()) {
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                    if (user.isEmailVerified()) {
                         startActivity(new Intent(LoginActivity.this, Home_Page.class));
-                    }else{
+                    } else {
                         user.sendEmailVerification();
-                        Toast.makeText(LoginActivity.this,"Check your email to verify your account!",Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this, "Check your email to verify your account!", Toast.LENGTH_LONG).show();
                     }
-                }else{
-                    Toast.makeText(LoginActivity.this,"Failed to Login! Please check credentials",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(LoginActivity.this, "Failed to Login! Please check credentials", Toast.LENGTH_LONG).show();
                 }
             }
         });

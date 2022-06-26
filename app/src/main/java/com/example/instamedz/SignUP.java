@@ -52,14 +52,7 @@ private ImageView otp_signup_button;
         super.onCreate(savedInstanceState);
 setContentView(R.layout.activity_sign_up);
 
-        otp_signup_button=findViewById(R.id.SignUP_Otp_phone);
-        otp_signup_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(SignUP.this,otp_send.class);
-                startActivity(intent);
-            }
-        });
+
 
 
 
@@ -84,6 +77,16 @@ setContentView(R.layout.activity_sign_up);
         editTextPassword = (EditText) findViewById(R.id.SignUP_password);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        otp_signup_button=findViewById(R.id.SignUP_Otp_phone);
+
+        otp_signup_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SignUP.this,otp_send.class);
+                startActivity(intent);
+            }
+        });
+
         findViewById(R.id.googleSignup).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -99,6 +102,7 @@ setContentView(R.layout.activity_sign_up);
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
     }
+
 
     @Override
     public void onClick(View view) {
