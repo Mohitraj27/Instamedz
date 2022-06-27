@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.login.otp_send">
+    tools:context=".ui.login.otp_send"
+    android:background="@drawable/background_image">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -12,14 +13,14 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="222dp"
+            android:layout_height="91dp"
             android:layout_marginTop="70dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_plane" />
+            app:srcCompat="@drawable/instamedz2" />
 
         <TextView
             android:id="@+id/textView"
@@ -40,6 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textColor="#FFFF"
             android:text="We will send otp to your entered mobile number."
             app:layout_constraintEnd_toEndOf="@+id/textView"
             app:layout_constraintStart_toStartOf="@+id/textView"
@@ -53,6 +55,7 @@
             android:background="@drawable/border_left"
             android:padding="15dp"
             android:text="+91"
+            android:textColor="#FFF"
             android:textSize="20sp"
             app:layout_constraintEnd_toStartOf="@+id/etPhone"
             app:layout_constraintHorizontal_bias="0.5"
@@ -67,6 +70,7 @@
             android:layout_marginStart="8dp"
             android:background="@drawable/border_right"
             android:ems="10"
+            android:backgroundTint="#FFF"
             android:hint="1234567890"
             android:inputType="phone"
             android:padding="15dp"
@@ -79,8 +83,8 @@
 
         <Button
             android:id="@+id/btnSend"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="157dp"
+            android:layout_height="46dp"
             android:layout_marginTop="45dp"
             android:layout_marginBottom="45dp"
             android:text="SEND"
