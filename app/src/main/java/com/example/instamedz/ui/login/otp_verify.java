@@ -55,14 +55,14 @@ public class otp_verify extends AppCompatActivity {
                         binding.etC5.getText().toString().trim().isEmpty() ||
                         binding.etC6.getText().toString().trim().isEmpty()
                 ) {
-                        Toast.makeText(otp_verify.this,"OTP is not Valid",Toast.LENGTH_SHORT).show();
-                }else{
-                    if(verificationId !=null){
-                        String code= binding.etC1.getText().toString().trim()+
-                                binding.etC2.getText().toString().trim()+
-                                binding.etC3.getText().toString().trim()+
-                                binding.etC4.getText().toString().trim()+
-                                binding.etC5.getText().toString().trim()+
+                    Toast.makeText(otp_verify.this, "OTP is not Valid", Toast.LENGTH_SHORT).show();
+                } else {
+                    if (verificationId != null) {
+                        String code = binding.etC1.getText().toString().trim() +
+                                binding.etC2.getText().toString().trim() +
+                                binding.etC3.getText().toString().trim() +
+                                binding.etC4.getText().toString().trim() +
+                                binding.etC5.getText().toString().trim() +
                                 binding.etC6.getText().toString().trim();
 
                         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, code);
@@ -70,23 +70,23 @@ public class otp_verify extends AppCompatActivity {
                                 .getInstance()
                                 .signInWithCredential(credential)
                                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-if(task.isSuccessful()){
-    binding.progressBarVerify.setVisibility(View.VISIBLE);
-    binding.btnVerify.setVisibility(View.INVISIBLE);
-    Toast.makeText(otp_verify.this,"Welcome...",Toast.LENGTH_SHORT).show();
-    Intent intent= new Intent(otp_verify.this, Home_Page.class);
-    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-    startActivity(intent);
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        if (task.isSuccessful()) {
+                                            binding.progressBarVerify.setVisibility(View.VISIBLE);
+                                            binding.btnVerify.setVisibility(View.INVISIBLE);
+                                            Toast.makeText(otp_verify.this, "Welcome...", Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(otp_verify.this, Home_Page.class);
+                                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                            startActivity(intent);
 
-}else{
-    binding.progressBarVerify.setVisibility(View.GONE);
-    binding.btnVerify.setVisibility(View.VISIBLE);
-    Toast.makeText(otp_verify.this,"OTP is not Valid",Toast.LENGTH_SHORT).show();
-}
-                            }
-                        });
+                                        } else {
+                                            binding.progressBarVerify.setVisibility(View.GONE);
+                                            binding.btnVerify.setVisibility(View.VISIBLE);
+                                            Toast.makeText(otp_verify.this, "OTP is not Valid", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
 
                     }
                 }
@@ -104,7 +104,7 @@ if(task.isSuccessful()){
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-     binding.etC2.requestFocus();
+                binding.etC2.requestFocus();
             }
 
             @Override

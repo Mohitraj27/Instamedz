@@ -15,11 +15,12 @@ class FragAboveForty : Fragment() {
     lateinit var binding: FragmentFragAboveFortyBinding
     lateinit var selectedAnswer:String
     private var questionIndex = 0
-    var score=0;
+    var score=0
     lateinit var currenQuestion: QnsAboveForty
     lateinit var answers:ArrayList<String>
     val maxNUmberOfQuestion =21
-    var questions = arrayListOf<QnsAboveForty>(
+
+    private var questions = arrayListOf<QnsAboveForty>(
         QnsAboveForty(
             "Do you have sudden flashes of light? ",
             arrayListOf("Yes", "Rarely", "Not at all")
@@ -94,11 +95,11 @@ class FragAboveForty : Fragment() {
 
     private fun getScore(){
         if(score>=3){
-            Toast.makeText(activity,"Won", Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity,"Based on our observation, We'll suggest you a convex/concave lens.", Toast.LENGTH_SHORT).show()
         }
         else{
             if(score>=3){
-                Toast.makeText(activity,"Lost", Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity,"Based on our observation, We'll suggest you a sunglasses or blue lens", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -119,8 +120,20 @@ class FragAboveForty : Fragment() {
             container,
             false
         )
+        setQuestion()
         binding.aboveForty=this
         return binding.root
     }
-
+    override fun onActivityCreated(savedInstanceState: Bundle?){
+        super.onActivityCreated(savedInstanceState)
+        binding.option1.setOnClickListener {
+            checkAns(binding.option1.text.toString())
+        }
+        binding.option2.setOnClickListener {
+            checkAns(binding.option2.text.toString())
+        }
+        binding.option3.setOnClickListener {
+            checkAns(binding.option3.text.toString())
+        }
+    }
 }

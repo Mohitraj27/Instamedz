@@ -21,7 +21,7 @@ class FragZeroToForty : Fragment() {
     lateinit var answers: ArrayList<String>
     lateinit var selectedAnswer: String
 
-    var questions = arrayListOf<QnsZeroToForty>(
+    private var questions = arrayListOf<QnsZeroToForty>(
         QnsZeroToForty(
             "Do you feel difficulty in reading when something is written on board? ",
             arrayListOf("Yes", "Rarely", "Not at all")
