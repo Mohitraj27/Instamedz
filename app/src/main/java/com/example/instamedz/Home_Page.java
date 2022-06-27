@@ -15,7 +15,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.bumptech.glide.Glide;
 import com.example.instamedz.chatBot.ChatBot;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -45,7 +48,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
    ImageView Business_care;
     private FirebaseUser user, currentUser;
     private DatabaseReference reference;
-    private String userID,username;
+    private String userID,username="Guest";
 
 
 
@@ -73,10 +76,16 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);*/
         user= FirebaseAuth.getInstance().getCurrentUser();
+        GoogleSignInAccount account= GoogleSignIn.getLastSignedInAccount(this);
+        if(user!=null)
+        {
+            userID=user.getUid();
+            username=user.getDisplayName();
+
+            Glide.with(this).load(account.getPhotoUrl()).circleCrop().into((ImageView) findViewById(R.id.profilePic));
+        }
         reference= FirebaseDatabase.getInstance("https://instamedz-f5dcf-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users");
-        userID=user.getUid();
-        username=user.getDisplayName();
-        Toast.makeText(this,"Welcome "+user.getDisplayName(),Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Welcome "+username,Toast.LENGTH_LONG).show();
         UserProfilePic=(ImageView) findViewById(R.id.profilePic);
         UserProfilePic.setOnClickListener(Home_Page.this);
        Whatsapp_icon_health_care=findViewById(R.id.whatsapp_icon_health_care);

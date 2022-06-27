@@ -16,7 +16,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button GetStarted;
+    private Button GetStarted,Guest;
     private TextView Already_Have_A_account;
 private Button Login_button;
     private FirebaseAuth mAuth;
@@ -59,6 +59,15 @@ private Button Login_button;
             public void onClick(View view) {
                 Intent LogInPage=new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(LogInPage);
+            }
+        });
+
+        Guest=findViewById(R.id.Guest_button);
+        Guest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent HomePage=new Intent(MainActivity.this, Home_Page.class);
+                startActivity(HomePage);
             }
         });
     }

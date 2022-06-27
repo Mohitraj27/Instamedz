@@ -28,7 +28,7 @@ public class UserProfile extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference reference;
 
-    private String userID;
+    private String userID,name, email;
     private Button logout;
     private GoogleSignInClient mGoogleSignInClient;
 
@@ -37,22 +37,23 @@ public class UserProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
         final TextView nameTextView = (TextView) findViewById(R.id.userName);
-        final TextView emailTextView=(TextView) findViewById(R.id.userEmail);
+        final TextView emailTextView = (TextView) findViewById(R.id.userEmail);
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken("229501187991-uaj4m0o1fohia7lh6omkm0h6tc6jgnic.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-        GoogleSignInAccount account=GoogleSignIn.getLastSignedInAccount(this);
-        if(account!=null){
-            String Name=account.getDisplayName();
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        logout = (Button) findViewById(R.id.logoutButton);
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        if ((account != null)&&user!=null) {
+            String Name = account.getDisplayName();
 
-            String Mail=account.getEmail();
+            String Mail = account.getEmail();
             nameTextView.setText(Name);
             emailTextView.setText(Mail);
             Glide.with(this).load(account.getPhotoUrl()).circleCrop().into((ImageView) findViewById(R.id.Userpic));
-        }
-        logout=(Button) findViewById(R.id.logoutButton);
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,28 +62,35 @@ public class UserProfile extends AppCompatActivity {
             }
         });
 
-        user=FirebaseAuth.getInstance().getCurrentUser();
 
-        reference= FirebaseDatabase.getInstance("https://instamedz-f5dcf-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users");
-        userID=user.getUid();
+
+        reference = FirebaseDatabase.getInstance("https://instamedz-f5dcf-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users");
+        userID = user.getUid();
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User userProfile =snapshot.getValue(User.class);
-                if(userProfile !=null){
-                    String name=user.getDisplayName();
-                    String email= user.getEmail();
+                User userProfile = snapshot.getValue(User.class);
+                if (userProfile != null) {
+                    name = user.getDisplayName();
+                    email = user.getEmail();
                     findViewById(R.id.Userpic).setVisibility(View.INVISIBLE);
-                    nameTextView.setText(name);
-                    emailTextView.setText(email);
+
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(UserProfile.this,"Something wrong happened!",Toast.LENGTH_LONG).show();
+                Toast.makeText(UserProfile.this, "Something wrong happened!", Toast.LENGTH_LONG).show();
             }
         });
+    }
+        else{
+            findViewById(R.id.logoutButton).setVisibility(View.INVISIBLE);
+            name="Guest";
+            email="Please sign in to register your email!";
+        }
+        nameTextView.setText(name);
+        emailTextView.setText(email);
     }
 }
