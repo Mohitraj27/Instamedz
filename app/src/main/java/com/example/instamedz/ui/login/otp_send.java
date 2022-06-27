@@ -22,13 +22,14 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import java.util.concurrent.TimeUnit;
 
 public class otp_send extends AppCompatActivity {
-private OtpSendBinding binding;
-private FirebaseAuth mAuth;
-private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
+    private OtpSendBinding binding;
+    private FirebaseAuth mAuth;
+    private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding=OtpSendBinding.inflate(getLayoutInflater());
+        binding = OtpSendBinding.inflate(getLayoutInflater());
         mAuth = FirebaseAuth.getInstance();
         setContentView(binding.getRoot());
         FirebaseApp.initializeApp(/*context=*/ this);
@@ -39,14 +40,14 @@ private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
         binding.btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(binding.etPhone.getText().toString().trim().isEmpty()){
-                    Toast.makeText(otp_send.this,"Invalid Phone Number",Toast.LENGTH_SHORT).show();
+                if (binding.etPhone.getText().toString().trim().isEmpty()) {
+                    Toast.makeText(otp_send.this, "Invalid Phone Number", Toast.LENGTH_SHORT).show();
 
-                } else if(binding.etPhone.getText().toString().trim().length() !=10){
-                    Toast.makeText(otp_send.this,"Invalid Phone Number",Toast.LENGTH_SHORT).show();
+                } else if (binding.etPhone.getText().toString().trim().length() != 10) {
+                    Toast.makeText(otp_send.this, "Invalid Phone Number", Toast.LENGTH_SHORT).show();
 
-                }else{
-                        otpSend();
+                } else {
+                    otpSend();
                 }
             }
         });
@@ -66,7 +67,7 @@ private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
             public void onVerificationFailed(FirebaseException e) {
                 binding.progressBar.setVisibility(View.GONE);
                 binding.btnSend.setVisibility(View.GONE);
-                Toast.makeText(otp_send.this,e.getLocalizedMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(otp_send.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
 
             }
 
@@ -75,16 +76,16 @@ private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
                                    @NonNull PhoneAuthProvider.ForceResendingToken token) {
                 binding.progressBar.setVisibility(View.GONE);
                 binding.btnSend.setVisibility(View.GONE);
-                Toast.makeText(otp_send.this,"OTP Successfully sent",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(otp_send.this,otp_verify.class);
-                intent.putExtra("phone",binding.etPhone.getText().toString().trim());
-                intent.putExtra("verificationId",verificationId);
+                Toast.makeText(otp_send.this, "OTP Successfully sent", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(otp_send.this, otp_verify.class);
+                intent.putExtra("phone", binding.etPhone.getText().toString().trim());
+                intent.putExtra("verificationId", verificationId);
                 startActivity(intent);
             }
         };
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
-                        .setPhoneNumber("+91"+binding.etPhone.getText().toString().trim())      // Phone number to verify
+                        .setPhoneNumber("+91" + binding.etPhone.getText().toString().trim())      // Phone number to verify
                         .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
                         .setActivity(this)                 // Activity (for callback binding)
                         .setCallbacks(mCallbacks)          // OnVerificationStateChangedCallbacks
