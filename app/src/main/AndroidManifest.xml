@@ -16,7 +16,9 @@
         android:theme="@style/Theme.Instamedz"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-
+        <activity
+            android:name=".Guest_page"
+            android:exported="false" />
         <activity
             android:name=".Splash_screen"
             android:exported="true">
@@ -106,7 +108,7 @@
             android:label="Log In" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

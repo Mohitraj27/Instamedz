@@ -46,7 +46,7 @@ public class UserProfile extends AppCompatActivity {
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         logout = (Button) findViewById(R.id.logoutButton);
         user = FirebaseAuth.getInstance().getCurrentUser();
-        if ((account != null)&&user!=null) {
+        if ((account != null)&&(user!=null)) {
             String Name = account.getDisplayName();
 
             String Mail = account.getEmail();
@@ -75,6 +75,8 @@ public class UserProfile extends AppCompatActivity {
                     name = user.getDisplayName();
                     email = user.getEmail();
                     findViewById(R.id.Userpic).setVisibility(View.INVISIBLE);
+                    nameTextView.setText(name);
+                    emailTextView.setText(email);
 
                 }
             }
@@ -86,11 +88,18 @@ public class UserProfile extends AppCompatActivity {
         });
     }
         else{
-            findViewById(R.id.logoutButton).setVisibility(View.INVISIBLE);
             name="Guest";
             email="Please sign in to register your email!";
-        }
-        nameTextView.setText(name);
-        emailTextView.setText(email);
+            logout.setText("Log in");
+            logout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    FirebaseAuth.getInstance().signOut();
+                    startActivity(new Intent(UserProfile.this, MainActivity.class));
+                }
+            });
+            nameTextView.setText(name);
+            emailTextView.setText(email);}
+
     }
 }

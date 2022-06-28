@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -33,7 +32,7 @@ import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUP extends AppCompatActivity implements View.OnClickListener {
-    private TextView registerUser;
+    private ImageView registerUser;
     private EditText editTextName, editTextEmail, editTextPassword;
     private ProgressBar progressBar;
 
@@ -69,7 +68,7 @@ setContentView(R.layout.activity_sign_up);
         LogIn_text.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
 
-        registerUser = (Button) findViewById(R.id.sign_up_button);
+        registerUser = (ImageView) findViewById(R.id.sign_up_button);
         registerUser.setOnClickListener(this);
 
         editTextName = (EditText) findViewById(R.id.sign_up_username);

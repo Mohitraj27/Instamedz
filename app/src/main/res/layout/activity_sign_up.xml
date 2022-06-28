@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUP"
-    android:background="@drawable/signup_page1"
+    android:background="@drawable/sign_up_page__2_"
     android:layout_marginTop="0dp"
     android:layout_marginStart="-10dp">
 
@@ -107,13 +107,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.553" />
 
-    <Button
+    <ImageView
         android:id="@+id/sign_up_button"
-        android:layout_width="149dp"
+        android:layout_width="141dp"
         android:layout_height="54dp"
         android:layout_gravity="start"
         android:layout_marginTop="4dp"
-        android:background="@drawable/rounded_button"
+
         android:enabled="true"
         android:text="@string/Sign_Up"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -121,31 +121,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SignUP_password"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.055" />
 
     <ImageView
         android:id="@+id/SignUP_Otp_phone"
-        android:layout_width="167dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="96dp"
+        android:layout_width="88dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="92dp"
         android:clickable="true"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintHorizontal_bias="0.297"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/googleSignup"
-        android:layout_width="159dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="88dp"
+        android:layout_width="96dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="92dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintHorizontal_bias="0.687"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0"
@@ -158,8 +158,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.296"
         app:layout_constraintStart_toEndOf="@+id/sign_up_button"
         app:layout_constraintTop_toBottomOf="@+id/SignUP_password"
+        app:layout_constraintVertical_bias="0.054"
         tools:visibility="invisible" />
 
 

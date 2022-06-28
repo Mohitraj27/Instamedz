@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,11 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.instamedz.ForgotPassword;
-import com.example.instamedz.Heart_Care;
 import com.example.instamedz.Home_Page;
 import com.example.instamedz.R;
 import com.example.instamedz.SignUP;
-import com.example.instamedz.are_u_doctor_heart_care;
 import com.example.instamedz.databinding.ActivityLoginBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -36,7 +34,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView forgotPass;
     private TextView signup;
     private EditText editTextEmail, editTextPassword;
-    private Button login;
+    private ImageView login;
 
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
@@ -55,7 +53,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         signup = (TextView) findViewById(R.id.sign_UP_text);
         signup.setOnClickListener(this);
 
-        login = (Button) findViewById(R.id.login);
+        login = (ImageView) findViewById(R.id.login);
         login.setOnClickListener(this);
 
         editTextEmail = (EditText) findViewById(R.id.username);

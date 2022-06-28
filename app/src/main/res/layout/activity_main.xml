@@ -5,49 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/_1"
+    android:background="@drawable/landing_page"
     >
 
 
-    <Button
+    <ImageView
         android:id="@+id/Get_started"
-        android:layout_width="237dp"
+        android:layout_width="214dp"
         android:layout_height="60dp"
-        android:background="@drawable/rounded_button"
+
         android:backgroundTint="#E18D09"
         android:text="@string/Get_started"
         android:textAlignment="center"
         android:textColor="#FFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821"></Button>
+        app:layout_constraintVertical_bias="0.815"></ImageView>
 
     <TextView
-        android:id="@+id/Already_have_a_account_text"
-        android:layout_width="334dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="485dp"
 
+        android:id="@+id/Guest_button"
+        android:layout_width="186dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="485dp"
         android:contextClickable="true"
         android:textColor="#FFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.588" />
+        app:layout_constraintVertical_bias="0.648" />
 
-    <Button
-        android:id="@+id/Guest_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/roboto"
-        android:text="Continue as Guest"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

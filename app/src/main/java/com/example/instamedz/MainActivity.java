@@ -5,25 +5,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.instamedz.ui.login.LoginActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button GetStarted,Guest;
-    private TextView Already_Have_A_account;
+    private ImageView GetStarted;
+
 private Button Login_button;
     private FirebaseAuth mAuth;
     private long pressedTime;
 
 
-
+private TextView Guest_page;
 
 
     //Dashboard Intent
@@ -43,7 +43,14 @@ private Button Login_button;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+Guest_page=findViewById(R.id.Guest_button);
+Guest_page.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent= new Intent(MainActivity.this, Guest_page.class);
+        startActivity(intent);
+    }
+});
 
         GetStarted = findViewById(R.id.Get_started);
         GetStarted.setOnClickListener(new View.OnClickListener() {
@@ -53,23 +60,10 @@ private Button Login_button;
                 startActivity(SigUpPage);
             }
         });
-        Already_Have_A_account=findViewById(R.id.Already_have_a_account_text);
-        Already_Have_A_account.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent LogInPage=new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(LogInPage);
-            }
-        });
 
-        Guest=findViewById(R.id.Guest_button);
-        Guest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent HomePage=new Intent(MainActivity.this, Home_Page.class);
-                startActivity(HomePage);
-            }
-        });
+
+
+
     }
     @Override
     public void onBackPressed() {
