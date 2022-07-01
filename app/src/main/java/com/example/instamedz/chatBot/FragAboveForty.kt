@@ -95,11 +95,11 @@ class FragAboveForty : Fragment() {
 
     private fun getScore(){
         if(score>=3){
-            Toast.makeText(activity,"Based on our observation, We'll suggest you a convex/concave lens.", Toast.LENGTH_LONG).show()
+            Toast.makeText(activity,"Based on our observation, We'll suggest you a convex/concave lens.", Toast.LENGTH_SHORT).show()
         }
         else{
             if(score>=3){
-                Toast.makeText(activity,"Based on our observation, We'll suggest you a sunglasses or blue lens", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity,"Based on our observation, We'll suggest you a sunglasses or blue lens", Toast.LENGTH_SHORT).show()
             }
         }
     }

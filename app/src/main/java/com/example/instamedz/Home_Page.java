@@ -26,6 +26,7 @@ import com.example.instamedz.ui.login.User_Frag;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -56,6 +57,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
     private DatabaseReference reference;
     private String userID,username="Guest";
     private ActionBarDrawerToggle toggle;
+    private FloatingActionButton fab;
 
 
     @Override
@@ -72,6 +74,9 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         toggle=new ActionBarDrawerToggle(this, drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+        replaceFragment(new Home_fragment());
+        fab = (FloatingActionButton) findViewById(R.id.floatingActionButton2);
+        fab.show();
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -81,10 +86,13 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
                 switch (id)
                 {
                     case R.id.home_item:
-                        replaceFragment(new User_Frag());break;
-
+                        replaceFragment(new Home_fragment()); fab.show(); break;
+                    case R.id.User_item:
+                        replaceFragment(new User_Frag());fab.hide(); break;
+                    case R.id.dashboard_item:
+                        Toast.makeText(Home_Page.this,"Dashboard is clicked",Toast.LENGTH_SHORT).show(); break;
                     case R.id.appointment_item:
-                        replaceFragment(new Appoint_frag());break;
+                        replaceFragment(new Appoint_frag());fab.hide();break;
                     default:
                         return true;
                 }

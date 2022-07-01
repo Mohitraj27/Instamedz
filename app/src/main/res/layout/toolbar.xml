@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<com.google.android.material.appbar.AppBarLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">-->
-<com.google.android.material.appbar.MaterialToolbar
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
-    android:background="@drawable/instamedz_tollbar"
-    >
+    <com.google.android.material.appbar.MaterialToolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/instamedz_tollbar">
+
     <ImageView
         android:id="@+id/profilePic"
         android:layout_width="40dp"
@@ -25,7 +19,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.011"
         tools:srcCompat="@tools:sample/avatars" />
+    </com.google.android.material.appbar.MaterialToolbar>
 
-</com.google.android.material.appbar.MaterialToolbar>
-
-<!--</com.google.android.material.appbar.AppBarLayout>-->
