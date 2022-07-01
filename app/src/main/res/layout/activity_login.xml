@@ -17,10 +17,7 @@
     <TextView
         android:layout_width="90dp"
         android:layout_height="30dp"
-
-
         android:contextClickable="true"
-
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

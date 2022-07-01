@@ -8,8 +8,21 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
 
-        android:layout_height="match_parent">
+        android:src="@drawable/chatbot_for_nayan_care__2__1"
+        android:layout_height="match_parent"
+        >
 
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="810dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chatbot_for_nayan_care__2__1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
         <ImageView
             android:layout_width="55dp"
             android:layout_height="37dp"
@@ -31,32 +44,32 @@
             android:textSize="28sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.801"
+            app:layout_constraintHorizontal_bias="0.72"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.199" />
+            app:layout_constraintVertical_bias="0.181" />
 
         <LinearLayout
-            android:layout_width="481dp"
-            android:layout_height="175dp"
+            android:layout_width="503dp"
+            android:layout_height="161dp"
             android:layout_marginEnd="80dp"
 
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.653"
+            app:layout_constraintHorizontal_bias="0.401"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/question"
-            app:layout_constraintVertical_bias="0.186">
+            app:layout_constraintVertical_bias="0.17">
 
             <Button
                 android:id="@+id/option1"
                 android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="150dp"
-                android:text="Below 18"
-
                 android:backgroundTint="#D3E7F7"
+
+                android:text="Below 18"
                 android:textColor="@color/black" />
 
             <Button
@@ -76,12 +89,6 @@
                 android:backgroundTint="#D3E7F7"
                 android:text="40 &amp; Above"
                 android:textColor="@color/black" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="810dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/chatbot_for_nayan_care__2__1" />
 
 
         </LinearLayout>

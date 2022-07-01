@@ -375,7 +375,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="#FFD54F"
+        android:background="#FFFF"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_navigation_drawer"
         app:layout_constraintStart_toStartOf="parent"

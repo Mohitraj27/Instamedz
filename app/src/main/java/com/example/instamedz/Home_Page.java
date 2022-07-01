@@ -21,7 +21,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.instamedz.EyecareBot.Eyecarebot;
-import com.example.instamedz.chatBot.ChatBot;
 import com.example.instamedz.ui.login.Appoint_frag;
 import com.example.instamedz.ui.login.User_Frag;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -83,8 +82,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
                 {
                     case R.id.home_item:
                         replaceFragment(new User_Frag());break;
-                    case R.id.dashboard_item:
-                        Toast.makeText(Home_Page.this,"Dashboard is clicked",Toast.LENGTH_SHORT).show(); break;
+
                     case R.id.appointment_item:
                         replaceFragment(new Appoint_frag());break;
                     default:
