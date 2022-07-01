@@ -16,7 +16,6 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.instamedz.Home_Page;
 import com.example.instamedz.R;
 import com.example.instamedz.databinding.ActivityNavigationDrawerBinding;
-import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
 public class Navigation_drawer extends AppCompatActivity {
@@ -52,7 +51,7 @@ private TextView TextHome_intent;
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
-        NavigationView navigationView = binding.navView;
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -61,7 +60,7 @@ private TextView TextHome_intent;
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation_drawer);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
+
     }
 
     @Override

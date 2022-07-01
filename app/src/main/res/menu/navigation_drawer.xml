@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
     <item
         android:id="@+id/main_item"
         android:title="Title">
         <menu>
             <item
                 android:id="@+id/home_item"
-                android:title="Home"
+                android:title="User Profile"
                 android:checkable="true"
-
+                android:icon="@drawable/ic_baseline_person_24"
                 />
             <item
                 android:id="@+id/dashboard_item"
                 android:icon="@drawable/ic_baseline_dashboard_24"
                 android:title="Dashboard"
+                android:checkable="true"/>
+            <item
+                android:id="@+id/appointment_item"
+                android:icon="@drawable/ic_baseline_dashboard_24"
+                android:title="Book your Appointment"
                 android:checkable="true"/>
             <item
                 android:id="@+id/about_us_item"

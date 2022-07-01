@@ -10,6 +10,9 @@
     android:fitsSystemWindows="true"
     tools:context=".Home_Page"
     tools:openDrawer="start">
+
+
+
     <include
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,19 +20,7 @@
         layout="@layout/appbar_home_drawer"
         />
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:background="#FFD54F"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_navigation_drawer"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/navigation_drawer">
 
-    </com.google.android.material.navigation.NavigationView>
 <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="start"
@@ -341,6 +332,7 @@
 
 
         </LinearLayout>
+
     </ScrollView>
 
 
@@ -370,5 +362,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_twotone_chat_24" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/framelayout"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="?attr/actionBarSize"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFD54F"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_navigation_drawer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/navigation_drawer">
+
+    </com.google.android.material.navigation.NavigationView>
+
 </androidx.drawerlayout.widget.DrawerLayout>
