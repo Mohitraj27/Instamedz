@@ -20,6 +20,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.instamedz.EyecareBot.Eyecarebot;
 import com.example.instamedz.chatBot.ChatBot;
 import com.example.instamedz.ui.login.Appoint_frag;
 import com.example.instamedz.ui.login.User_Frag;
@@ -389,7 +390,7 @@ Business_care.setOnClickListener(new View.OnClickListener() {
     }
 
     public void Chatbot(View view) {
-        Intent Chatbot=new Intent(Home_Page.this, ChatBot.class);
+        Intent Chatbot=new Intent(Home_Page.this, Eyecarebot.class);
         startActivity(Chatbot);
     }
     private void replaceFragment(Fragment fragment){

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/eyecare_bot_nav"
+    app:startDestination="@id/EC_welcome">
+
+    <fragment
+        android:id="@+id/EC_welcome"
+        android:name="com.example.instamedz.EyecareBot.EC_welcome"
+        android:label="fragment_e_c_welcome"
+        tools:layout="@layout/fragment_e_c_welcome" >
+        <action
+            android:id="@+id/action_EC_welcome_to_EC_one"
+            app:destination="@id/EC_one" />
+    </fragment>
+    <fragment
+        android:id="@+id/EC_one"
+        android:name="com.example.instamedz.EyecareBot.EC_one"
+        android:label="EC_one" >
+        <action
+            android:id="@+id/action_EC_one_to_EC_two"
+            app:destination="@id/EC_two" />
+        <action
+            android:id="@+id/action_EC_one_to_EC_thirteen"
+            app:destination="@id/EC_thirteen" />
+    </fragment>
+    <fragment
+        android:id="@+id/EC_two"
+        android:name="com.example.instamedz.EyecareBot.EC_two"
+        android:label="EC_two" >
+        <action
+            android:id="@+id/action_EC_two_to_EC_three"
+            app:destination="@id/EC_three" />
+        <action
+            android:id="@+id/action_EC_two_to_EC_nine"
+            app:destination="@id/EC_nine" />
+        <action
+            android:id="@+id/action_EC_two_to_EC_eight"
+            app:destination="@id/EC_eight" />
+    </fragment>
+    <fragment
+        android:id="@+id/EC_three"
+        android:name="com.example.instamedz.EyecareBot.EC_three"
+        android:label="EC_three" >
+        <action
+            android:id="@+id/action_EC_three_to_EC_four"
+            app:destination="@id/EC_four" />
+    </fragment>
+    <fragment
+        android:id="@+id/EC_four"
+        android:name="com.example.instamedz.EyecareBot.EC_four"
+        android:label="EC_four" >
+        <action
+            android:id="@+id/action_EC_four_to_EC_five"
+            app:destination="@id/EC_five" />
+    </fragment>
+    <fragment
+        android:id="@+id/EC_five"
+        android:name="com.example.instamedz.EyecareBot.EC_five"
+        android:label="EC_five" >
+        <action
+            android:id="@+id/action_EC_five_to_EC_six"
+            app:destination="@id/EC_six" />
+    </fragment>
+    <fragment
+        android:id="@+id/EC_six"
+        android:name="com.example.instamedz.EyecareBot.EC_six"
+        android:label="EC_six" >
+        <action
+            android:id="@+id/action_EC_six_to_EC_seven"
+            app:destination="@id/EC_seven" />
+    </fragment>
+    <fragment
+        android:id="@+id/EC_seven"
+        android:name="com.example.instamedz.EyecareBot.EC_seven"
+        android:label="EC_seven" >
+        <action
+            android:id="@+id/action_EC_seven_to_EC_eight"
+            app:destination="@id/EC_eight" />
+    </fragment>
+    <fragment
+        android:id="@+id/EC_eight"
+        android:name="com.example.instamedz.EyecareBot.EC_eight"
+        android:label="EC_eight" >
+        <action
+            android:id="@+id/action_EC_eight_to_EC_four"
+            app:destination="@id/EC_four" />
+    </fragment>
+    <fragment
+        android:id="@+id/EC_nine"
+        android:name="com.example.instamedz.EyecareBot.EC_nine"
+        android:label="EC_nine" >
+        <action
+            android:id="@+id/action_EC_nine_to_EC_ten"
+            app:destination="@id/EC_ten" />
+        <action
+            android:id="@+id/action_EC_nine_to_EC_eleven"
+            app:destination="@id/EC_eleven" />
+    </fragment>
+    <fragment
+        android:id="@+id/EC_ten"
+        android:name="com.example.instamedz.EyecareBot.EC_ten"
+        android:label="EC_ten" />
+    <fragment
+        android:id="@+id/EC_eleven"
+        android:name="com.example.instamedz.EyecareBot.EC_eleven"
+        android:label="EC_eleven" >
+        <action
+            android:id="@+id/action_EC_eleven_to_EC_twelve"
+            app:destination="@id/EC_twelve" />
+    </fragment>
+    <fragment
+        android:id="@+id/EC_twelve"
+        android:name="com.example.instamedz.EyecareBot.EC_twelve"
+        android:label="EC_twelve" />
+    <fragment
+        android:id="@+id/EC_thirteen"
+        android:name="com.example.instamedz.EyecareBot.EC_thirteen"
+        android:label="EC_thirteen" >
+        <action
+            android:id="@+id/action_EC_thirteen_to_EC_fourteen"
+            app:destination="@id/EC_fourteen" />
+        <action
+            android:id="@+id/action_EC_thirteen_to_EC_fifteen"
+            app:destination="@id/EC_fifteen" />
+    </fragment>
+    <fragment
+        android:id="@+id/EC_fourteen"
+        android:name="com.example.instamedz.EyecareBot.EC_fourteen"
+        android:label="EC_fourteen" >
+        <action
+            android:id="@+id/action_EC_fourteen_to_EC_sixteen"
+            app:destination="@id/EC_sixteen" />
+    </fragment>
+    <fragment
+        android:id="@+id/EC_fifteen"
+        android:name="com.example.instamedz.EyecareBot.EC_fifteen"
+        android:label="EC_fifteen" >
+        <action
+            android:id="@+id/action_EC_fifteen_to_EC_sixteen"
+            app:destination="@id/EC_sixteen" />
+        <action
+            android:id="@+id/action_EC_fifteen_to_EC_fourteen"
+            app:destination="@id/EC_fourteen" />
+    </fragment>
+    <fragment
+        android:id="@+id/EC_sixteen"
+        android:name="com.example.instamedz.EyecareBot.EC_sixteen"
+        android:label="EC_sixteen" />
+</navigation>
