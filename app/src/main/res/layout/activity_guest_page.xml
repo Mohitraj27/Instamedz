@@ -13,12 +13,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:textColorHint="#FFFF"
         android:layout_marginBottom="170dp"
         android:hint="Name"
-
         android:minHeight="48dp"
+
         android:selectAllOnFocus="true"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFD54F"
+        android:textColorHint="#FFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

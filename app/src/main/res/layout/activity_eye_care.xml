@@ -5,10 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Eye_Care"
-    android:layout_marginTop="-21dp"
+    android:fitsSystemWindows="true"
     
     android:background="@drawable/nayan_care___introduction___page__1_">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+  />
     <ImageView
         android:id="@+id/nayan_care_intro_page_button"
         android:layout_width="77dp"
@@ -20,18 +24,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.931" />
-
-    <ImageView
-        android:id="@+id/eye_care_user_lgout"
-        android:layout_width="50dp"
-        android:layout_height="38dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton2"

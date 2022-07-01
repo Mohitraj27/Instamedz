@@ -24,17 +24,6 @@ private FloatingActionButton ChatBot_icon;
         setContentView(R.layout.activity_eye_care);
 
 
-        EyeCare_User_logout=findViewById(R.id.eye_care_user_lgout);
-        EyeCare_User_logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Eye_Care.this,UserProfile.class);
-                startActivity(intent);
-            }
-        });
-
-
-
 
 
     Nayan_care_Button =findViewById(R.id.nayan_care_intro_page_button);
@@ -58,6 +47,5 @@ private FloatingActionButton ChatBot_icon;
        });
 
     }
-
 
 }

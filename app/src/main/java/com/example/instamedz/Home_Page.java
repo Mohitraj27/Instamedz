@@ -43,10 +43,10 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
       ImageView Whatsapp_icon_bussiness_care;
      ImageView Whatsapp_icon_Soul_care;
      ImageView UserProfilePic;
-     MaterialToolbar toolbar;
-    DrawerLayout drawerLayout;
-    NavigationView navigationView;
-    FrameLayout frameLayout;
+     public MaterialToolbar toolbar;
+     public DrawerLayout drawerLayout;
+    public NavigationView navigationView;
+    public FrameLayout frameLayout;
    ImageView onCLick_menu_bar;
    ImageView Eye_Care;
    ImageView Health_Care;

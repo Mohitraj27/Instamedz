@@ -116,8 +116,6 @@ public class Appoint_frag extends Fragment implements View.OnClickListener {
                     Toast.makeText(getContext(), item.toString(),
                             Toast.LENGTH_SHORT).show();
                 }
-                Toast.makeText(getContext(), "Selected",
-                        Toast.LENGTH_SHORT).show();
 
             }
 

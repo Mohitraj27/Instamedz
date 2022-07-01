@@ -16,8 +16,6 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.example.instamedz.chatBot.ChatBot;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -87,7 +85,7 @@ public class Home_fragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home_fragment, container, false);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        frameLayout = v.findViewById(R.id.framelayout);
+
         user = FirebaseAuth.getInstance().getCurrentUser();
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getContext());
         if (user != null) {
@@ -325,12 +323,6 @@ public class Home_fragment extends Fragment implements View.OnClickListener {
         getActivity().startActivity(Chatbot);
     }
 
-    private void replaceFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getParentFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.framelayout, fragment);
-        fragmentTransaction.commit();
-    }
 
 
 
