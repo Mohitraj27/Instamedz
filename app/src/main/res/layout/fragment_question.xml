@@ -21,18 +21,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.01" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="810dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/chatbot_for_nayan_care__2__1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
 
             android:id="@+id/question"
@@ -88,6 +76,12 @@
                 android:backgroundTint="#D3E7F7"
                 android:text="40 &amp; Above"
                 android:textColor="@color/black" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="810dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/chatbot_for_nayan_care__2__1" />
 
 
         </LinearLayout>

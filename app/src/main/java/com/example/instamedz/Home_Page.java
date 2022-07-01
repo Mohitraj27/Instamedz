@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.instamedz.EyecareBot.Eyecarebot;
 import com.example.instamedz.chatBot.ChatBot;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -361,7 +362,7 @@ Business_care.setOnClickListener(new View.OnClickListener() {
     }
 
     public void Chatbot(View view) {
-        Intent Chatbot=new Intent(Home_Page.this, ChatBot.class);
+        Intent Chatbot=new Intent(Home_Page.this, Eyecarebot.class);
         startActivity(Chatbot);
     }
 }
