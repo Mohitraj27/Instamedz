@@ -5,12 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".are_u_doctor_heart_care">
-
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="100dp"
         android:orientation="vertical">
+
 <ImageView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"

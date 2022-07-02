@@ -4,10 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="-30dp"
+
     tools:context=".ui.login.ui.Nayan_care_option_page"
     android:background="@drawable/option_page__1_">
-
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
 
     <ImageView
         android:id="@+id/eye_care_user_lgout"

@@ -1,17 +1,18 @@
 package com.example.instamedz.ui.login.ui;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.instamedz.Doctor_consultaions;
+import com.example.instamedz.Home_Page;
 import com.example.instamedz.R;
 import com.example.instamedz.UserProfile;
 
-public class Nayan_care_option_page extends AppCompatActivity {
+public class Nayan_care_option_page extends Home_Page {
 
 private  ImageView EyeCare_User_logout;
 
@@ -23,11 +24,12 @@ private  ImageView EyeCare_User_logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nayan_care_option_page);
-
-
-
-
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View contentView = inflater.inflate(R.layout.activity_nayan_care_option_page, null, false);
+        drawerLayout.addView(contentView, 0);
+        fab.hide();
+        alreadyExecuted=true;
+        ToastAlreadyExecuted=true;
         EyeCare_User_logout=findViewById(R.id.eye_care_user_lgout);
         EyeCare_User_logout.setOnClickListener(new View.OnClickListener() {
             @Override
