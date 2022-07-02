@@ -1,28 +1,35 @@
 package com.example.instamedz;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.instamedz.chatBot.ChatBot;
 import com.example.instamedz.ui.login.ui.Nayan_care_option_page;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class Eye_Care extends AppCompatActivity {
+public class Eye_Care extends Home_Page {
 
 
     private  ImageView EyeCare_User_logout;
 private ImageView Nayan_care_Button;
 private FloatingActionButton ChatBot_icon;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eye_care);
-
+        fab.hide();
+        //Next 3 lines are for navigation drawer
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View contentView = inflater.inflate(R.layout.activity_eye_care, null, false);
+        drawerLayout.addView(contentView, 0);
+        alreadyExecuted=true;
+        ToastAlreadyExecuted=true;
 
 
 

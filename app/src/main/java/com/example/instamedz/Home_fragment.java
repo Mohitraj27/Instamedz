@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -44,7 +43,6 @@ public class Home_fragment extends Fragment implements View.OnClickListener {
     MaterialToolbar toolbar;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    FrameLayout frameLayout;
     ImageView onCLick_menu_bar;
     ImageView Eye_Care;
     ImageView Health_Care;

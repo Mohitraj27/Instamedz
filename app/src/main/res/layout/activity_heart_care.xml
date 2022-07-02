@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Heart_Care"
-    android:layout_marginTop="-30dp"
     android:background="@drawable/final_heart_care__1_">
-
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
     <ImageView
         android:id="@+id/are_u_a_doctor_button"
         android:layout_width="377dp"

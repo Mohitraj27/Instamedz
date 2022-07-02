@@ -74,14 +74,12 @@
             android:name=".Bussiness_care"
             android:exported="true"
             android:label="Bussiness Care"
-            android:parentActivityName=".Home_Page"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:parentActivityName=".Home_Page" />
         <activity
             android:name=".Soul_care"
             android:exported="true"
             android:label="Soul Care"
-            android:parentActivityName=".Home_Page"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:parentActivityName=".Home_Page" />
         <activity
             android:name=".Heart_Care"
             android:exported="true" />
@@ -89,8 +87,7 @@
             android:name=".Health_Care"
             android:exported="true"
             android:label="Health Care"
-            android:parentActivityName=".Home_Page"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:parentActivityName=".Home_Page" />
         <activity
             android:name=".Eye_Care"
             android:exported="true" />

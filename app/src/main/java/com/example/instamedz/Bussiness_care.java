@@ -1,14 +1,20 @@
 package com.example.instamedz;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class Bussiness_care extends AppCompatActivity {
+public class Bussiness_care extends Home_Page {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bussiness_care);
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View contentView = inflater.inflate(R.layout.activity_bussiness_care, null, false);
+        drawerLayout.addView(contentView, 0);
+        fab.hide();
+        alreadyExecuted=true;
+        ToastAlreadyExecuted=true;
     }
 }

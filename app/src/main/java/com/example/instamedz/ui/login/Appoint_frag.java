@@ -169,7 +169,7 @@ public class Appoint_frag extends Fragment implements View.OnClickListener {
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getParentFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.framelayout, fragment);
+        fragmentTransaction.replace(R.id.Home_FrameLayout, fragment);
         fragmentTransaction.commit();
     }
 

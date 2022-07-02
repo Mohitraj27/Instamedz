@@ -1,8 +1,6 @@
 package com.example.instamedz;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,7 +16,6 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.example.instamedz.EyecareBot.Eyecarebot;
 import com.example.instamedz.ui.login.Appoint_frag;
@@ -57,8 +54,20 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
     private DatabaseReference reference;
     private String userID,username="Guest";
     private ActionBarDrawerToggle toggle;
-    private FloatingActionButton fab;
+    public FloatingActionButton fab;
+    public boolean alreadyExecuted;
+    public boolean ToastAlreadyExecuted;
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(!alreadyExecuted)
+        {
+            replaceFragment(new Home_fragment());
+            alreadyExecuted=true;
+            Toast.makeText(this,"Welcome "+username,Toast.LENGTH_LONG).show();
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,15 +77,17 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        frameLayout=findViewById(R.id.framelayout);
+        frameLayout=findViewById(R.id.Home_FrameLayout);
         drawerLayout=findViewById(R.id.drawer_layout_home);
         navigationView=findViewById(R.id.nav_view);
         toggle=new ActionBarDrawerToggle(this, drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        replaceFragment(new Home_fragment());
+
         fab = (FloatingActionButton) findViewById(R.id.floatingActionButton2);
         fab.show();
+
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -89,33 +100,39 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
                         replaceFragment(new Home_fragment()); fab.show(); break;
                     case R.id.User_item:
                         replaceFragment(new User_Frag());fab.hide(); break;
-                    case R.id.dashboard_item:
-                        Toast.makeText(Home_Page.this,"Dashboard is clicked",Toast.LENGTH_SHORT).show(); break;
                     case R.id.appointment_item:
                         replaceFragment(new Appoint_frag());fab.hide();break;
+                    case R.id.eye_care_item:
+                        Intent Eye_Care_Intent = new Intent(Home_Page.this, Eye_Care.class);
+                        startActivity(Eye_Care_Intent); break;
+                    case R.id.heart_care_item:
+                        Intent Heart_care_intent = new Intent(Home_Page.this, Heart_Care.class);
+                        startActivity(Heart_care_intent); break;
+                    case R.id.soul_care_item:
+                        Intent Soul_care_intent = new Intent(Home_Page.this, Soul_care.class);
+                        startActivity(Soul_care_intent);break;
+                    case R.id.health_care:
+                        Intent Health_Care_Intent = new Intent(Home_Page.this, Health_Care.class);
+                        startActivity(Health_Care_Intent); break;
+                    case R.id.business_care_item:
+                        Intent Bus_Care_Intent = new Intent(Home_Page.this, Bussiness_care.class);
+                        startActivity(Bus_Care_Intent);
                     default:
                         return true;
                 }
                 return true;
             }
         });
-        /*mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_profile)
-                .setOpenableLayout(drawerLayout)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation_drawer);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);*/
         user= FirebaseAuth.getInstance().getCurrentUser();
         GoogleSignInAccount account= GoogleSignIn.getLastSignedInAccount(this);
         if(user!=null)
         {
             userID=user.getUid();
             username=user.getDisplayName();
-//            Glide.with(this).load(account.getPhotoUrl()).circleCrop().into((ImageView) findViewById(R.id.profilePic));
+           // Glide.with(this).load(account.getPhotoUrl()).circleCrop().into((ImageView) findViewById(R.id.profilePic));
         }
         reference= FirebaseDatabase.getInstance("https://instamedz-f5dcf-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users");
-        Toast.makeText(this,"Welcome "+username,Toast.LENGTH_LONG).show();
+
         UserProfilePic=(ImageView) findViewById(R.id.profilePic);
         UserProfilePic.setOnClickListener(Home_Page.this);
        Whatsapp_icon_health_care=findViewById(R.id.whatsapp_icon_health_care);
@@ -124,244 +141,15 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         Whatsapp_icon_Soul_care=findViewById(R.id.whatsapp_icon_soul_care);
         Whatsapp_icon_bussiness_care=findViewById(R.id.whatsapp_icon_business_care);
 
-
-       final String num= "+7415070882";
-        final String text_heart_care ="I Just Clicked on Heart Care whatsapp icon";
-        final String text_health_care="I Just Clicked on Health Care whatsapp icon";
-        final String text_eye_care="I Just Clicked on Eye Care Whatsapp icon";
-        final String text_soul_care="I Just Clicked on Soul Care Whatsapp icon";
-       final String text_bussines_care="I Just Clicked on Bussiness Care Whatsapp icon";
-       /* toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (drawerLayout.isDrawerOpen(GravityCompat.END)) {
-                    drawerLayout.closeDrawers();
-                } else {
-                    drawerLayout.openDrawer(Gravity.RIGHT);
-                }
-            }
-        });*/
         UserProfilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 replaceFragment(new User_Frag());
             }
         });
-        Whatsapp_icon_Soul_care.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean installed=isAppInstalled("com.whatsapp");
-                if (installed)
-                {
-                    Intent intent=new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse("http://api.whatsapp.com/send?phone="+num+"&text="+text_soul_care));
-                    startActivity(intent);
-                }
-                else
-                {
-                    Toast.makeText(Home_Page.this,"Whatsapp is not installed!",Toast.LENGTH_SHORT);
-                }
-
-            }
-
-            private boolean isAppInstalled(String s) {
-                PackageManager packageManager=getPackageManager();
-                boolean is_installed;
-                try {
-                    packageManager.getPackageInfo(s,PackageManager.GET_ACTIVITIES);
-                    is_installed=true;
-                } catch (PackageManager.NameNotFoundException e) {
-                    is_installed=false;
-                    e.printStackTrace();
-                }
-                return  is_installed;
-            }
-        });
 
 
 
-        Whatsapp_icon_bussiness_care.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean installed=isAppInstalled("com.whatsapp");
-                if (installed)
-                {
-                    Intent intent=new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse("http://api.whatsapp.com/send?phone="+num+"&text="+text_bussines_care));
-                    startActivity(intent);
-                }
-                else
-                {
-                    Toast.makeText(Home_Page.this,"Whatsapp is not installed!",Toast.LENGTH_SHORT);
-                }
-
-            }
-
-            private boolean isAppInstalled(String s) {
-
-
-
-                PackageManager packageManager=getPackageManager();
-                boolean is_installed;
-                try {
-                    packageManager.getPackageInfo(s,PackageManager.GET_ACTIVITIES);
-                    is_installed=true;
-                } catch (PackageManager.NameNotFoundException e) {
-                    is_installed=false;
-                    e.printStackTrace();
-                }
-                return  is_installed;
-            }
-
-
-
-
-        });
-
-        Whatsapp_icon_eye_care.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean installed=isAppInstalled("com.whatsapp");
-                if (installed)
-                {
-                    Intent intent=new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse("http://api.whatsapp.com/send?phone="+num+"&text="+text_eye_care));
-                    startActivity(intent);
-                }
-                else
-                {
-                    Toast.makeText(Home_Page.this,"Whatsapp is not installed!",Toast.LENGTH_SHORT);
-                }
-
-
-            }
-
-            private boolean isAppInstalled(String s) {
-                PackageManager packageManager=getPackageManager();
-                boolean is_installed;
-                try {
-                    packageManager.getPackageInfo(s,PackageManager.GET_ACTIVITIES);
-                    is_installed=true;
-                } catch (PackageManager.NameNotFoundException e) {
-                    is_installed=false;
-                    e.printStackTrace();
-                }
-                return  is_installed;
-            }
-
-        });
-
-
-
-
-
-        Whatsapp_icon_health_care.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                boolean installed=isAppInstalled("com.whatsapp");
-                if (installed)
-                {
-                    Intent intent=new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse("http://api.whatsapp.com/send?phone="+num+"&text="+text_health_care));
-                    startActivity(intent);
-                }
-                else
-                {
-                    Toast.makeText(Home_Page.this,"Whatsapp is not installed!",Toast.LENGTH_SHORT);
-                }
-            }
-
-            private boolean isAppInstalled(String s) {
-
-                PackageManager packageManager=getPackageManager();
-                boolean is_installed;
-                try {
-                    packageManager.getPackageInfo(s,PackageManager.GET_ACTIVITIES);
-                    is_installed=true;
-                } catch (PackageManager.NameNotFoundException e) {
-                    is_installed=false;
-                    e.printStackTrace();
-                }
-                return  is_installed;
-            }
-
-        });
-
-
-                 Whatsapp_icon_heart_care.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        boolean installed=isAppInstalled("com.whatsapp");
-                          if (installed)
-                          {
-                              Intent intent=new Intent(Intent.ACTION_VIEW);
-                              intent.setData(Uri.parse("http://api.whatsapp.com/send?phone="+num+"&text="+text_heart_care));
-                              startActivity(intent);
-                          }
-                          else
-                          {
-                              Toast.makeText(Home_Page.this,"Whatsapp is not installed!",Toast.LENGTH_SHORT);
-                          }
-                    }
-
-                    private boolean isAppInstalled(String s) {
-                        PackageManager packageManager=getPackageManager();
-                        boolean is_installed;
-                        try {
-                            packageManager.getPackageInfo(s,PackageManager.GET_ACTIVITIES);
-                            is_installed=true;
-                        } catch (PackageManager.NameNotFoundException e) {
-                            is_installed=false;
-                            e.printStackTrace();
-                        }
-                        return  is_installed;
-                    }
-                });
-
-
-  Eye_Care=findViewById(R.id.Eye_Care);
-  Eye_Care.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-          Intent Eye_Care_Intent=new Intent(Home_Page.this,Eye_Care.class);
-          startActivity(Eye_Care_Intent);
-      }
-  });
-  Health_Care=findViewById(R.id.health_care);
-  Health_Care.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-          Intent Health_Care_Intent=new Intent(Home_Page.this, Health_Care.class);
-          startActivity(Health_Care_Intent);
-      }
-  });
-
-Heart_care=findViewById(R.id.heart_care);
-Heart_care.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        Intent Heart_Care_intent=new Intent(Home_Page.this,Heart_Care.class);
-        startActivity(Heart_Care_intent);
-    }
-});
-
-Soul_care=findViewById(R.id.soul_care);
-Soul_care.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        Intent Soul_care_Intent=new Intent(Home_Page.this, Soul_care.class);
-        startActivity(Soul_care_Intent);
-    }
-});
-
-Business_care=findViewById(R.id.bussiness_care);
-Business_care.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        Intent Bussiness_care=new Intent(Home_Page.this, com.example.instamedz.Bussiness_care.class);
-        startActivity(Bussiness_care);
-    }
-});
     }
 
     /*@Override
@@ -401,9 +189,9 @@ Business_care.setOnClickListener(new View.OnClickListener() {
     }
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.framelayout,fragment);
-        fragmentTransaction.commit();
+        fragmentManager.beginTransaction()
+                .replace(R.id.Home_FrameLayout, fragment)
+                .commit();
     }
 }
 
