@@ -117,6 +117,8 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
                     case R.id.business_care_item:
                         Intent Bus_Care_Intent = new Intent(Home_Page.this, Bussiness_care.class);
                         startActivity(Bus_Care_Intent);
+                    case R.id.share_item:
+                        ShareWebsite();
                     default:
                         return true;
                 }
@@ -192,6 +194,15 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         fragmentManager.beginTransaction()
                 .replace(R.id.Home_FrameLayout, fragment)
                 .commit();
+    }
+    private void ShareWebsite()
+    {
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "www.instamedz.in \n InstaMedz: One app for all your medical needs!");
+        sendIntent.setType("text/plain");
+        Intent shareIntent = Intent.createChooser(sendIntent, "Share our app with:");
+        startActivity(shareIntent);
     }
 }
 
