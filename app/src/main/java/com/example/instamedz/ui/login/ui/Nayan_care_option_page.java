@@ -7,10 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.instamedz.Doctor_consultaions;
 import com.example.instamedz.Home_Page;
 import com.example.instamedz.R;
 import com.example.instamedz.UserProfile;
+import com.example.instamedz.ui.login.Appoint_frag;
 
 public class Nayan_care_option_page extends Home_Page {
 
@@ -60,8 +60,7 @@ private  ImageView EyeCare_User_logout;
         Doctor_consulations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Nayan_care_option_page.this, Doctor_consultaions.class);
-                startActivity(intent);
+                replaceFragment(new Appoint_frag());
             }
         });
 

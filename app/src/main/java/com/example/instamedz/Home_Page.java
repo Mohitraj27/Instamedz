@@ -189,7 +189,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         Intent Chatbot=new Intent(Home_Page.this, Eyecarebot.class);
         startActivity(Chatbot);
     }
-    private void replaceFragment(Fragment fragment){
+    public void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager=getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.Home_FrameLayout, fragment)
