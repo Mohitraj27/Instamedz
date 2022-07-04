@@ -67,6 +67,12 @@
                 android:icon="@drawable/ic_baseline_info_24"
                 android:title="Business Care"
                 android:checkable="true"/>
+            <item
+                android:id="@+id/nutri_care_item"
+                android:icon="@drawable/ic_baseline_info_24"
+                android:title="NutriCare"
+                android:checkable="true"/>
+
         </menu>
     </item>
 </menu>
