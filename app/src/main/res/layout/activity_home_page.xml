@@ -64,6 +64,7 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_navigation_drawer"
         app:itemIconTint="#FFFFFF"
+        app:itemRippleColor="#FFA000"
         app:itemTextColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
