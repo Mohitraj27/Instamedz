@@ -59,10 +59,15 @@
             android:exported="false" />
         <activity
             android:name=".ui.login.ui.Eye_hygiene_diet"
-            android:exported="false" />
+            android:exported="true"
+            android:parentActivityName=".ui.login.ui.Nayan_care_option_page"/>
         <activity
             android:name=".ui.login.ui.Eye_Exercise"
-            android:exported="false" />
+            android:exported="true"
+            android:parentActivityName=".ui.login.ui.Nayan_care_option_page"/>
+        <activity android:name=".Diet_for_eyes"
+            android:exported="true"
+            android:parentActivityName=".ui.login.ui.Nayan_care_option_page"/>
         <activity
             android:name=".ui.login.ui.Nayan_care_option_page"
             android:exported="true"
