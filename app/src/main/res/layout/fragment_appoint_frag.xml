@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.login.Appoint_frag"
-    android:windowSoftInputMode="adjustPan" >
+    tools:context=".ui.login.Appoint_frag">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -30,10 +29,9 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="412dp"
-            android:layout_height="64dp"
+            android:layout_height="1dp"
             android:scaleType="centerCrop"
             android:src="@drawable/instamedz_tollbar"
-            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -131,7 +129,7 @@
                 android:id="@+id/datatime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableEnd="@drawable/ic_baseline_calendar_today_24"
+                android:drawableRight="@drawable/ic_baseline_calendar_today_24"
                 android:inputType="text"
                 tools:layout_editor_absoluteX="31dp"
                 tools:layout_editor_absoluteY="301dp" />

@@ -19,7 +19,7 @@ private  ImageView EyeCare_User_logout;
     private ImageView Eye_excercise;
     private  ImageView Eye_Hygiene_Diet;
     private  ImageView Doctor_consulations;
-
+  private ImageView Diet_for_eyes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,16 @@ private  ImageView EyeCare_User_logout;
                 startActivity(intent);
             }
         });
+
+        Diet_for_eyes =findViewById(R.id.diet_for_eyes);
+        Diet_for_eyes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Nayan_care_option_page.this, com.example.instamedz.Diet_for_eyes.class);
+                startActivity(intent);
+            }
+        });
+
 
         Eye_excercise =findViewById(R.id.Eye_care_exercise_button);
         Eye_excercise.setOnClickListener(new View.OnClickListener() {

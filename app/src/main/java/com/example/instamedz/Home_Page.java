@@ -101,6 +101,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
                     case R.id.User_item:
                         replaceFragment(new User_Frag());fab.hide(); break;
                     case R.id.appointment_item:
+
                         replaceFragment(new Appoint_frag());fab.hide();break;
                     case R.id.eye_care_item:
                         Intent Eye_Care_Intent = new Intent(Home_Page.this, Eye_Care.class);

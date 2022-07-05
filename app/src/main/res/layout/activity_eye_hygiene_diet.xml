@@ -4,59 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.login.ui.Eye_hygiene_diet">
+    tools:context=".ui.login.ui.Eye_hygiene_diet"
+
+    android:background="@drawable/eye_hygiene">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical">
+<include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginBottom="10dp"
+        android:fillViewport="true"
+        android:layout_marginTop="240dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:ignore="SpeakableTextPresentCheck">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-        <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar"
-            />
-        <ImageView
 
-            android:layout_width="match_parent"
-            android:layout_height="316dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/eye_hygiene_and_diet_image1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+        android:orientation="horizontal">
 
+    <ImageView
 
-        <ImageView
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/frame_5_1st_part" />
 
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="-90dp"
-            android:src="@drawable/eye_hygiene_and_diet_image3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+    <ImageView
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="-202dp"
-            android:src="@drawable/eye_hygiene_and_diet_image_4"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintStart_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"/>
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="-202dp"
-            android:src="@drawable/eye_hygiene_and_diet_image5"/>
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="-202dp"
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/frame_5__1__part2" />
 
-            android:src="@drawable/eye_hygiene_and_diet_image7"/>
+    <ImageView
 
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/frame_5__1__part_3" />
+
+    <ImageView
+
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/frame_5__1__part4" />
+
+    <ImageView
+
+        android:layout_width="200dp"
+        android:layout_height="190dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/frame_5__1__part_" />
     </LinearLayout>
+    </HorizontalScrollView>
+    </LinearLayout>
+
 </ScrollView>
