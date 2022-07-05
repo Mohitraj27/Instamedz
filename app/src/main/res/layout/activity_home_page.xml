@@ -62,11 +62,14 @@
         android:layout_gravity="start"
         android:background="@drawable/nav_background"
         android:fitsSystemWindows="true"
-        app:itemIconTint="#000000"
         app:headerLayout="@layout/nav_header_navigation_drawer"
+        app:itemIconTint="#FFFFFF"
+        app:itemRippleColor="#FFA000"
+        app:itemTextColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/navigation_drawer">
+        app:menu="@menu/navigation_drawer"
+        app:subheaderColor="#FFFFFF">
 
     </com.google.android.material.navigation.NavigationView>
 

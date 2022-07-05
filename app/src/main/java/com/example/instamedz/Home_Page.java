@@ -120,6 +120,9 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
                         startActivity(Bus_Care_Intent); break;
                     case R.id.share_item:
                         ShareWebsite(); break;
+                    case R.id.nutri_care_item:
+                        Intent Nutri_care_Intent = new Intent(Home_Page.this, Nutri_care.class);
+                        startActivity(Nutri_care_Intent); break;
                     default:
                         return true;
                 }
