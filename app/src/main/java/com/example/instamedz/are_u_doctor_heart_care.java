@@ -12,7 +12,7 @@ import com.example.instamedz.chatBot.ChatBot;
 public class are_u_doctor_heart_care extends Home_Page {
 
 
-
+ImageView Benifits_intent;
     ImageView ChatBot_icon;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,17 @@ public class are_u_doctor_heart_care extends Home_Page {
         fab.hide();
         alreadyExecuted=true;
         ToastAlreadyExecuted=true;
+
+
+
+        Benifits_intent =findViewById(R.id.benfits_intent);
+        Benifits_intent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(are_u_doctor_heart_care.this,Benifits.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
