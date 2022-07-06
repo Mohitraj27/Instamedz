@@ -44,32 +44,32 @@
                 android:id="@+id/heart_care_item"
                 android:title="Heart Care"
                 android:checkable="true"
-                android:icon="@drawable/ic_baseline_home_24"
+                android:icon="@drawable/heart"
                 />
             <item
                 android:id="@+id/health_care_item"
                 android:title="Health Care"
                 android:checkable="true"
-                android:icon="@drawable/ic_baseline_person_24"
+                android:icon="@drawable/health"
                 />
             <item
                 android:id="@+id/soul_care_item"
-                android:icon="@drawable/ic_baseline_dashboard_24"
+                android:icon="@drawable/soul"
                 android:title="Soul Care"
                 android:checkable="true"/>
             <item
                 android:id="@+id/eye_care_item"
-                android:icon="@drawable/ic_baseline_calendar_today_24"
+                android:icon="@drawable/eye__2_"
                 android:title="Eye Care"
                 android:checkable="true"/>
             <item
                 android:id="@+id/business_care_item"
-                android:icon="@drawable/ic_baseline_info_24"
+                android:icon="@drawable/business"
                 android:title="Business Care"
                 android:checkable="true"/>
             <item
                 android:id="@+id/nutri_care_item"
-                android:icon="@drawable/ic_baseline_info_24"
+                android:icon="@drawable/nutricare"
                 android:title="NutriCare"
                 android:checkable="true"/>
 

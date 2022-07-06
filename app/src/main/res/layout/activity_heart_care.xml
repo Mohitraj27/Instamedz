@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Heart_Care"
-    android:background="@drawable/final_heart_care__1_"
+    android:background="@drawable/heart_care__2_"
     >
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"
         />
+
 
     <ImageView
         android:id="@+id/are_u_a_doctor_button"
@@ -18,11 +19,9 @@
         android:layout_height="55dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762" />
-
+        app:layout_constraintVertical_bias="0.714" />
 
     <ImageView
         android:id="@+id/are_u_a_heart_patient_button"
@@ -34,6 +33,6 @@
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.907" />
+        app:layout_constraintVertical_bias="0.889" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
