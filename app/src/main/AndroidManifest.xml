@@ -19,8 +19,16 @@
         android:windowSoftInputMode="adjustPan"
         tools:targetApi="m">
         <activity
-            android:name=".Benifits"
+            android:name=".impulse_12"
+            android:exported="true"
+            />
+        <activity
+            android:name=".Accesories"
             android:exported="false" />
+        <activity
+            android:name=".Benifits"
+            android:exported="true"
+            android:parentActivityName=".impulse_12"/>
         <activity
             android:name=".Guest_page"
             android:exported="false" />

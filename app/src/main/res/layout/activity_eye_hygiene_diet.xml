@@ -19,7 +19,7 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="310dp"
         android:layout_marginBottom="10dp"
         android:fillViewport="true"
         android:layout_marginTop="240dp"
@@ -37,36 +37,36 @@
 
     <ImageView
 
-        android:layout_width="200dp"
-        android:layout_height="190dp"
+        android:layout_width="290dp"
+        android:layout_height="290dp"
         android:layout_margin="15dp"
         android:src="@drawable/frame_5_1st_part" />
 
     <ImageView
 
-        android:layout_width="200dp"
-        android:layout_height="190dp"
+        android:layout_width="290dp"
+        android:layout_height="290dp"
         android:layout_margin="15dp"
         android:src="@drawable/frame_5__1__part2" />
 
     <ImageView
 
-        android:layout_width="200dp"
-        android:layout_height="190dp"
+        android:layout_width="290dp"
+        android:layout_height="290dp"
         android:layout_margin="15dp"
         android:src="@drawable/frame_5__1__part_3" />
 
     <ImageView
 
-        android:layout_width="200dp"
-        android:layout_height="190dp"
+        android:layout_width="290dp"
+        android:layout_height="290dp"
         android:layout_margin="15dp"
         android:src="@drawable/frame_5__1__part4" />
 
     <ImageView
 
-        android:layout_width="200dp"
-        android:layout_height="190dp"
+        android:layout_width="290dp"
+        android:layout_height="290dp"
         android:layout_margin="15dp"
         android:src="@drawable/frame_5__1__part_" />
     </LinearLayout>

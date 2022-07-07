@@ -17,7 +17,7 @@
         />
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="310dp"
         android:layout_marginBottom="100dp"
         android:fillViewport="true"
         android:layout_marginTop="220dp"
@@ -35,56 +35,56 @@
 
             <ImageView
 
-                android:layout_width="200dp"
-                android:layout_height="190dp"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
                 android:layout_margin="15dp"
                 android:src="@drawable/frame_4_part1" />
 
             <ImageView
 
-                android:layout_width="200dp"
-                android:layout_height="190dp"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
                 android:layout_margin="15dp"
                 android:src="@drawable/frame_4_part2" />
 
             <ImageView
 
-                android:layout_width="200dp"
-                android:layout_height="190dp"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
                 android:layout_margin="15dp"
                 android:src="@drawable/frame_4_part3" />
 
             <ImageView
 
-                android:layout_width="200dp"
-                android:layout_height="190dp"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
                 android:layout_margin="15dp"
                 android:src="@drawable/frame_4_part4" />
 
             <ImageView
 
-                android:layout_width="200dp"
-                android:layout_height="190dp"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
                 android:layout_margin="15dp"
                 android:src="@drawable/frame_4_part5" />
 
 
             <ImageView
 
-                android:layout_width="200dp"
-                android:layout_height="190dp"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
                 android:layout_margin="15dp"
                 android:src="@drawable/frame_4_part6" />
             <ImageView
 
-                android:layout_width="200dp"
-                android:layout_height="190dp"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
                 android:layout_margin="15dp"
                 android:src="@drawable/frame_4_part7" />
             <ImageView
 
-                android:layout_width="200dp"
-                android:layout_height="190dp"
+                android:layout_width="290dp"
+                android:layout_height="290dp"
                 android:layout_margin="15dp"
                 android:src="@drawable/frame_4_part8" />
 
