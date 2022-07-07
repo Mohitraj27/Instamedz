@@ -1,15 +1,18 @@
 package com.example.instamedz.ui.login.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import com.example.instamedz.Eyecare_ex1;
 import com.example.instamedz.Home_Page;
 import com.example.instamedz.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Eye_Exercise extends Home_Page {
-
+FloatingActionButton eyeEx;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,5 +22,10 @@ public class Eye_Exercise extends Home_Page {
         fab.hide();
         alreadyExecuted=true;
         ToastAlreadyExecuted=true;
+
+    }
+    public void EyeCareEx1(View view) {
+        Intent Eyecareex=new Intent(Eye_Exercise.this, Eyecare_ex1.class);
+        startActivity(Eyecareex);
     }
 }

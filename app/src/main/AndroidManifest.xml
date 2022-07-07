@@ -19,19 +19,21 @@
         android:windowSoftInputMode="adjustPan"
         tools:targetApi="m">
         <activity
+            android:name=".Eyecare_ex1"
+            android:exported="false" />
+        <activity
             android:name=".TimerPage"
             android:exported="true" />
         <activity
             android:name=".impulse_12"
-            android:exported="true"
-            />
+            android:exported="true" />
         <activity
             android:name=".Accesories"
             android:exported="false" />
         <activity
             android:name=".Benifits"
             android:exported="true"
-            android:parentActivityName=".impulse_12"/>
+            android:parentActivityName=".impulse_12" />
         <activity
             android:name=".Guest_page"
             android:exported="false" />
@@ -131,8 +133,9 @@
         <activity
             android:name=".EyecareBot.Eyecarebot"
             android:exported="true" />
-        <activity android:name=".Nutri_care"
-            android:exported="true"/>
+        <activity
+            android:name=".Nutri_care"
+            android:exported="true" />
     </application>
 
 </manifest>

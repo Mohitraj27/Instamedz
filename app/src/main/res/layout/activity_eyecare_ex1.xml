@@ -4,30 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Nutri_care">
+    android:background="@drawable/excercise_1eyecareex1"
+    tools:context=".Eyecare_ex1">
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"
         />
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/text_View"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="508dp"
-        android:layout_marginEnd="124dp"
-        android:text="Diet And Nutrition"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="204dp"
+        android:layout_marginBottom="116dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/StartButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="152dp"
-        android:text="ProGrain"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="160dp"
+        android:text="Start"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
+        app:layout_constraintTop_toBottomOf="@+id/text_View" />
 </androidx.constraintlayout.widget.ConstraintLayout>
