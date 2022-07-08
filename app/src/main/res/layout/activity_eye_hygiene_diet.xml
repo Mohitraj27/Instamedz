@@ -1,76 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.login.ui.Eye_hygiene_diet"
 
-    android:background="@drawable/eye_hygiene">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="100dp"
-        android:orientation="vertical">
+    android:background="@drawable/eye_hygiene__1_">
+
 <include
             android:id="@+id/toolbar"
             layout="@layout/toolbar"
             />
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="310dp"
-        android:layout_marginBottom="10dp"
-        android:fillViewport="true"
-        android:layout_marginTop="240dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        tools:ignore="SpeakableTextPresentCheck">
+    <ViewFlipper
 
-    <LinearLayout
+        android:id="@+id/view_flipper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right">
 
-        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="290dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/frame_5_1st_part" />
+        <ImageView
+            android:layout_width="290dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/frame_5__1__part4" />
+        <ImageView
+            android:layout_width="290dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/frame_5__1__part2" />
+        <ImageView
+            android:layout_width="290dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/frame_5__1__part_3" />
+
+        <ImageView
+            android:layout_width="290dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/frame_5__1__part_" />
+
+
+
+
+    </ViewFlipper>
 
     <ImageView
-
-        android:layout_width="290dp"
-        android:layout_height="290dp"
-        android:layout_margin="15dp"
-        android:src="@drawable/frame_5_1st_part" />
-
-    <ImageView
-
-        android:layout_width="290dp"
-        android:layout_height="290dp"
-        android:layout_margin="15dp"
-        android:src="@drawable/frame_5__1__part2" />
+        android:id="@+id/prev_button"
+        android:layout_width="76dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/left_icon" />
 
     <ImageView
+        android:id="@+id/next_button"
+        android:layout_width="63dp"
+        android:layout_height="54dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/right_icon" />
 
-        android:layout_width="290dp"
-        android:layout_height="290dp"
-        android:layout_margin="15dp"
-        android:src="@drawable/frame_5__1__part_3" />
-
-    <ImageView
-
-        android:layout_width="290dp"
-        android:layout_height="290dp"
-        android:layout_margin="15dp"
-        android:src="@drawable/frame_5__1__part4" />
-
-    <ImageView
-
-        android:layout_width="290dp"
-        android:layout_height="290dp"
-        android:layout_margin="15dp"
-        android:src="@drawable/frame_5__1__part_" />
-    </LinearLayout>
-    </HorizontalScrollView>
-    </LinearLayout>
-
-</ScrollView>
+</RelativeLayout>
