@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/excercise_1eyecareex1"
-    tools:context=".Eyecare_ex1">
+    android:background="@drawable/excercise_5_eye"
+    tools:context=".Eyecare_ex5">
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"
@@ -32,23 +32,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_View" />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/Eye_care_ex1_fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="EyeCareEx2"
-        android:clickable="true"
-        app:srcCompat="@drawable/ic_twotone_arrow_forward_ios_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/Eye_care_ex1_fab_back"
+        android:id="@+id/Eye_care_ex5_fab_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="EyeCareEx"
+        android:onClick="EyeCareEx4"
         android:clickable="true"
         app:srcCompat="@drawable/ic_baseline_arrow_back_ios_new_24"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -19,6 +19,18 @@
         android:windowSoftInputMode="adjustPan"
         tools:targetApi="m">
         <activity
+            android:name=".Eyecare_ex5"
+            android:exported="false" />
+        <activity
+            android:name=".Eyecare_ex4"
+            android:exported="false" />
+        <activity
+            android:name=".Eyecare_ex3"
+            android:exported="false" />
+        <activity
+            android:name=".Eyecare_ex2"
+            android:exported="false" />
+        <activity
             android:name=".frame_12_asparagus"
             android:exported="false" />
         <activity

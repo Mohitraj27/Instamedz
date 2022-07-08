@@ -9,10 +9,9 @@ import android.view.View;
 import com.example.instamedz.Eyecare_ex1;
 import com.example.instamedz.Home_Page;
 import com.example.instamedz.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Eye_Exercise extends Home_Page {
-FloatingActionButton eyeEx;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
