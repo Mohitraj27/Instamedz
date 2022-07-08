@@ -19,6 +19,9 @@
         android:windowSoftInputMode="adjustPan"
         tools:targetApi="m">
         <activity
+            android:name=".Diet_heart_care"
+            android:exported="false" />
+        <activity
             android:name=".Eyecare_ex1"
             android:exported="false" />
         <activity
@@ -57,9 +60,6 @@
             android:exported="false" />
         <activity
             android:name=".chatBot.ChatBot"
-            android:exported="false" />
-        <activity
-            android:name=".Heart_Patient"
             android:exported="false" />
         <activity
             android:name=".appointment_details"

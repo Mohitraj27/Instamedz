@@ -18,7 +18,7 @@ public class impulse_12 extends AppCompatActivity {
         setContentView(R.layout.activity_impulse_12);
 
 
-        //Whatsapp Icon in Home Page for Suggestion of the App.
+        //Whatsapp for booking free demo of impulse 12
 
         impulse_12_book = findViewById(R.id.impulse_12_demo_book);
         final String num = "+917415070882";

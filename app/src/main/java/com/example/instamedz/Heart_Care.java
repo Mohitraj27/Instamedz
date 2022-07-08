@@ -36,7 +36,7 @@ private ImageView Heart_patient;
         Heart_patient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Heart_Care.this,Heart_Patient.class);
+                Intent intent=new Intent(Heart_Care.this,Diet_heart_care.class);
                 startActivity(intent);
             }
         });

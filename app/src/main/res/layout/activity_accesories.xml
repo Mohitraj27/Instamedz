@@ -1,79 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Accesories"
-    android:background="@drawable/accessories">
-    <LinearLayout
+    android:background="@drawable/accessories__1_">
+
+    <ViewFlipper
+
+        android:id="@+id/view_flipper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="100dp"
-        android:orientation="vertical">
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="320dp"
-            android:layout_marginBottom="10dp"
-            android:fillViewport="true"
-            android:layout_marginTop="240dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3"
-            tools:ignore="SpeakableTextPresentCheck">
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-301dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+        <ImageView
+            android:layout_width="290dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/frame_6" />
 
-                android:orientation="horizontal">
+        <ImageView
+            android:layout_width="290dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/frame_7" />
 
-                <ImageView
+        <ImageView
+            android:layout_width="290dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/frame_8" />
 
-                    android:layout_width="290dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="15dp"
-                    android:src="@drawable/frame_6" />
+        <ImageView
+            android:layout_width="290dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/frame_9" />
 
-                <ImageView
+        <ImageView
+            android:layout_width="290dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/frame_10" />
 
-                    android:layout_width="290dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="15dp"
-                    android:src="@drawable/frame_10" />
+        <ImageView
+            android:layout_width="290dp"
+            android:layout_height="350dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/frame_11" />
 
-                <ImageView
+    </ViewFlipper>
 
-                    android:layout_width="290dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="15dp"
-                    android:src="@drawable/frame_7"/>
+    <ImageView
+        android:id="@+id/prev_button"
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-345dp"
+        android:layout_marginBottom="340dp"
+        android:src="@drawable/left_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-                <ImageView
+    <ImageView
+        android:id="@+id/next_button"
+        android:layout_width="55dp"
+        android:layout_height="81dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-340dp"
+        android:src="@drawable/right_icon"
 
-                    android:layout_width="290dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="15dp"
-                    android:src="@drawable/frame_8" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-
-                    android:layout_width="290dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="15dp"
-                    android:src="@drawable/frame_9" />
-
-                <ImageView
-
-                    android:layout_width="290dp"
-                    android:layout_height="290dp"
-                    android:layout_margin="15dp"
-                    android:src="@drawable/frame_11" />
-            </LinearLayout>
-        </HorizontalScrollView>
-
-    </LinearLayout>
 
     <ImageView
         android:id="@+id/impulse_12"
