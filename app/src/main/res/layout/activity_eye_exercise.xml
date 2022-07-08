@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="start"
+    android:fitsSystemWindows="true"
     tools:context=".ui.login.ui.Eye_Exercise">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.ui.Eye_Exercise">
+
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -15,6 +24,8 @@
         layout="@layout/toolbar"
         />
 
+
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="262dp"
@@ -24,7 +35,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="parent">
+
+    </ImageView>
+
+
 
     <ImageView
         android:layout_width="wrap_content"
@@ -35,6 +50,7 @@
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="parent" />
 
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -43,7 +59,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="parent">
+    </ImageView>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -56,5 +73,22 @@
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="parent" />
 
+
+
+
 </LinearLayout>
+
+
 </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/Eye_care_ex_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="EyeCareEx1"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
