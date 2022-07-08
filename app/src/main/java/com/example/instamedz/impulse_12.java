@@ -11,12 +11,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class impulse_12 extends AppCompatActivity {
-
+    ImageView impulse_12_book;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_impulse_12);
- ImageView impulse_12_book;
+
 
         //Whatsapp Icon in Home Page for Suggestion of the App.
 

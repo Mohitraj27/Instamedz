@@ -11,27 +11,27 @@
                 android:id="@+id/home_item"
                 android:title="Home"
                 android:checkable="true"
-                android:icon="@drawable/ic_baseline_home_24"
+                android:icon="@drawable/home"
                 />
             <item
                 android:id="@+id/User_item"
                 android:title="User Profile"
                 android:checkable="true"
-                android:icon="@drawable/ic_baseline_person_24"
+                android:icon="@drawable/user"
                 />
             <item
                 android:id="@+id/appointment_item"
-                android:icon="@drawable/ic_baseline_calendar_today_24"
+                android:icon="@drawable/booking"
                 android:title="Book Appointment"
                 android:checkable="true"/>
             <item
                 android:id="@+id/about_us_item"
-                android:icon="@drawable/ic_baseline_info_24"
+                android:icon="@drawable/info"
                 android:title="About us"
                 android:checkable="true"/>
             <item
                 android:id="@+id/share_item"
-                android:icon="@drawable/ic_baseline_share_24"
+                android:icon="@drawable/share"
                 android:title="Share"
                 android:checkable="true"/>
         </menu>
