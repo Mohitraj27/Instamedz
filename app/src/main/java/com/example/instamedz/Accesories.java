@@ -1,14 +1,14 @@
 package com.example.instamedz;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class Accesories extends AppCompatActivity {
+public class Accesories extends Home_Page {
 private ImageView impulse_12_intent;
 
     ViewFlipper flipper;
@@ -17,7 +17,12 @@ private ImageView impulse_12_intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accesories);
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View contentView = inflater.inflate(R.layout.activity_accesories, null, false);
+        drawerLayout.addView(contentView, 0);
+        fab.hide();
+        alreadyExecuted=true;
+        ToastAlreadyExecuted=true;
 
 
         flipper = findViewById(R.id.view_flipper);

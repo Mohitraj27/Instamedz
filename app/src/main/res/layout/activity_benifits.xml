@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".Benifits"
     android:background="@drawable/benefits_">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
 
 
     <ImageView

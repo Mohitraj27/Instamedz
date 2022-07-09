@@ -19,6 +19,9 @@
         android:windowSoftInputMode="adjustPan"
         tools:targetApi="m">
         <activity
+            android:name=".Diet_heart_care"
+            android:exported="false" />
+        <activity
             android:name=".Eyecare_ex5"
             android:exported="false" />
         <activity
@@ -32,9 +35,6 @@
             android:exported="false" />
         <activity
             android:name=".frame_12_asparagus"
-            android:exported="false" />
-        <activity
-            android:name=".Diet_heart_care"
             android:exported="false" />
         <activity
             android:name=".Eyecare_ex1"
