@@ -21,7 +21,7 @@ public class Eyecare_ex1 extends Home_Page {
     CountDownTimer mCountDownTimer;
     boolean mTimerRunning=false;
     long mTimeLeftInMillis=START_TIME_IN_MILLIS;
-
+Button Cancel_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,16 @@ public class Eyecare_ex1 extends Home_Page {
         alreadyExecuted = true;
         ToastAlreadyExecuted = true;
         textView = findViewById(R.id.text_View);
+
+
+         Cancel_btn=findViewById(R.id.Cancel_Button);
+         Cancel_btn.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent intent=new Intent(Eyecare_ex1.this,Eye_Exercise.class);
+                 startActivity(intent);
+             }
+         });
         startButton = findViewById(R.id.StartButton);
 
         startButton.setOnClickListener(new View.OnClickListener() {
@@ -81,9 +91,6 @@ public class Eyecare_ex1 extends Home_Page {
         String timeLeftFormatted=String.format(Locale.getDefault(),"%02d",seconds);
         textView.setText(timeLeftFormatted);
     }
-    public void EyeCareEx(View view) {
-        Intent Eyecareex=new Intent(Eyecare_ex1.this, Eye_Exercise.class);
-        startActivity(Eyecareex);
-    }
+
 
 }

@@ -11,15 +11,24 @@
         android:layout_height="match_parent">
 
         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="810dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chatbot_for_nayan_care__2__1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/skip_button"
             android:layout_width="55dp"
             android:layout_height="37dp"
-            android:id="@+id/skip_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.967"
+            app:layout_constraintHorizontal_bias="0.955"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.01" />
+            app:layout_constraintVertical_bias="0.067" />
 
         <TextView
 
@@ -77,11 +86,7 @@
                 android:text="40 &amp; Above"
                 android:textColor="@color/black" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="810dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/chatbot_for_nayan_care__2__1" />
+
 
 
         </LinearLayout>

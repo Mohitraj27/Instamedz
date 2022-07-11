@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.instamedz.ui.login.ui.Eye_Exercise;
+
 import java.util.Locale;
 
 public class Eyecare_ex3 extends Home_Page {
@@ -19,7 +21,7 @@ public class Eyecare_ex3 extends Home_Page {
     CountDownTimer mCountDownTimer;
     boolean mTimerRunning=false;
     long mTimeLeftInMillis=START_TIME_IN_MILLIS;
-
+Button Cancel_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,15 @@ public class Eyecare_ex3 extends Home_Page {
         ToastAlreadyExecuted = true;
         textView = findViewById(R.id.text_View);
         startButton = findViewById(R.id.StartButton);
+
+        Cancel_btn=findViewById(R.id.Cancel_Button);
+        Cancel_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Eyecare_ex3.this, Eye_Exercise.class);
+                startActivity(intent);
+            }
+        });
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
