@@ -4,30 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Nutri_care">
+    tools:context=".Nutri_care"
+    android:background="@drawable/nutri_care_start">
+
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"
         />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="508dp"
-        android:layout_marginEnd="124dp"
-        android:text="Diet And Nutrition"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/nutri_next_button"
+        android:layout_width="73dp"
+        android:layout_height="75dp"
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="152dp"
-        android:text="ProGrain"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.943"
+ />
+
+
+    <!--    <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="67dp"
+            android:layout_height="62dp"
+            android:layout_marginEnd="48dp"
+
+            android:layout_marginBottom="48dp"
+            android:background="@drawable/next_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

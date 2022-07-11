@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".impulse_12">
+    tools:context=".Diet_heart_care">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

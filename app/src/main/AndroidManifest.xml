@@ -19,33 +19,41 @@
         android:windowSoftInputMode="adjustPan"
         tools:targetApi="m">
         <activity
+            android:name=".nutri_prograin"
+            android:exported="false" />
+        <activity
+            android:name=".nutri_tips"
+            android:exported="false" />
+        <activity
+            android:name=".Nutri_options"
+            android:exported="false" />
+        <activity
             android:name=".Diet_heart_care"
             android:exported="true"
-            android:parentActivityName=".Heart_Care"/>
+            android:parentActivityName=".Heart_Care" />
         <activity
             android:name=".Eyecare_ex5"
             android:exported="true"
-            android:parentActivityName=".ui.login.ui.Eye_Exercise"/>
+            android:parentActivityName=".ui.login.ui.Eye_Exercise" />
         <activity
             android:name=".Eyecare_ex4"
             android:exported="true"
-            android:parentActivityName=".ui.login.ui.Eye_Exercise"/>
+            android:parentActivityName=".ui.login.ui.Eye_Exercise" />
         <activity
             android:name=".Eyecare_ex3"
             android:exported="true"
-            android:parentActivityName=".ui.login.ui.Eye_Exercise"/>
+            android:parentActivityName=".ui.login.ui.Eye_Exercise" />
         <activity
             android:name=".Eyecare_ex2"
             android:exported="true"
-            android:parentActivityName=".ui.login.ui.Eye_Exercise"/>
+            android:parentActivityName=".ui.login.ui.Eye_Exercise" />
         <activity
             android:name=".frame_12_asparagus"
-            android:exported="true"
-            />
+            android:exported="true" />
         <activity
             android:name=".Eyecare_ex1"
             android:exported="true"
-            android:parentActivityName=".ui.login.ui.Eye_Exercise"/>
+            android:parentActivityName=".ui.login.ui.Eye_Exercise" />
         <activity
             android:name=".TimerPage"
             android:exported="true" />
@@ -135,11 +143,6 @@
         <activity
             android:name=".Eye_Care"
             android:exported="true" />
-        <activity
-            android:name=".ui.login.Navigation_drawer"
-            android:exported="false"
-            android:label="@string/title_activity_navigation_drawer"
-            android:theme="@style/Theme.Instamedz.NoActionBar" />
         <activity android:name=".Home_Page" />
         <activity
             android:name=".SignUP"
