@@ -2,6 +2,7 @@ package com.example.instamedz;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -68,12 +70,17 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
             Toast.makeText(this,"Welcome "+username,Toast.LENGTH_LONG).show();
         }
     }
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.top_app_bar, menu);
+        return true;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_home_page);
+
         toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -129,6 +136,23 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
                 return true;
             }
         });
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                int id=item.getItemId();
+                item.setChecked(true);
+                switch(id)
+                {
+                    case R.id.profile_toolbar:
+                        replaceFragment(new User_Frag());
+                    default:
+                        return true;
+
+                }
+
+            }
+        });
+
         user= FirebaseAuth.getInstance().getCurrentUser();
         GoogleSignInAccount account= GoogleSignIn.getLastSignedInAccount(this);
         if(user!=null)
@@ -139,26 +163,26 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         }
         reference= FirebaseDatabase.getInstance("https://instamedz-f5dcf-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users");
 
-        UserProfilePic=(ImageView) findViewById(R.id.profilePic);
-        UserProfilePic.setOnClickListener(Home_Page.this);
+/*        UserProfilePic=(ImageView) findViewById(R.id.profilePic);
+        UserProfilePic.setOnClickListener(Home_Page.this);*/
        Whatsapp_icon_health_care=findViewById(R.id.whatsapp_icon_health_care);
         Whatsapp_icon_heart_care =findViewById(R.id.whatsapp_icon_heart_care);
         Whatsapp_icon_eye_care=findViewById(R.id.whatsapp_icon_eye_care);
         Whatsapp_icon_Soul_care=findViewById(R.id.whatsapp_icon_soul_care);
         Whatsapp_icon_bussiness_care=findViewById(R.id.whatsapp_icon_business_care);
 
-        UserProfilePic.setOnClickListener(new View.OnClickListener() {
+        /*UserProfilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 replaceFragment(new User_Frag());
             }
         });
-
+*/
 
 
     }
 
-    /*@Override
+   /* @Override
     public void onBackPressed() {
         new MaterialAlertDialogBuilder(this)
                 .setTitle("Exit InstaMedz")
@@ -170,6 +194,27 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
                 })
                 .setNegativeButton("No", null)
                 .show();
+    }*/
+    /*@Override
+    public void onBackPressed() {
+
+        int count = getSupportFragmentManager().getBackStackEntryCount();
+        if (count == 0) {
+            super.onBackPressed();
+            new MaterialAlertDialogBuilder(this)
+                    .setTitle("Exit InstaMedz")
+                    .setMessage("Are you sure you want to exit?")
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            Home_Page.this.finishAffinity();
+                        }
+                    })
+                    .setNegativeButton("No", null)
+                    .show();
+        } else {
+            getSupportFragmentManager().popBackStack();
+        }
+
     }*/
 
 
