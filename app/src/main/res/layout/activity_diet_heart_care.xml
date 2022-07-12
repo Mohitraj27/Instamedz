@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-=======
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
->>>>>>> origin/master
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
+
     tools:context=".Diet_heart_care"
     android:background="@drawable/diet_for_healthy_heart">
 
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <ViewFlipper
 
         android:id="@+id/view_flipper"
@@ -71,8 +71,16 @@
             android:layout_gravity="center"
             android:scaleType="centerCrop"
             android:src="@drawable/frame_18" />
-    </ViewFlipper>
 
+
+    </ViewFlipper>
+    <ImageView
+        android:id="@+id/next_button"
+        android:layout_width="63dp"
+        android:layout_height="54dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/right_icon" />
     <ImageView
         android:id="@+id/prev_button"
         android:layout_width="76dp"
@@ -83,21 +91,6 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:src="@drawable/left_icon" />
-
-    <ImageView
-        android:id="@+id/next_button"
-        android:layout_width="63dp"
-        android:layout_height="54dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/right_icon" />
-
 </RelativeLayout>
-=======
-    tools:context=".Diet_heart_care">
-
 </androidx.constraintlayout.widget.ConstraintLayout>
->>>>>>> origin/master
+
