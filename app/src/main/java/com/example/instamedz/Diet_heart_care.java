@@ -1,21 +1,28 @@
 package com.example.instamedz;
 
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
+=======
+>>>>>>> origin/master
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Diet_heart_care extends AppCompatActivity {
+<<<<<<< HEAD
     // creating object of ViewPager
     ViewFlipper flipper;
     ImageView prev_Button, next_Button;
+=======
+>>>>>>> origin/master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diet_heart_care);
+<<<<<<< HEAD
 
 
 
@@ -64,4 +71,7 @@ public class Diet_heart_care extends AppCompatActivity {
     }
 
 
+=======
+    }
+>>>>>>> origin/master
 }

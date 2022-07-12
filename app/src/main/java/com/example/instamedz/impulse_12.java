@@ -1,21 +1,26 @@
 package com.example.instamedz;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class impulse_12 extends AppCompatActivity {
+public class impulse_12 extends Home_Page {
     ImageView impulse_12_book;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_impulse_12);
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View contentView = inflater.inflate(R.layout.activity_impulse_12, null, false);
+        drawerLayout.addView(contentView, 0);
+        fab.hide();
+        alreadyExecuted=true;
+        ToastAlreadyExecuted=true;
 
 
         //Whatsapp for booking free demo of impulse 12

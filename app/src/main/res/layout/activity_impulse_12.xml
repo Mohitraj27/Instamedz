@@ -5,7 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/what_impulse_12_offers">
-
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
     <ImageView
         android:id="@+id/impulse_12_demo_book"
         android:layout_width="351dp"
