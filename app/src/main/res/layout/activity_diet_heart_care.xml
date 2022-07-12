@@ -21,15 +21,18 @@
         android:outAnimation="@android:anim/slide_out_right">
 
         <ImageView
-
+            android:id="@+id/asparagus_image"
             android:layout_width="290dp"
             android:layout_height="350dp"
             android:layout_gravity="center"
             android:scaleType="centerCrop"
-            android:src="@drawable/frame_12" />
+            android:src="@drawable/frame_12"
+            android:onClick="Asparagus_dialog"/>
 
 
         <ImageView
+            android:id="@+id/broccoli_image"
+            android:onClick="Broccoli_dialog"
             android:layout_width="290dp"
             android:layout_height="350dp"
             android:layout_gravity="center"
@@ -37,6 +40,8 @@
             android:src="@drawable/frame_13" />
 
         <ImageView
+            android:id="@+id/choc_image"
+            android:onClick="Choc_dialog"
             android:layout_width="290dp"
             android:layout_height="350dp"
             android:layout_gravity="center"
@@ -44,6 +49,8 @@
             android:src="@drawable/frame_14" />
 
         <ImageView
+            android:id="@+id/liver_image"
+            android:onClick="liver_dialog"
             android:layout_width="290dp"
             android:layout_height="350dp"
             android:layout_gravity="center"
@@ -51,6 +58,8 @@
             android:src="@drawable/frame_15" />
 
         <ImageView
+            android:id="@+id/avocados_image"
+            android:onClick="Avocados_dialog"
             android:layout_width="290dp"
             android:layout_height="350dp"
             android:layout_gravity="center"
@@ -58,6 +67,8 @@
             android:src="@drawable/frame_16" />
 
         <ImageView
+            android:id="@+id/fish_image"
+            android:onClick="Fish_dialog"
             android:layout_width="290dp"
             android:layout_height="350dp"
             android:layout_gravity="center"
@@ -65,6 +76,8 @@
             android:src="@drawable/frame_17" />
 
         <ImageView
+            android:id="@+id/walnuts_image"
+            android:onClick="Walnuts_dialog"
             android:layout_width="290dp"
             android:layout_height="350dp"
             android:layout_gravity="center"
