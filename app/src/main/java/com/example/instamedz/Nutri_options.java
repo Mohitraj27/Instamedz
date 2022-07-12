@@ -38,7 +38,7 @@ ImageView prograin,diet,water,tips,doc;
         doc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Nutri_options.this, Doctor_consultaions.class);
+                Intent intent=new Intent(Nutri_options.this, appointment_details.class);
                 startActivity(intent);
             }
         });
