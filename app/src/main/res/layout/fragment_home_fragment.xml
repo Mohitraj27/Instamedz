@@ -221,7 +221,7 @@
                         />
 
                     <Button
-
+                        android:id="@+id/health_care_learn_more_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="120dp"
@@ -348,8 +348,21 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.914" />
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="960dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/reduce_stress"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.896"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.914" />
 
                 </LinearLayout>
+
 
             </ScrollView>
 

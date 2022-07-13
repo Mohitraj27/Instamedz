@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -33,6 +34,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Home_Page extends AppCompatActivity implements View.OnClickListener, Home_Page1 {
+
 
 
 
@@ -80,6 +82,9 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_home_page);
+
+
+
 
         toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
