@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Instamedz" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#144970</item>
+        <item name="colorPrimary">#3788E4</item>
         <item name="colorPrimaryVariant">#144970</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
