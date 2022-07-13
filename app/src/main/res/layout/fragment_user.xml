@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".UserProfile">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/userProfilePage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,15 +20,30 @@
             android:contentDescription="Display Picture"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.903"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.079"
+            app:layout_constraintVertical_bias="0.087"
             tools:ignore="ImageContrastCheck"
             tools:src="@tools:sample/avatars" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="254dp"
+            android:layout_height="196dp"
+            android:layout_marginTop="-1500dp"
+            android:scaleType="center"
+            android:src="@drawable/book_aapointment_gif"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.751" />
 
         <TextView
             android:layout_width="262dp"
             android:layout_height="50dp"
+            android:layout_marginTop="190dp"
             android:fontFamily="sans-serif"
             android:scaleType="centerCrop"
             android:text="𝐔𝐬𝐞𝐫 𝐃𝐞𝐭𝐚𝐢𝐥𝐬"
@@ -37,10 +51,10 @@
             android:textSize="29sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.253"
+            app:layout_constraintHorizontal_bias="0.107"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.241" />
+            app:layout_constraintVertical_bias="0.118" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/logoutButton"
@@ -51,38 +65,38 @@
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.685" />
+            app:layout_constraintVertical_bias="0.662" />
 
         <TextView
             android:id="@+id/userName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="1dp"
+            android:layout_height="41dp"
             android:layout_marginTop="84dp"
             android:textColor="#144970"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintHorizontal_bias="0.109"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Userpic"
-            app:layout_constraintVertical_bias="0.004" />
+            app:layout_constraintVertical_bias="0.155" />
 
         <TextView
             android:id="@+id/userEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:textSize="24sp"
             android:textColor="#144970"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintHorizontal_bias="0.111"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/userName"
-            app:layout_constraintVertical_bias="0.031" />
+            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
