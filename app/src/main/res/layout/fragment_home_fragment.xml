@@ -116,6 +116,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="25dp"
                         android:text="ABOUT US"
+                        android:layout_marginTop="100dp"
                         android:textColor="#144970"
                         android:textSize="29sp"
                         android:textStyle="bold"
@@ -132,6 +133,7 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="15dp"
                         android:paddingStart="15dp"
+
                         android:text="@string/About_Us_Content"
                         android:textColor="#144970"
                         android:textStyle="bold"
@@ -202,7 +204,10 @@
                         android:padding="10dp"
 
                         android:scaleType="centerCrop"
-                        android:src="@drawable/health_care_card_view_1" />
+                        android:src="@drawable/health_care_card_view_1" >
+
+                    </ImageView>
+
 
                     <ImageView
 
@@ -320,7 +325,29 @@
                         android:layout_marginTop="-80dp"
                         android:text="Learn More"
                         android:textColor="#FFFFFF" />
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="243dp"
+                        android:layout_marginTop="-1550dp"
+                        android:src="@drawable/image_processing20200317_9232_147l0fa"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.896"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.914" />
 
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="260dp"
+                        android:layout_marginTop="200dp"
+                        android:src="@drawable/untitled_design"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.896"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.914" />
 
                 </LinearLayout>
 
