@@ -61,6 +61,7 @@ public class Home_fragment extends Fragment implements View.OnClickListener {
 
 
     public static Home_fragment newInstance(String param1, String param2) {
+
         Home_fragment fragment = new Home_fragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
@@ -83,7 +84,10 @@ public class Home_fragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home_fragment, container, false);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
+        /*toolbar=v.findViewById(R.id.toolbar);
+        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary_blue)));*/
         user = FirebaseAuth.getInstance().getCurrentUser();
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getContext());
         if (user != null) {

@@ -1,6 +1,7 @@
 package com.example.instamedz;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -65,6 +66,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         super.onStart();
         if(!alreadyExecuted)
         {
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary_blue)));
             replaceFragment(new Home_fragment());
             alreadyExecuted=true;
             Toast.makeText(this,"Welcome "+username,Toast.LENGTH_LONG).show();
@@ -104,11 +106,13 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
                 switch (id)
                 {
                     case R.id.home_item:
+                        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary_blue)));
                         replaceFragment(new Home_fragment()); fab.show(); break;
                     case R.id.User_item:
+                        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary_blue)));
                         replaceFragment(new User_Frag());fab.hide(); break;
                     case R.id.appointment_item:
-
+                        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary_blue)));
                         replaceFragment(new Appoint_frag());fab.hide();break;
                     case R.id.eye_care_item:
                         Intent Eye_Care_Intent = new Intent(Home_Page.this, Eye_Care.class);
@@ -144,6 +148,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
                 switch(id)
                 {
                     case R.id.profile_toolbar:
+                        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primary_blue)));
                         replaceFragment(new User_Frag());
                     default:
                         return true;

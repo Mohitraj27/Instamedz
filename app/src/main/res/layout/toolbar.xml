@@ -21,6 +21,7 @@
         app:layout_constraintVertical_bias="0.011"
         tools:srcCompat="@tools:sample/avatars" />
     </com.google.android.material.appbar.MaterialToolbar>
+    android:background="@drawable/instamedz_tollbar"
 -->
 
 
@@ -31,7 +32,14 @@
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     app:menu="@menu/top_app_bar"
-    android:background="@drawable/instamedz_tollbar"
-    app:navigationIcon="@drawable/ic_twotone_menu_24" >
+    android:background="#0D0D47A1"
+    app:navigationIcon="@drawable/ic_twotone_menu_24"
+   >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:contentDescription="logo"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/instamedz"/>
 
 </com.google.android.material.appbar.MaterialToolbar>
