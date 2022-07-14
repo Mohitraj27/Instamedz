@@ -1,7 +1,10 @@
 package com.example.instamedz;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,6 +19,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -81,6 +86,21 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_home_page);
 
+
+        //For Notification
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel Home_page_channel=new NotificationChannel("HomePage_notification", "HomePage_notification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager Home_page_manager =getSystemService(NotificationManager.class);
+            Home_page_manager.createNotificationChannel(Home_page_channel);
+        }
+         NotificationCompat.Builder builder=new NotificationCompat.Builder(this,"HomePage_notification")
+                 .setContentTitle("Welcome to Instamedz")
+                 .setSmallIcon(R.drawable.instamedz2)
+                 .setAutoCancel(true)
+                 .setContentText("We are committed towards your holistic well-being !!\n ");
+
+        NotificationManagerCompat Home_page_manager = NotificationManagerCompat.from(this);
+        Home_page_manager.notify(1,builder.build());
 
 
 

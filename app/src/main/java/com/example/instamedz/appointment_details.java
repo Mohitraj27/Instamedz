@@ -1,7 +1,10 @@
 package com.example.instamedz;
 
 import android.app.DatePickerDialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,6 +20,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -65,6 +70,20 @@ public class appointment_details extends AppCompatActivity  implements AdapterVi
         setContentView(R.layout.activity_appointment_details);
 
 
+        //Book your appointment Notification
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            NotificationChannel channel=new NotificationChannel("doctor_appointement", "doctor_appointement", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager =getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+        NotificationCompat.Builder builder=new NotificationCompat.Builder(this,"doctor_appointement")
+                .setContentTitle("Book your Appointment Now!!")
+                .setSmallIcon(R.drawable.instamedz2)
+                .setAutoCancel(true)
+                .setContentText("We have the team of Best doctors as per your need");
+
+        NotificationManagerCompat manager = NotificationManagerCompat.from(this);
+        manager.notify(1111,builder.build());
 
 
 
