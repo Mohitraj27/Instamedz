@@ -12,7 +12,7 @@
         <item name="colorSecondaryVariant">#1D36BF</item>
         <item name="colorOnSecondary">#4CAF50</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="android:fontFamily">@font/poppins</item>
         <item name="android:windowTranslucentStatus">true</item>
