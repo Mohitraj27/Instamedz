@@ -20,7 +20,7 @@
             android:contentDescription="Display Picture"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.903"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.087"
@@ -28,25 +28,25 @@
             tools:src="@tools:sample/avatars" />
 
         <pl.droidsonroids.gif.GifImageView
-            android:layout_width="254dp"
-            android:layout_height="196dp"
+            android:layout_width="362dp"
+            android:layout_height="280dp"
             android:layout_marginTop="-1500dp"
+            android:alpha="0.2"
             android:scaleType="center"
             android:src="@drawable/book_aapointment_gif"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.05"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.751" />
+            app:layout_constraintVertical_bias="0.876" />
 
         <TextView
             android:layout_width="262dp"
             android:layout_height="50dp"
             android:layout_marginTop="190dp"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/poppins_bold"
             android:scaleType="centerCrop"
-            android:text="𝐔𝐬𝐞𝐫 𝐃𝐞𝐭𝐚𝐢𝐥𝐬"
+            android:text="User Details"
             android:textColor="#144970"
             android:textSize="29sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -54,7 +54,7 @@
             app:layout_constraintHorizontal_bias="0.107"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.118" />
+            app:layout_constraintVertical_bias="0.024" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/logoutButton"
@@ -68,18 +68,19 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.662" />
+            app:layout_constraintVertical_bias="0.882" />
 
         <TextView
             android:id="@+id/userName"
-            android:layout_width="1dp"
-            android:layout_height="41dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="84dp"
+            android:textAlignment="viewStart"
             android:textColor="#144970"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.109"
+            app:layout_constraintHorizontal_bias="0.111"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Userpic"
             app:layout_constraintVertical_bias="0.155" />
