@@ -39,11 +39,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
 
 
 
-      ImageView Whatsapp_icon_heart_care;
-      ImageView Whatsapp_icon_health_care;
-      ImageView Whatsapp_icon_eye_care;
-      ImageView Whatsapp_icon_bussiness_care;
-     ImageView Whatsapp_icon_Soul_care;
+
      ImageView UserProfilePic;
      public MaterialToolbar toolbar;
      public DrawerLayout drawerLayout;
@@ -173,14 +169,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         }
         reference= FirebaseDatabase.getInstance("https://instamedz-f5dcf-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("Users");
 
-/*        UserProfilePic=(ImageView) findViewById(R.id.profilePic);
-        UserProfilePic.setOnClickListener(Home_Page.this);*/
-       Whatsapp_icon_health_care=findViewById(R.id.whatsapp_icon_health_care);
-        Whatsapp_icon_heart_care =findViewById(R.id.whatsapp_icon_heart_care);
-        Whatsapp_icon_eye_care=findViewById(R.id.whatsapp_icon_eye_care);
-        Whatsapp_icon_Soul_care=findViewById(R.id.whatsapp_icon_soul_care);
-        Whatsapp_icon_bussiness_care=findViewById(R.id.whatsapp_icon_business_care);
-
+/*
         /*UserProfilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

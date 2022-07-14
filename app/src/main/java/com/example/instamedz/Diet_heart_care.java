@@ -71,7 +71,7 @@ public class Diet_heart_care extends Home_Page {
     public void Asparagus_dialog(View view) {
         new MaterialAlertDialogBuilder(this)
                 .setTitle("About Asparagus")
-                .setMessage("Info")
+                .setMessage("Asparagus helps to increase blood flow and is rich in fiber, which helps in reducing high blood pressure and diabetes and also decreases the risks of coronary artery disease and stroke. ")
                 .setPositiveButton("Okay", null)
                 .show();
     }
@@ -79,7 +79,7 @@ public class Diet_heart_care extends Home_Page {
     public void Broccoli_dialog(View view) {
         new MaterialAlertDialogBuilder(this)
                 .setTitle("About Broccoli")
-                .setMessage("Info")
+                .setMessage("Broccoli when consumed in steamed condition helps in reducing cholesterol whose increase is the cause of many heart related issues and heart attacks. ")
                 .setPositiveButton("Okay", null)
                 .show();
     }
@@ -87,7 +87,7 @@ public class Diet_heart_care extends Home_Page {
     public void Choc_dialog(View view) {
         new MaterialAlertDialogBuilder(this)
                 .setTitle("About Dark chocolates")
-                .setMessage("Info")
+                .setMessage("It helps in preventing stiffness of arteries and white blood cells adhesion with the blood vessels. Its flavor helps in decreasing the risk of heart attack and stroke. ")
                 .setPositiveButton("Okay", null)
                 .show();
     }
@@ -95,7 +95,7 @@ public class Diet_heart_care extends Home_Page {
     public void liver_dialog(View view) {
         new MaterialAlertDialogBuilder(this)
                 .setTitle("About Liver meat")
-                .setMessage("Info")
+                .setMessage("Liver is rich in copper, folic acid, zinc and chromium. Out of all the organs of meat, the liver is the most nutrient-rich. It helps in increasing hemoglobin level and keeps the heart healthy.")
                 .setPositiveButton("Okay", null)
                 .show();
     }
@@ -103,7 +103,7 @@ public class Diet_heart_care extends Home_Page {
     public void Avocados_dialog(View view) {
         new MaterialAlertDialogBuilder(this)
                 .setTitle("About Avocados")
-                .setMessage("Info")
+                .setMessage("They are known to lower cholesterol and help in reducing risks of heart attacks.")
                 .setPositiveButton("Okay", null)
                 .show();
     }
@@ -111,7 +111,7 @@ public class Diet_heart_care extends Home_Page {
     public void Fish_dialog(View view) {
         new MaterialAlertDialogBuilder(this)
                 .setTitle("About Fish and Fish Oil")
-                .setMessage("Info")
+                .setMessage("Fatty fish like salmon, mackerel, sardines, and tuna are loaded with omega-3 fatty acids, which have been studied extensively for their heart-health benefits.")
                 .setPositiveButton("Okay", null)
                 .show();
     }
@@ -119,7 +119,7 @@ public class Diet_heart_care extends Home_Page {
     public void Walnuts_dialog(View view) {
         new MaterialAlertDialogBuilder(this)
                 .setTitle("About Walnuts")
-                .setMessage("Info")
+                .setMessage("Walnuts are a great source of fiber and micronutrients like magnesium, copper, and manganese. Evidence for cardiovascular disease prevention is strong for some varieties of tree nuts, particularly walnuts.")
                 .setPositiveButton("Okay", null)
                 .show();
     }
