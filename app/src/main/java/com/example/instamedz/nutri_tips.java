@@ -17,4 +17,19 @@ public class nutri_tips extends Home_Page {
         alreadyExecuted=true;
         ToastAlreadyExecuted=true;
     }
+
+    public void Nutri_exc_dialog(View view) {
+    }
+
+    public void Nutri_sleep_dialog(View view) {
+    }
+
+    public void Nutri_hydrate_dialog(View view) {
+    }
+
+    public void Nutri_addiction_dialog(View view) {
+    }
+
+    public void Nutri_junk_dialog(View view) {
+    }
 }
