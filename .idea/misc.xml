@@ -8,6 +8,7 @@
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/ic_twotone_menu_24.xml" value="0.1695" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/nav_background.xml" value="0.2025" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/next_button.xml" value="0.191" />
+        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_about_us.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_accesories.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_appointment_details.xml" value="0.25" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_are_udoctor_heart_care.xml" value="0.2314410480349345" />
@@ -16,7 +17,7 @@
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_diet_for_eyes.xml" value="0.17391304347826086" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_diet_heart_care.xml" value="0.2760416666666667" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_doctor_consultaions.xml" value="0.2796875" />
-        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_eye_care.xml" value="0.1" />
+        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_eye_care.xml" value="0.15" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_eye_exercise.xml" value="0.16203703703703703" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_eye_hygiene_diet.xml" value="0.12" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_eyecare_ex1.xml" value="0.2" />
@@ -75,11 +76,10 @@
         <entry key="..\:/Users/dell/StudioProjects/Instamedz/app/src/main/res/layout/activity_appointment_details.xml" value="0.19293478260869565" />
         <entry key="..\:/Users/dell/StudioProjects/Instamedz/app/src/main/res/layout/activity_are_udoctor_heart_care.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/dell/StudioProjects/Instamedz/app/src/main/res/layout/activity_bussiness_care.xml" value="0.24547101449275363" />
-        <entry key="..\:/Users/dell/StudioProjects/Instamedz/app/src/main/res/layout/activity_diet_heart_care.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/dell/StudioProjects/Instamedz/app/src/main/res/layout/activity_eyecare_ex1.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/dell/StudioProjects/Instamedz/app/src/main/res/layout/activity_nutri_care.xml" value="0.176" />
         <entry key="..\:/Users/dell/StudioProjects/Instamedz/app/src/main/res/layout/activity_nutri_options.xml" value="0.19293478260869565" />
-        <entry key="..\:/Users/dell/StudioProjects/Instamedz/app/src/main/res/layout/fragment_home_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/dell/StudioProjects/Instamedz/app/src/main/res/layout/fragment_home_fragment.xml" value="0.20634249471458774" />
         <entry key="..\:/Users/dell/StudioProjects/Instamedz/app/src/main/res/layout/fragment_slideshow.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/dell/StudioProjects/Instamedz/app/src/main/res/layout/fragment_user.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/intel/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/drawable_image_button.xml" value="0.153" />

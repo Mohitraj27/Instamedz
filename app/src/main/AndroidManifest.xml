@@ -19,6 +19,9 @@
         android:windowSoftInputMode="adjustPan"
         tools:targetApi="m">
         <activity
+            android:name=".About_us"
+            android:exported="false" />
+        <activity
             android:name=".nutri_prograin"
             android:exported="false" />
         <activity

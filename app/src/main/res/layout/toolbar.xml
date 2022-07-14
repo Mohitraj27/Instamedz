@@ -32,7 +32,7 @@
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     app:menu="@menu/top_app_bar"
-    android:background="#333788E4"
+    android:background="#3788E4"
     app:liftOnScroll="true"
     app:layout_scrollFlags="scroll|enterAlways"
     app:navigationIcon="@drawable/ic_twotone_menu_24"

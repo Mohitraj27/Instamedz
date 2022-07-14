@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -155,6 +154,9 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
                     case R.id.nutri_care_item:
                         Intent Nutri_care_Intent = new Intent(Home_Page.this, Nutri_care.class);
                         startActivity(Nutri_care_Intent); break;
+                    case R.id.about_us_item:
+                        Intent About_us_Intent = new Intent(Home_Page.this, About_us.class);
+                        startActivity(About_us_Intent); break;
                     default:
                         return true;
                 }
