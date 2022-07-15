@@ -11,6 +11,7 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar"
         />
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,7 +20,8 @@
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
 
     <ImageView
         android:id="@+id/eye_care_user_lgout"
@@ -35,47 +37,49 @@
 
     <ImageView
         android:id="@+id/Eye_care_exercise_button"
-        android:layout_width="376dp"
-        android:layout_height="68dp"
+        android:layout_width="377dp"
+        android:layout_height="70dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464" />
+        app:layout_constraintVertical_bias="0.408" />
 
     <ImageView
         android:id="@+id/doctors_consulations_button"
-        android:layout_width="375dp"
-        android:layout_height="64dp"
+        android:layout_width="379dp"
+        android:layout_height="69dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85" />
+        app:layout_constraintVertical_bias="0.832" />
+
     <ImageView
         android:id="@+id/Eye_hygiene_button"
-        android:layout_width="369dp"
-        android:layout_height="67dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.593" />
-
-    <ImageView
-        android:id="@+id/diet_for_eyes"
-        android:layout_width="369dp"
-        android:layout_height="67dp"
+        android:layout_width="378dp"
+        android:layout_height="69dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.719" />
+        app:layout_constraintVertical_bias="0.551" />
+
+    <ImageView
+        android:id="@+id/diet_for_eyes"
+        android:layout_width="377dp"
+        android:layout_height="68dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.692" />
 </androidx.constraintlayout.widget.ConstraintLayout>
