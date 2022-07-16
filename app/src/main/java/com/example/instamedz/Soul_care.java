@@ -3,11 +3,13 @@ package com.example.instamedz;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import androidx.annotation.ColorInt;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
@@ -26,6 +28,7 @@ public class Soul_care extends Home_Page {
                 .setContentTitle("Welcome to our Soul Care Service")
                 .setSmallIcon(R.drawable.eye_care_icon)
                 .setAutoCancel(true)
+
                 .setContentText("We believe in the purposeful care of one’s mind. WILL + EMOTION.   ");
 
         NotificationManagerCompat Eye_manager = NotificationManagerCompat.from(this);
