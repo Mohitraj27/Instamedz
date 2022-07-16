@@ -19,6 +19,21 @@
         android:windowSoftInputMode="adjustPan"
         tools:targetApi="m">
         <activity
+            android:name=".Nutri_food"
+            android:exported="false" />
+        <activity
+            android:name=".Nutri_addiction"
+            android:exported="false" />
+        <activity
+            android:name=".Nutri_hydrate"
+            android:exported="false" />
+        <activity
+            android:name=".Nutri_sleep"
+            android:exported="false" />
+        <activity
+            android:name=".Nutri_exc"
+            android:exported="false" />
+        <activity
             android:name=".About_us"
             android:exported="false" />
         <activity

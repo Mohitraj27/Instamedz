@@ -10,7 +10,7 @@
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/drawable/next_button.xml" value="0.191" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_about_us.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_accesories.xml" value="0.26979166666666665" />
-        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_appointment_details.xml" value="0.25" />
+        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_appointment_details.xml" value="0.1" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_are_udoctor_heart_care.xml" value="0.2314410480349345" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_benifits.xml" value="0.26979166666666665" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_bussiness_care.xml" value="0.2796875" />
@@ -37,9 +37,14 @@
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_navigation_drawer.xml" value="0.15270935960591134" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_nayan_care_option_page.xml" value="0.1" />
+        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_nutri_addiction.xml" value="0.2625" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_nutri_care.xml" value="0.25" />
+        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_nutri_exc.xml" value="0.2760416666666667" />
+        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_nutri_food.xml" value="0.2625" />
+        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_nutri_hydrate.xml" value="0.2625" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_nutri_options.xml" value="0.25" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_nutri_prograin.xml" value="0.1276595744680851" />
+        <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_nutri_sleep.xml" value="0.2760416666666667" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_nutri_tips.xml" value="0.1" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_offline_doctors.xml" value="0.1766304347826087" />
         <entry key="..\:/Users/Gunal/AndroidStudioProjects/Instamedz/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
