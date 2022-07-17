@@ -30,6 +30,7 @@
         android:layout_height="85dp"
         android:layout_marginBottom="44dp"
         android:text="Digital Dukan"
+        android:onClick="OpenBusinessCards"
         android:textSize="20sp"
         app:icon="@drawable/ic_twotone_connect_without_contact_24"
         app:iconSize="35dp"

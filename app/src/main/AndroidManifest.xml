@@ -19,6 +19,9 @@
         android:windowSoftInputMode="adjustPan"
         tools:targetApi="m">
         <activity
+            android:name=".business_options_cards"
+            android:exported="false" />
+        <activity
             android:name=".Nutri_food"
             android:exported="false" />
         <activity
