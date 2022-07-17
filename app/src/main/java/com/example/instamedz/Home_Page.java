@@ -147,7 +147,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
                         Intent Health_Care_Intent = new Intent(Home_Page.this, Health_Care.class);
                         startActivity(Health_Care_Intent); break;
                     case R.id.business_care_item:
-                        Intent Bus_Care_Intent = new Intent(Home_Page.this, Bussiness_care.class);
+                        Intent Bus_Care_Intent = new Intent(Home_Page.this, com.example.instamedz.Business_care.class);
                         startActivity(Bus_Care_Intent); break;
                     case R.id.share_item:
                         ShareWebsite(); break;

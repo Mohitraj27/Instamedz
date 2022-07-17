@@ -141,9 +141,14 @@
             android:name=".UserProfile"
             android:exported="false" />
         <activity
-            android:name=".Bussiness_care"
+            android:name=".Business_care"
             android:exported="true"
             android:label="Bussiness Care"
+            android:parentActivityName=".Home_Page" />
+        <activity
+            android:name=".Business_options"
+            android:exported="true"
+            android:label="Bussiness Options"
             android:parentActivityName=".Home_Page" />
         <activity
             android:name=".Soul_care"

@@ -299,7 +299,7 @@ public class Home_fragment extends Fragment implements View.OnClickListener {
         Business_care.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Bussiness_care = new Intent(getActivity().getApplicationContext(), com.example.instamedz.Bussiness_care.class);
+                Intent Bussiness_care = new Intent(getActivity().getApplicationContext(), com.example.instamedz.Business_care.class);
                 getActivity().startActivity(Bussiness_care);
             }
         });
