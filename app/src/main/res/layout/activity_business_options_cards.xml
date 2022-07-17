@@ -382,7 +382,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
-                            android:text="Provides a dynamic, interactive, and regular updated website. Cost effective with quick deployment and community support"
+                            android:text="Provides a dynamic, interactive, and regularly updated website. Cost effective with quick deployment and community support"
                             android:textAppearance="?attr/textAppearanceBodyMedium"
                             android:textColor="?android:attr/textColorSecondary" />
 
