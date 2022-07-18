@@ -72,7 +72,7 @@ public class Eyecare_ex2 extends Home_Page {
             public void onFinish() {
                 mTimerRunning=false;
                 startButton.setText("Start");
-                Toast.makeText(getApplicationContext(),"Excercise Complete",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Good job! Click next to go to the next exercise",Toast.LENGTH_LONG).show();
             }
         }.start();
         mTimerRunning=true;
